@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Versta Project Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <a class="logo" href="index.html">
+                <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
+                <span class="logo__text">D12 Fund</span>
+            </a>
+        </div>
+        <nav class="header__navigation">
+            <ul class="link-list">
+                <li class="link-list__item">
+                    <a class="link link_icon link_white active" href="#" title="Dashboard">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_dashboard"><use xlink:href="assets/images/icon.svg#icon_dashboard"></use></svg>
+                        </span>
+                        <span class="link__text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="link-list__item">
+                    <a class="link link_icon link_white" href="#" title="Buy tokens / Invest">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                        </span>
+                        <span class="link__text">Buy tokens / Invest</span>
+                    </a>
+                </li>
+                <li class="link-list__item">
+                    <a class="link link_icon link_white" href="#" title="Purchase history">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                        </span>
+                        <span class="link__text">Purchase history</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__account">
+            <a class="notification is-active" href="#">
+                <svg class="notification__icon"><use xlink:href="assets/images/icon.svg#icon_bell"></use></svg>
+            </a>
+            <div class="language">
+                <select class="language__select js-language"></select>
+            </div>
+            <div class="account">
+                <div class="account__info js-dropdown-toggle">
+                    <div class="avatar account__avatar">
+                        <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="account__login">mark.hoffan@gmail.com</div>
+                    <div class="account__toggle">
+                        <svg class="account__icon"><use xlink:href="assets/images/icon.svg#icon_angle"></use></svg>
+                    </div>
+                </div>
+                <div class="js-dropdown dropdown account__dropdown">
+                    <ul class="link-list link-list_vertical">
+                        <li class="link-list__item">
+                            <a class="link" href="#">
+                                <span class="link__text">Log out</span>
+                            </a>
+                        </li>
+                        <li class="link-list__item">
+                            <a class="link" href="#">
+                                <span class="link__text">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sitemap">
+        <div class="container">
+            <div class="sitemap__list">
+                <a class="link" href="ui-kit.html">
+                    <span class="link__text">UI-kit (ui-kit.html)</span>
+                </a>
+                <a class="link" href="index.html">
+                    <span class="link__text">Главная (index.html)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
