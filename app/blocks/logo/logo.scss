@@ -1,0 +1,25 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  text-transform: none;
+
+  &__image {
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+  }
+
+  &__text {
+    @include heading-5;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-basic;
+
+    @include screen('phone-wide', max) {
+      @include visual-hide;
+    }
+  }
+}

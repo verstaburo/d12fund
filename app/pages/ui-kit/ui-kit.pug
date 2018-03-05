@@ -1,7 +1,7 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'D12 Fund - Ui-kit'
 
 block content
   +ui-kit
@@ -10,8 +10,11 @@ block content
       +e.UL.navigation__list
 
     +ui-kit-head
-      +e.logo Логотип
-      +e.name Название проекта
+      +e.logo
+        +logo
+        +e.BR
+        | Логотип
+      +e.name D12 Fund
 
     //- Сетка
     +ui-section._grid

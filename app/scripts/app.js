@@ -13,6 +13,7 @@ import maps from '../blocks/map/map';
 import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
+import languageSelect from '../blocks/language/language';
 
 const $ = window.$;
 
@@ -33,4 +34,5 @@ $(() => {
   numberinput();
   maps();
   scrollanimation();
+  languageSelect();
 });

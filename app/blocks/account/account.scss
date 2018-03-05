@@ -1,0 +1,84 @@
+.account {
+  position: relative;
+  display: block;
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    &.is-active {
+
+      .account {
+
+        &__toggle {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    margin-right: 16px;
+
+    @include screen('desktop') {
+      margin-right: 24px;
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    transform: rotate(0);
+    transition: all $ease-main;
+  }
+
+  &__login {
+    @include text;
+    font-weight: 500;
+
+    @include screen('desktop-wide', max) {
+      @include visual-hide;
+    }
+
+    @include screen('desktop') {
+      margin-right: 16px;
+    }
+  }
+
+  &__icon {
+    width: 11px;
+    height: 7px;
+    fill: none;
+    stroke: $color-basic;
+    transition: all $ease-main;
+  }
+
+  &__dropdown.dropdown {
+    width: 100%;
+
+    .link-list__item {
+      max-width: 100%;
+    }
+
+    .link {
+      @include ellipsis(100%);
+    }
+  }
+
+  &:hover {
+
+    .account {
+
+      &__icon {
+        stroke: $color-input;
+      }
+    }
+  }
+}

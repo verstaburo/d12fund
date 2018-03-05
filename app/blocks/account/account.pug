@@ -1,0 +1,13 @@
+mixin account()
+  +b.account&attributes(attributes)
+    +e.info.js-dropdown-toggle
+      +avatar.__avatar
+      +e.login mark.hoffan@gmail.com
+      +e.toggle
+        +icon('angle').icon
+    +dropdown.__dropdown
+      +b.UL.link-list_vertical
+        +e.item
+          +link(href="#") Log out
+        +e.item
+          +link(href="#") Settings

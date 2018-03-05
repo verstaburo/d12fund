@@ -3,8 +3,8 @@
 // ##########
 // Базовые настройки сетки сайта
 // ##########
-$container-width: 960px; // Максимальная ширина контейнера контента
-$container-padding: 20px; // Отступы слева и справа у контейнера
+$container-width: 1230px; // Максимальная ширина контейнера контента
+$container-padding: 30px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 20px; // Расстояние между колонками
@@ -14,11 +14,25 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
 // ##########
 // Цвета
 // ##########
-$color-basic: black; // Основной цвет текста (применяется к body)
-$color-placeholder: #777; // Основной цвет для placeholder
-$color-input: black; // Основной цвет input, select и textarea
-$color-main: #2252d8; // Основной фирменный цвет
-$color-border: #ccc; // Основной цвет границ таблиц, секций
+$color-basic: white; // Основной цвет текста (применяется к body)
+$color-text: #83a1c4;
+$color-text-second: #b6d0ee;
+$color-placeholder: #122a48; // Основной цвет для placeholder
+$color-input: #268dfc; // Основной цвет input, select и textarea
+$color-main: #1a97fc; // Основной фирменный цвет
+$color-border: #23538d; // Основной цвет границ таблиц, секций
+$color-background: #09182a; //Основной цвет фона
+$color-background-second: #0a1b2f; //Дополнительный цвет фона (секция)
+$color-background-third: #0c1f35; //Дополнительный цвет фона (хэдер)
+$color-background-four: #0a2443; //
+$color-background-fifth: #0a2648;
+$color-button: #2290fc;
+$color-button-hover: #0055a9;
+$color-orange: #f5922f;
+$color-orange-light: #ffbd7c;
+$color-red: #be2a73;
+$color-blue: #234266;
+
 
 // ##########
 // Transitions
@@ -28,5 +42,4 @@ $ease-main: .3s ease;
 // ##########
 // Шрифты
 // ##########
-$font-main: Arial, sans-serif; // Основной шрифт сайта
-$font-second: Times New Roman, sans-serif; // Дополнительный шрифт
+$font-main: 'HelveticaNeue', 'Arial', sans-serif; // Основной шрифт сайта

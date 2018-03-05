@@ -1,0 +1,8 @@
+mixin link-list()
+  +b.UL.link-list&attributes(attributes)
+    +e.LI.item
+      +link-icon('dashboard')._white.active(href="#" title="Dashboard") Dashboard
+    +e.LI.item
+      +link-icon('money')._white(href="#" title="Buy tokens / Invest") Buy tokens / Invest
+    +e.LI.item
+      +link-icon('time')._white(href="#" title="Purchase history") Purchase history

@@ -1,0 +1,54 @@
+.notification {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  transition: opacity $ease-main;
+
+  @include screen('phone-wide', max) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    fill: $color-blue;
+
+    @include screen('phone-wide', max) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &.is-active {
+
+    &::before {
+      @include pseudo;
+      top: -3px;
+      right: -3px;
+      width: 9px;
+      height: 9px;
+      border: 3px solid $color-background-second;
+      border-radius: 50%;
+      background: $color-main;
+
+      @include screen('phone-wide', max) {
+        width: 5px;
+        height: 5px;
+        border-width: 2px;
+      }
+    }
+
+    .notification__icon {
+      fill: $color-basic;
+    }
+  }
+}

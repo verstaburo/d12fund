@@ -1,0 +1,82 @@
+.header {
+  @include clearfix;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 14px 20px;
+  background: $color-background-second;
+  box-sizing: border-box;
+
+  @include screen('tablet-wide') {
+    padding: 24px 20px;
+  }
+
+  @include screen('desktop') {
+    padding: 24px 30px;
+  }
+
+  @include screen('tablet-wide') {
+    flex-wrap: nowrap;
+  }
+
+  &__logo, &__account {
+
+    @include screen('tablet-wide') {
+      width: 200px;
+      max-width: 200px;
+    }
+
+    @include screen('desktop-wide') {
+      width: 400px;
+      max-width: 400px;
+    }
+  }
+
+  &__navigation {
+    display: block;
+    margin: 0 auto;
+
+    @include screen('tablet-wide', max) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin: 20px 0 0;
+      order: 2;
+    }
+  }
+
+  &__account {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include screen('tablet-wide', max) {
+      margin-left: auto;
+    }
+
+    .notification {
+      margin-right: 10px;
+
+      @include screen('phone-wide') {
+        margin-right: 16px;
+      }
+
+      @include screen('desktop') {
+        margin-right: 24px;
+      }
+    }
+
+    .language {
+      margin-right: 16px;
+
+      @include screen('desktop') {
+        margin-right: 26px;
+      }
+    }
+  }
+}

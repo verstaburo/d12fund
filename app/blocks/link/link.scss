@@ -5,28 +5,66 @@
     @include link;
   }
 
-  &_dashed &__text {
-    @include link-dashed;
-  }
-
   &_icon {
     position: relative;
-    padding-left: 25px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-    .link__icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+  &__iwrapper {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
   }
 
   &__icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
+    width: 28px;
+    height: 28px;
+    display: block;
     fill: $color-main;
+    transition: all $ease-main;
+
+    &_dashboard {
+      width: 28px;
+      height: 28px;
+    }
+
+    &_money {
+      width: 24px;
+      height: 28px;
+    }
+
+    &_time {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &_white {
+
+    .link {
+
+      &__text {
+        @include link-white;
+      }
+
+      &__icon {
+        fill: $color-basic;
+      }
+    }
+
+    &:hover {
+
+      .link__icon {
+        fill: $color-main;
+      }
+    }
   }
 
   &.disabled {

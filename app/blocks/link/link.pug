@@ -4,7 +4,9 @@ mixin link()
       block
 
 mixin link-icon(iconname)
+  -var addClass = " _" + iconname
   +b.A.link&attributes(attributes)._icon
-    +icon(iconname).__icon
+    +e.iwrapper
+      +icon(iconname)(class="__icon" + addClass)
     +e.SPAN.text
       block

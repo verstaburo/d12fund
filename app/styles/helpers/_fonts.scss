@@ -14,6 +14,90 @@
 }
 */
 
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/HelveticaNeueCyr-Thin.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Thin.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Thin.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Thin.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/HelveticaNeueCyr-UltraLight.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-UltraLight.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-UltraLight.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/HelveticaNeueCyr-Light.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Light.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Light.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Light.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/HelveticaNeueCyr-Roman.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Roman.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/HelveticaNeueCyr-Medium.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Medium.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/HelveticaNeueCyr-Bold.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/HelveticaNeueCyr-Black.eot');
+  src:
+    url('../fonts/HelveticaNeueCyr-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/HelveticaNeueCyr-Black.woff2') format('woff2'),
+    url('../fonts/HelveticaNeueCyr-Black.woff') format('woff'),
+    url('../fonts/HelveticaNeueCyr-Black.ttf')  format('truetype');
+}
+
 /* Соответствие письменного названия жирности числовому значению
 100 — Thin
 200 — Extra Light, Ultra Light
