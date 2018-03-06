@@ -1,0 +1,7 @@
+mixin page-section(title, tag)
+  +b.page-section&attributes(attributes)
+    .container
+      -if (title) {
+        +e(h3 || tag).title!= title
+      - }
+      block

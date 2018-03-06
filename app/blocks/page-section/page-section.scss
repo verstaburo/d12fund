@@ -1,0 +1,12 @@
+.page-section {
+  display: block;
+
+  &__title {
+    @include text-bigger-st;
+    font-weight: 700;
+  }
+
+  &_light {
+    background: $color-background-second;
+  }
+}
