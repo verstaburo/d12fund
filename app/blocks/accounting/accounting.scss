@@ -1,3 +1,76 @@
 .accounting {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__col {
+    width: 50%;
+    box-sizing: border-box;
+
+    &_left {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 28px;
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__mark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &__currency {
+    @include text;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  &__status {
+    @include text;
+    line-height: 1.1;
+    color: $color-text;
+  }
+
+  &__price {
+    @include text-big;
+    text-align: right;
+
+    .up, .down {
+      margin-right: 4px;
+    }
+
+    .down {
+      color: $color-red;
+    }
+
+    .up {
+      color: $color-main;
+    }
+  }
 }

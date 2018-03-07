@@ -1,3 +1,24 @@
 .income {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @include text-big;
+  text-align: center;
+
+  &__total {
+    width: 100%;
+    @include heading-2;
+  }
+
+  &__sum {
+    display: inline-block;
+    color: $color-main;
+  }
+
+  &__time {
+    display: inline-block;
+    color: $color-text;
+  }
 }

@@ -1,3 +1,76 @@
 .rate {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__col {
+    width: 50%;
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__count, &__name {
+    @include text-big;
+    line-height: 1.1;
+  }
+
+  &__count {
+    color: $color-text-four;
+  }
+
+  &__growth {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 13px;
+    transition: all $ease-main;
+    transform: rotate(0);
+
+    &.is-down {
+      transform: rotate(180deg);
+
+      .rate__icon {
+        stroke: $color-red;
+      }
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 13px;
+    fill: none;
+    stroke: $color-green;
+  }
+
+  &__price {
+    @include heading-4;
+  }
 }

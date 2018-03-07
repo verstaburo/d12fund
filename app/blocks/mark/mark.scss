@@ -1,0 +1,23 @@
+.mark {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  border: 2px solid $color-main;
+  background: $color-background-four;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  &__text {
+    @include text-big;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &_orange {
+    border-color: $color-orange-light;
+    background: $color-orange;
+  }
+}

@@ -1,3 +1,38 @@
 mixin rate()
   +b.rate&attributes(attributes)
-    block
+    +e.row
+      +e.col_left
+        +e.count 25
+        +e.name BTC
+      +e.col_right
+        +e.growth
+          +e.arrow
+            +icon('arrow').icon
+          +e.price $ 1.482.402
+    +e.row
+      +e.col_left
+        +e.count 28
+        +e.name EHT
+      +e.col_right
+        +e.growth
+          +e.arrow
+            +icon('arrow').icon
+          +e.price $ 1.482.402
+    +e.row
+      +e.col_left
+        +e.count 332
+        +e.name Bitcoin Cash
+      +e.col_right
+        +e.growth
+          +e.arrow.is-down
+            +icon('arrow').icon
+          +e.price $ 1.482.402
+    +e.row
+      +e.col_left
+        +e.count 450
+        +e.name Monero
+      +e.col_right
+        +e.growth
+          +e.arrow
+            +icon('arrow').icon
+          +e.price $ 1.482.402

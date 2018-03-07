@@ -1,3 +1,38 @@
 mixin accounting()
   +b.accounting&attributes(attributes)
-    block
+    +e.row
+      +e.col_left
+        +mark.__mark T
+        +e.currency TOKEN
+        +e.status Sold
+      +e.col_right
+        +e.price
+          span.down -
+          | $ 337
+    +e.row
+      +e.col_left
+        +mark.__mark T
+        +e.currency TOKEN
+        +e.status Bought
+      +e.col_right
+        +e.price
+          span.up +
+          | $ 337
+    +e.row
+      +e.col_left
+        +mark.__mark T
+        +e.currency TOKEN
+        +e.status Bought
+      +e.col_right
+        +e.price
+          span.up +
+          | $ 337
+    +e.row
+      +e.col_left
+        +mark.__mark T
+        +e.currency TOKEN
+        +e.status Bought
+      +e.col_right
+        +e.price
+          span.up +
+          | $ 337
