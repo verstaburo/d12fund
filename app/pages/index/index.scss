@@ -1,4 +1,40 @@
 .index {
   display: block;
+  width: 100%;
   height: 100000px;
+
+  &__informers {
+
+    .grid {
+
+      &:first-of-type {
+        @include screen('desktop', max) {
+          margin-top: -40px;
+        }
+      }
+    }
+
+    .grid__col_four {
+
+      @include screen('desktop', max) {
+        padding-top: 40px;
+        width: 50%;
+      }
+
+      @include screen('tablet-small', max) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__news {
+    padding-top: 85px;
+
+    &-slider {
+
+      @include screen('desktop') {
+        margin: 0 -40px;
+      }
+    }
+  }
 }

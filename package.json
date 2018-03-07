@@ -57,6 +57,7 @@
     "gulp-stylelint": "^3.9.0",
     "gulp-svg-symbols": "^2.0.2",
     "gulp-watch": "^4.3.11",
+    "highcharts": "^6.0.7",
     "inputmask": "^3.3.8",
     "jade-get-data": "^1.0.1",
     "jquery": "^3.2.1",

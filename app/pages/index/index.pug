@@ -4,17 +4,32 @@ block head
   - var pageTitle = 'D12 Fund - Главная'
 
 block content
-  +page-section(false)._light.informers
-    +grid
-      +col(4)
-        +info-block('Total Fund Value', 'View Statistics')
-          +rate
-          +income
-      +col(4)
-        +info-block('My Balance', 'Withdraw funds')
-          +diagramm
-          +income
-      +col(4)
-        +info-block('Purchases', 'View History')
-          +accounting
-  +page-section('Recent news').news
+  +b.index
+    +page-section(false)._light.__informers
+      +grid
+        +col(4)
+          +info-block('Total Fund Value', 'View Statistics')
+            +rate
+            +income
+        +col(4)
+          +info-block('My Balance', 'Withdraw funds')
+            +diagramm#di-balance
+            +income
+        +col(4)
+          +info-block('Purchases', 'View History')
+            +accounting
+    +page-section('Recent news', true).__news
+      .index__news-slider
+        +slider(false, true)
+          +slide
+            +short-news('Bibendum Mattis Cursus', '25 Jun 2018')(href="#")
+              +e.P Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus...
+          +slide
+            +short-news('Bibendum Mattis Cursus', '25 Jun 2018')(href="#")
+              +e.P Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus...
+          +slide
+            +short-news('Bibendum Mattis Cursus', '25 Jun 2018')(href="#")
+              +e.P Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus...
+          +slide
+            +short-news('Bibendum Mattis Cursus', '25 Jun 2018')(href="#")
+              +e.P Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus...

@@ -1,3 +1,10 @@
-mixin short-news()
-  +b.short-news&attributes(attributes)
-    block
+mixin short-news(title, date)
+  +b.A.short-news&attributes(attributes)
+    +e.DIV.image
+      +e.round
+        +icon('envelope').icon
+    +e.DIV.content
+      +e.H4.title!= title
+      +e.text
+        block
+      +e.TIME.date!=date

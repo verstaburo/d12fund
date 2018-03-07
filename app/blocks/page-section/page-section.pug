@@ -1,7 +1,11 @@
-mixin page-section(title, tag)
+mixin page-section(title, button, tag)
   +b.page-section&attributes(attributes)
     .container
       -if (title) {
-        +e(h3 || tag).title!= title
+        +e('h3' || tag).title
+          +e.SPAN.text!= title
+          -if (button) {
+            +button(a)(href="#")._small._dark.__button View All
+          -}
       - }
       block

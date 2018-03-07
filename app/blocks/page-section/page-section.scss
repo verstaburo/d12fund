@@ -1,9 +1,31 @@
 .page-section {
   display: block;
+  padding: 53px 0 66px;
 
   &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     @include text-bigger-st;
+    width: 100%;
     font-weight: 700;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+    @include screen('desktop') {
+      padding: 0 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__text {
+    margin-right: 20px;
+  }
+
+  &__button {
+    margin-left: auto;
+    min-width: 104px;
   }
 
   &_light {

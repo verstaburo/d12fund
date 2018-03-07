@@ -14,6 +14,7 @@ import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import languageSelect from '../blocks/language/language';
+import diagramms from '../blocks/diagramm/diagramm';
 
 const $ = window.$;
 
@@ -35,4 +36,5 @@ $(() => {
   maps();
   scrollanimation();
   languageSelect();
+  diagramms();
 });

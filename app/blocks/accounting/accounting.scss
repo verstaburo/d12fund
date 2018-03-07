@@ -1,9 +1,15 @@
 .accounting {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  
+  @include screen('desktop-wide') {
+    padding: 26px 6px 24px; //Для кривизны дизайна
+  }
 
   &__row {
     display: flex;
@@ -27,7 +33,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-left: 28px;
+      padding-left: 27px;
     }
 
     &__right {
@@ -35,6 +41,7 @@
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
+      box-sizing: border-box;
     }
   }
 
@@ -60,6 +67,11 @@
   &__price {
     @include text-big;
     text-align: right;
+    box-sizing: border-box;
+    
+    @include screen('desktop-wide') {
+      padding-right: 12px; //Для кривизны дизайна
+    }
 
     .up, .down {
       margin-right: 4px;
