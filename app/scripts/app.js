@@ -15,6 +15,7 @@ import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import languageSelect from '../blocks/language/language';
 import diagramms from '../blocks/diagramm/diagramm';
+import updatePrice from '../blocks/rate/rate';
 
 const $ = window.$;
 
@@ -37,4 +38,5 @@ $(() => {
   scrollanimation();
   languageSelect();
   diagramms();
+  updatePrice();
 });

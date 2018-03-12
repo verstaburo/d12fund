@@ -75,5 +75,14 @@
 
   &__price {
     @include heading-4;
+    transition: all .3s ease-in-out;
+
+    &.animate-down {
+      color: $color-red;
+    }
+
+    &.animate-up {
+      color: $color-green;
+    }
   }
 }

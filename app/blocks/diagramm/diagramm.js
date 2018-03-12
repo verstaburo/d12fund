@@ -10,9 +10,7 @@ export default function diagramms() {
         width: null,
         showAxes: false,
         backgroundColor: '#0a1b2f',
-        parallelAxes: {
-          visible: false,
-        },
+        className: 'diagramm-balance',
         height: 200,
       },
       title: {
@@ -44,7 +42,6 @@ export default function diagramms() {
             y: -10,
           },
         }],
-        tickAmount: 0,
         title: {
           text: '',
         },
@@ -53,6 +50,9 @@ export default function diagramms() {
         enabled: false,
       },
       plotOptions: {
+        areaspline: {
+          classNames: 'diagramm-balance__plot',
+        },
         series: {
           marker: {
             enabled: false,
@@ -61,7 +61,21 @@ export default function diagramms() {
       },
       series: [{
         type: 'areaspline',
-        data: [9, 8, 12.25, 10.5, 11, 9, 9.5, 9.6],
+        className: 'diagramm-balance__line',
+        data: [
+          { x: 0, y: 9.3 },
+          { x: 2, y: 8.8 },
+          { x: 3, y: 10 },
+          { x: 4, y: 12.37 },
+          { x: 6, y: 11 },
+          { x: 7, y: 10.5 },
+          { x: 9, y: 11 },
+          { x: 10, y: 11.3 },
+          { x: 11, y: 11 },
+          { x: 12, y: 10 },
+          { x: 13, y: 9.3 },
+          { x: 15, y: 9.8 },
+        ],
         lineWidth: 3,
         fillColor: {
           linearGradient: [0, 0, 0, '100%'],
@@ -75,7 +89,7 @@ export default function diagramms() {
           radius: 5,
         },
         lineColor: '#1a97fc',
-        threshold: 10,
+        threshold: 8,
         tooltip: {
           headerFormat: '',
           pointFormat: '<b>{point.y}</b><br/>',
