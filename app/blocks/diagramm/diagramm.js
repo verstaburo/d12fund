@@ -19,15 +19,30 @@ export default function diagramms() {
         text: '',
       },
       xAxis: {
+        gridLineWidth: 0,
         visible: false,
       },
       yAxis: {
+        labels: {
+          enabled: false,
+        },
+        gridLineWidth: 0,
         plotLines: [{
           dashStyle: 'Dot',
           color: '#1a97fc',
           value: 10,
           width: 3,
           visible: true,
+          label: {
+            text: '100.00',
+            style: {
+              color: '#6e93bd',
+              'font-size': '10px',
+            },
+            textAlign: 'left',
+            x: 0,
+            y: -10,
+          },
         }],
         tickAmount: 0,
         title: {
@@ -45,9 +60,8 @@ export default function diagramms() {
         },
       },
       series: [{
-        yAxis: 0,
-        type: 'area',
-        data: [9, 8, 8.25, 12, 13, 11.5, 12.5, 12, 10, 8, 8.25, 9, 9.5],
+        type: 'areaspline',
+        data: [9, 8, 12.25, 10.5, 11, 9, 9.5, 9.6],
         lineWidth: 3,
         fillColor: {
           linearGradient: [0, 0, 0, '100%'],
@@ -64,9 +78,20 @@ export default function diagramms() {
         threshold: 10,
         tooltip: {
           headerFormat: '',
-          pointFormat: '<b>$ {point.y}</b><br/>',
+          pointFormat: '<b>{point.y}</b><br/>',
+          valuePrefix: '$',
         },
       }],
+      tooltip: {
+        backgroundColor: '#0a1b2f',
+        borderWidth: 0,
+        borderRadius: '2',
+        shadow: false,
+        style: {
+          color: '#1a97fc',
+          fontSize: '11px',
+        },
+      },
     });
   });
 }
