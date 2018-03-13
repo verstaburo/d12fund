@@ -40,7 +40,7 @@
                     </a>
                 </li>
                 <li class="link-list__item">
-                    <a class="link link_icon link_white" href="#" title="Purchase history">
+                    <a class="link link_icon link_white js-open-popup" href="#" data-popup="popup-history-purchases" title="Purchase history">
                         <span class="link__iwrapper">
                             <svg class="link__icon link__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
                         </span>
@@ -53,9 +53,14 @@
             <a class="notification is-active" href="#">
                 <svg class="notification__icon"><use xlink:href="assets/images/icon.svg#icon_bell"></use></svg>
             </a>
-            <div class="language">
-                <select class="language__select js-language"></select>
-            </div>
+            <a class="language js-open-popup" href="#" data-popup="popup-language" title="USA">
+                <span class="language__country">
+                    <img class="language__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                </span>
+                <span class="language__toggle">
+                    <svg class="language__icon"><use xlink:href="assets/images/icon.svg#icon_angle"></use></svg>
+                </span>
+            </a>
             <div class="account">
                 <div class="account__info js-dropdown-toggle">
                     <div class="avatar account__avatar">
@@ -80,6 +85,110 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popup-overlay"></div>
+        <div class="popup popup-language" id="popup-language">
+            <div class="container">
+                <div class="popup__title">Choose Your Country</div>
+                <div class="popup__content">
+                    <ul class="list list_icon popup-language__list">
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-withdrow-funds" id="popup-withdraw-funds">
+            <div class="container">
+                <div class="popup__title">Withdraw Funds</div>
+                <div class="popup__content"></div>
+            </div>
+        </div>
+        <div class="popup popup-history-purchases" id="popup-history-purchases">
+            <div class="container">
+                <div class="popup__title">Purchase History</div>
+                <div class="popup__content"></div>
             </div>
         </div>
     </div>
