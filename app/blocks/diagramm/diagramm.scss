@@ -4,6 +4,25 @@
   max-width: 100%;
 
   &-balance {
-    max-height: 200px;
+    height: 178px;
+    font-family: $font-main;
+
+    .highchart-plot-line-0 {
+      stroke-width: 3;
+      stroke-linecap: round;
+      fill: $color-main;
+
+      path {
+        stroke-dasharray: 3, 20;
+      }
+    }
+  }
+
+  &-price {
+
+    .highcharts-range-selector-group {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }

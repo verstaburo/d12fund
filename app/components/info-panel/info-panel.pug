@@ -1,0 +1,10 @@
+mixin info-panel()
+  +b.info-panel&attributes(attributes)
+    +e.prices
+      +price('This week').price 112.509501
+      +price('Last week')._dark.price 82.429300
+    +e.controls
+      +button._smaller._darken.js-filter(data-target-button='Day') Day
+      +button._smaller._darken.js-filter(data-target-button='Week') Week
+      +button._smaller._darken.js-filter(data-target-button='Month') Month
+      +button._smaller._darken.js-filter(data-target-button='Year') Year

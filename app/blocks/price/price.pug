@@ -1,0 +1,6 @@
+mixin price(label)
+  +b.price&attributes(attributes)
+    +e.label!=label
+    +e.text
+      block
+      +e.SPAN.unit USD

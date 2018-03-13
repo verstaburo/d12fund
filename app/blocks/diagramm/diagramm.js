@@ -1,36 +1,59 @@
 /* eslint-disable no-unused-vars */
-import Highcharts from 'highcharts';
+import Highcharts from 'highcharts/highstock';
 
 const $ = window.$;
 
 export default function diagramms() {
   $(() => {
-    const balanceChart = Highcharts.chart('di-balance', {
+    const balanceChart = Highcharts.stockChart('di-balance', {
+      navigator: {
+        enabled: false,
+      },
+      scrollbar: {
+        enabled: false,
+      },
+      rangeSelector: {
+        enabled: false,
+      },
       chart: {
+        type: 'areaspline',
         width: null,
         showAxes: false,
         backgroundColor: '#0a1b2f',
         className: 'diagramm-balance',
-        height: 200,
+        height: 178,
+        style: {
+          'font-family': "'HelveticaNeue', 'Arial', sans-serif",
+        },
+        spacing: [0, 0, 0, 0],
       },
       title: {
         text: '',
       },
+      credits: {
+        enabled: false,
+      },
       xAxis: {
         gridLineWidth: 0,
         visible: false,
+        crosshair: {
+          width: 0,
+        },
       },
       yAxis: {
+        className: 'diagramm-balance__yaxis',
         labels: {
           enabled: false,
         },
         gridLineWidth: 0,
         plotLines: [{
+          className: 'diagramm-balance__yaxis-0',
           dashStyle: 'Dot',
           color: '#1a97fc',
           value: 10,
           width: 3,
           visible: true,
+          id: 'dpl-yaxis-0',
           label: {
             text: '100.00',
             style: {
@@ -42,8 +65,12 @@ export default function diagramms() {
             y: -10,
           },
         }],
+        minPadding: 0,
         title: {
           text: '',
+        },
+        crosshair: {
+          width: 0,
         },
       },
       legend: {
@@ -60,7 +87,6 @@ export default function diagramms() {
         },
       },
       series: [{
-        type: 'areaspline',
         className: 'diagramm-balance__line',
         data: [
           { x: 0, y: 9.3 },
@@ -106,6 +132,139 @@ export default function diagramms() {
           fontSize: '11px',
         },
       },
+    });
+  });
+
+  $(() => {
+    const options = {
+      plotOptions: {
+        areaspline: {
+          className: 'diagramm-price__plot',
+          color: '#1a97fc',
+          dataLabels: {
+            className: 'diagram-price__label',
+          },
+          fillColor: '#0a2648',
+          marker: {
+            fillColor: '#fff',
+            radius: 8,
+          },
+          lineWidth: 4,
+          states: {
+            hover: {
+              lineWidthPlus: 0,
+            },
+          },
+          tooltip: {
+            headerFormat: '<span class="diagramm-price__tooltip-top">{point.key}</span><br/>',
+            pointFormat: '<span class="diagramm-price__tooltip-bottom">{point.y}</span>',
+          },
+        },
+      },
+      chart: {
+        className: 'diagramm-price',
+        type: 'areaspline',
+        spacing: [0, 0, 0, 0],
+        style: {
+          'font-family': "'HelveticaNeue', 'Arial', sans-serif",
+        },
+        height: 400,
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+      },
+      rangeSelector: {
+        inputEnabled: false,
+        buttons: [
+          {
+            type: 'day',
+            count: '1',
+            text: 'Day',
+          },
+          {
+            type: 'week',
+            count: '1',
+            text: 'Week',
+          },
+          {
+            type: 'month',
+            count: '1',
+            text: 'Month',
+          },
+          {
+            type: 'year',
+            count: '1',
+            text: 'Year',
+          },
+        ],
+        selected: 3,
+      },
+      navigator: {
+        enabled: false,
+      },
+      scrollbar: {
+        enabled: false,
+      },
+      series: [{
+        pointStart: '2016',
+        turboThreshold: 0,
+      }],
+      yAxis: {
+        type: 'linear',
+        tickPosition: 'inside',
+        gridLineWidth: 0,
+        lineWidth: 0,
+        labels: {
+          format: '{value}$',
+        },
+      },
+      xAxis: {
+        tickLength: 0,
+        tickPosition: 'inside',
+        units: [[
+          'day',
+          [1],
+        ], [
+          'week',
+          [1],
+        ], [
+          'month',
+          [1],
+        ], [
+          'year',
+          [1],
+        ]],
+        gridLineDashStyle: 'Dot',
+        gridLineWidth: 3,
+        gridZIndex: 6,
+        lineWidth: 0,
+      },
+      credits: {
+        enabled: false,
+      },
+    };
+    $.getJSON('assets/data/market-price.json', (data) => {
+      options.series[0].data = data.values;
+      const marketChart = Highcharts.stockChart('di-market', options);
+      $('.highcharts-button').each((i, el) => {
+        const type = $(el).find('text').text();
+        $(el).attr('data-type', type);
+        if ($(el).hasClass('highcharts-button-disabled')) {
+          $(`[data-target-button="${type}"]`).addClass('disabled');
+        } else {
+          $(`[data-target-button="${type}"]`).removeClass('disabled');
+        }
+        if ($(el).hasClass('highcharts-button-pressed')) {
+          $(`[data-target-button="${type}"]`).addClass('active');
+        } else {
+          $(`[data-target-button="${type}"]`).removeClass('active');
+        }
+      });
+      $(document).on('click', '.js-filter', (evt) => {
+        const self = $(evt.target).hasClass('.js-filter') ? $(evt.target) : $(evt.target).closest('.js-filter');
+        const targetButton = $(self).attr('data-target-button');
+        $(`[data-type="${targetButton}"]`).click();
+        $('.js-filter').not(self).removeClass('active');
+        $(self).addClass('active');
+      });
     });
   });
 }

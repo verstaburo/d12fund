@@ -28,6 +28,7 @@ export default function slider() {
         spaceBetween: 0,
       },
       1279: {
+        spaceBetween: 35,
         slidesPerView: 2,
       },
     },

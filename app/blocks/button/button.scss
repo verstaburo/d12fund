@@ -17,9 +17,10 @@
   text-align: center;
 
   &:disabled,
-  &.is-disabled {
+  &.disabled {
     opacity: .5;
     cursor: not-allowed;
+    pointer-events: none;
   }
 
   &:hover,
@@ -34,7 +35,7 @@
   }
 
   &_smaller {
-    padding: 5px 20px;
+    padding: 5px 15px;
     font-weight: 400;
   }
 
@@ -62,6 +63,7 @@
     &.active {
       background-color: $color-main;
       color: $color-basic;
+      background-image: linear-gradient(to top, rgba($color-blend, .64), rgba($color-blend, 0));
     }
   }
 }
