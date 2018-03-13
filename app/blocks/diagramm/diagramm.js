@@ -204,45 +204,40 @@ export default function diagramms() {
         enabled: false,
       },
       series: [{
-        pointStart: '2016',
         turboThreshold: 0,
+        yAxis: 0,
       }],
       yAxis: {
-        type: 'linear',
-        tickPosition: 'inside',
         gridLineWidth: 0,
         lineWidth: 0,
         labels: {
+          useHTML: '<span class="diagramm-price__ylabels">{value}</span>',
+          x: 10,
+          y: 0,
+          align: 'left',
           format: '{value}$',
         },
+        opposite: false,
+        showFirstLabel: false,
       },
       xAxis: {
         tickLength: 0,
-        tickPosition: 'inside',
-        units: [[
-          'day',
-          [1],
-        ], [
-          'week',
-          [1],
-        ], [
-          'month',
-          [1],
-        ], [
-          'year',
-          [1],
-        ]],
         gridLineDashStyle: 'Dot',
         gridLineWidth: 3,
         gridZIndex: 6,
         lineWidth: 0,
+        labels: {
+          useHTML: '<span class="diagramm-price__xlabels">{value}</span>',
+          align: 'left',
+          y: -20,
+        },
       },
       credits: {
         enabled: false,
       },
     };
     $.getJSON('assets/data/market-price.json', (data) => {
-      options.series[0].data = data.values;
+      options.series[0].data = data;
       const marketChart = Highcharts.stockChart('di-market', options);
       $('.highcharts-button').each((i, el) => {
         const type = $(el).find('text').text();

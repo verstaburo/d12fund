@@ -1,7 +1,58 @@
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 
 .popups {
-  display: none;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color-background, .4);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity .5s ease;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: $color-background-second;
+  transition: opacity .5s ease;
+  z-index: 101;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__title {
+    @include heading-1;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+
+    @include screen('tablet-wide') {
+      margin-top: 52px;
+      margin-bottom: 102px;
+    }
+  }
 }
 
 .fancybox-close-small:focus::after { outline: none; }

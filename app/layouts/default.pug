@@ -6,6 +6,10 @@ html(lang='en')
   include head
   body
     +header
+    +popups
+      +popup-language('Choose Your Country')#popup-language
+      +popup-withdrow-funds('Withdraw Funds')#popup-withdraw-funds
+      +popup-history-purchases('Purchase History')#popup-history-purchases
     block content
     script(src='assets/scripts/app.min.js')
     script(src='assets/scripts/main.js')

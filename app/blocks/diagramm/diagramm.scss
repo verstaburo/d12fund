@@ -19,10 +19,24 @@
   }
 
   &-price {
+    margin-top: -25px;
 
     .highcharts-range-selector-group {
       opacity: 0;
       pointer-events: none;
+    }
+
+    .highcharts-axis-labels {
+
+      .highcharts-yaxis-labels {
+        width: 0;
+      }
+    }
+
+    .highcharts-xaxis-grid .highcharts-grid-line {
+      stroke: $color-grid-lines;
+      stroke-width: 3;
+      stroke-dasharray: 3, 18;
     }
   }
 }

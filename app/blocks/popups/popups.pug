@@ -1,7 +1,11 @@
 mixin popups()
   +b.popups&attributes(attributes)
+    .popup-overlay
     block
 
-mixin popup()
+mixin popup(title)
   +b.popup&attributes(attributes)
-    block
+    .container
+      .popup__title!= title
+      .popup__content
+        block

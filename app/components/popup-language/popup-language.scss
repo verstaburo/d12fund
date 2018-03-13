@@ -1,0 +1,66 @@
+.popup-language {
+  display: block;
+
+  .popup__content {
+    box-sizing: border-box;
+    padding: 0 10px 50px;
+    width: 100%;
+
+    @include screen('desktop') {
+      padding: 0 182px 90px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    .list__item {
+      width: 100px;
+      margin-right: 0;
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @include screen('phone') {
+        width: 50%;
+        padding-right: 30px;
+        margin-bottom: 40px;
+      }
+
+      @include screen('tablet-small') {
+        width: 33.33%;
+      }
+
+      @include screen('tablet-wide') {
+        width: 25%;
+      }
+
+      @include screen('desktop-wide') {
+        width: 100px;
+        padding-right: 0;
+
+        &:not(:nth-child(4n)) {
+          margin-right: 132px;
+        }
+      }
+    }
+
+    .list__item {
+      cursor: pointer;
+      transition: opacity $ease-main;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .list__text {
+      @include text;
+      font-weight: 700;
+    }
+  }
+}

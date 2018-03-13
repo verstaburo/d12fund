@@ -1,4 +1,57 @@
 .language {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover {
+
+    .language {
+
+      &__icon {
+        stroke: $color-input;
+      }
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    transform: rotate(0);
+    transition: all $ease-main;
+
+    .language.active & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon {
+    width: 11px;
+    height: 7px;
+    fill: none;
+    stroke: $color-basic;
+    transition: all $ease-main;
+  }
+
+  &__country {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 14px;
+  }
+
+  &__image {
+    width: 29px;
+    height: 23px;
+    background: $color-main;
+  }
 
   .choices {
 

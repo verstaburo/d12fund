@@ -1,8 +1,8 @@
-mixin info-block(title, linktitle, link)
+mixin info-block(title, linktitle, link, popup)
   - var addLink = "#" || link
   +b.info-block&attributes(attributes)
     +e.title!= title
     +e.content
       block
     +e.buttons
-      +button('a')(href=addLink).__button!= linktitle
+      +button('a')(href=addLink data-popup=popup).__button.js-open-popup!= linktitle

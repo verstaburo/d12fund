@@ -1,3 +1,6 @@
 mixin language()
-  +b.language&attributes(attributes)
-    +e.SELECT.select.js-language
+  +b.A.language.js-open-popup(href="#" data-popup="popup-language" title="USA")&attributes(attributes)
+    +e.country
+      +e.IMG(src="assets/images/usa.svg").image
+    +e.toggle
+      +icon('angle').icon
