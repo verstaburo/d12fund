@@ -1,3 +1,74 @@
 mixin popup-history-purchases(title)
-  +popup(title).popup-history-purchases&attributes(attributes)
-    block
+  +popup(title).popup-history-purchases__&attributes(attributes)
+    +e.wrapper.js-scrollbar
+      +table.__purchase
+        +e.THEAD.header
+          +e.TR.row_head
+            +e.TH.cell_head Date
+            +e.TH.cell_head Name
+            +e.TH.cell_head Type
+            +e.TH.cell_head Gross
+            +e.TH.cell_head Fee
+            +e.TH.cell_head Net
+            +e.TH.cell_head Balance
+        +e.TBODY.body
+          +e.TR.row
+            +e.TD.cell_date 20 Oct 2017
+            +e.TD.cell_name
+              +mark.__mark T
+              | TOKEN
+            +e.TD.cell_type Sold
+            +e.TD.cell_gross $ 404
+            +e.TD.cell_fee  $ 67
+            +e.TD.cell_net
+              +e.SPAN.down -
+              | $ 337
+            +e.TD.cell_balance  $ 337
+          +e.TR.row
+            +e.TD.cell_date 20 Oct 2017
+            +e.TD.cell_name
+              +mark._orange.__mark B
+              | BITCOIN
+            +e.TD.cell_type Bought
+            +e.TD.cell_gross $ 404
+            +e.TD.cell_fee  $ 67
+            +e.TD.cell_net
+              +e.SPAN.up +
+              | $ 337
+            +e.TD.cell_balance  $ 337
+          +e.TR.row
+            +e.TD.cell_date 20 Oct 2017
+            +e.TD.cell_name
+              +mark.__mark T
+              | TOKEN
+            +e.TD.cell_type Sold
+            +e.TD.cell_gross $ 404
+            +e.TD.cell_fee  $ 67
+            +e.TD.cell_net
+              +e.SPAN.down -
+              | $ 337
+            +e.TD.cell_balance  $ 337
+          +e.TR.row
+            +e.TD.cell_date 20 Oct 2017
+            +e.TD.cell_name
+              +mark.__mark T
+              | TOKEN
+            +e.TD.cell_type Sold
+            +e.TD.cell_gross $ 404
+            +e.TD.cell_fee  $ 67
+            +e.TD.cell_net
+              +e.SPAN.down -
+              | $ 337
+            +e.TD.cell_balance  $ 337
+          +e.TR.row
+            +e.TD.cell_date 20 Oct 2017
+            +e.TD.cell_name
+              +mark.__mark T
+              | TOKEN
+            +e.TD.cell_type Sold
+            +e.TD.cell_gross $ 404
+            +e.TD.cell_fee  $ 67
+            +e.TD.cell_net
+              +e.SPAN.down -
+              | $ 337
+            +e.TD.cell_balance  $ 337

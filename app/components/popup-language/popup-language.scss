@@ -11,6 +11,14 @@
     }
   }
 
+  .popup__title {
+    margin-bottom: 60px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 102px;
+    }
+  }
+
   &__list {
     display: flex;
     flex-direction: row;

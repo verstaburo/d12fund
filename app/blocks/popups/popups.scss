@@ -45,12 +45,18 @@
     font-weight: 300;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin: 30px 0;
 
     @include screen('tablet-wide') {
-      margin-top: 52px;
-      margin-bottom: 102px;
+      margin: 52px 0;
+    }
+  }
+
+  &__content {
+    padding-bottom: 50px;
+
+    @include screen('desktop') {
+      padding-bottom: 90px;
     }
   }
 }

@@ -1,3 +1,23 @@
 .popup-history-purchases {
   display: block;
+
+  .container {
+
+    @include screen('desktop') {
+      padding: 0;
+    }
+  }
+
+  .popup__title {
+    margin-bottom: 20px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__purchase {
+    width: 1210px;
+    margin-bottom: 20px;
+  }
 }
