@@ -15,6 +15,14 @@
   }
 }
 
+@mixin link-bordered {
+  border-bottom: 1px solid $color-main;
+}
+
+@mixin link-uppercase {
+  text-transform: uppercase;
+}
+
 @mixin link-disabled {
   color: $color-border;
 }

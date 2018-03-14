@@ -1,0 +1,5 @@
+mixin upload(form)
+  +b.LABEL.upload&attributes(attributes)
+    +input(type="file" name="file[]" form=form).upload__input
+    +e.image
+      +icon('pen').icon

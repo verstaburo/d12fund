@@ -1,0 +1,38 @@
+.upload {
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+
+    .upload__image {
+      background-color: $color-button-hover;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: $color-main;
+    background-image: linear-gradient(to top, rgba($color-blend, .64), rgba($color-blend, 0));
+    background-blend-mode: soft-light;
+    transition: background $ease-main;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: $color-basic;
+  }
+}

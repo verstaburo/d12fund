@@ -5,7 +5,7 @@ mixin popup-withdrow-funds(title)
         +e.label from my wallet
         +e.wrapper
           +e.info.input Available 0000 EUR
-          +input(type="hidden" value="Available 0000 EUR").input_hidden
+          +input(type="hidden" value="Available 0000 EUR")
           +e.A.arrow-link(href="#")
             +icon('big-angle').icon_angle
       +e.row
@@ -15,7 +15,7 @@ mixin popup-withdrow-funds(title)
             +e.dots
             +e.dots
             | 0123
-          +input(type="hidden" value="VISA .... 0123").input_hidden
+          +input(type="hidden" value="VISA .... 0123")
           +e.A.arrow-link(href="#")
             +icon('big-angle').icon_angle
       +e.LABEL.row

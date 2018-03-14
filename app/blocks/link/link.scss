@@ -71,6 +71,26 @@
     }
   }
 
+  &_bordered {
+
+    .link {
+
+      &__text {
+        @include link-bordered;
+      }
+    }
+  }
+
+  &_upper {
+
+    .link {
+
+      &__text {
+        @include link-uppercase;
+      }
+    }
+  }
+
   &.disabled {
     pointer-events: none;
 

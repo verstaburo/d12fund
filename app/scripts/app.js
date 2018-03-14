@@ -16,6 +16,9 @@ import '../blocks/dropdown/dropdown';
 import languageSelect from '../blocks/language/language';
 import diagramms from '../blocks/diagramm/diagramm';
 import updatePrice from '../blocks/rate/rate';
+import switchTextToEdit from '../components/popup-profile/popup-profile';
+import editAvatar from '../blocks/upload/upload';
+import showPass from '../blocks/form/form';
 
 const $ = window.$;
 
@@ -39,4 +42,7 @@ $(() => {
   languageSelect();
   diagramms();
   updatePrice();
+  switchTextToEdit();
+  editAvatar();
+  showPass();
 });

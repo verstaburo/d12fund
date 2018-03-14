@@ -1,3 +1,127 @@
 .popup-profile {
   display: block;
+
+  .popup__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    @include screen('tablet-small') {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    @include screen('tablet-wide') {
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 50px;
+    }
+
+    @include screen('desktop') {
+      padding-left: 148px;
+      padding-right: 148px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .popup__title {
+    box-sizing: border-box;
+    padding-right: 4px;
+
+    @include screen('tablet-wide') {
+      margin-bottom: 54px;
+    }
+  }
+
+  &__column {
+    width: 100%;
+
+    &_left {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 30px;
+
+      @include screen('tablet-small') {
+        padding-top: 20px;
+        justify-content: flex-start;
+        width: 150px;
+        margin-right: 50px;
+      }
+
+      @include screen('tablet-wide') {
+        width: 260px;
+        padding-left: 40px;
+        margin-right: 90px;
+      }
+    }
+
+    &_right {
+
+      @include screen('tablet') {
+        width: auto;
+        flex: 1;
+      }
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    min-width: 150px;
+    width: 150px;
+    height: 150px;
+
+    @include screen('tablet-wide') {
+      min-width: 220px;
+      width: 220px;
+      height: 220px;
+    }
+  }
+
+  &__upload {
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+  }
+
+  &__form {
+
+    .form__row {
+      margin-bottom: 22px;
+
+      &_notes {
+        margin-bottom: 15px;
+
+        @include screen('tablet') {
+          margin-top: -4px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .input {
+      padding-right: 24px;
+    }
+
+    .link {
+      @include text-small;
+      font-weight: 700;
+      margin-right: 30px;
+      margin-bottom: 15px;
+    }
+
+    .form__button {
+
+      @include screen('tablet-small', max) {
+        width: 100%;
+      }
+    }
+  }
 }

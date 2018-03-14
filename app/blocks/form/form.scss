@@ -7,10 +7,6 @@
     text-transform: uppercase;
   }
 
-  .input {
-    padding-right: 36px;
-  }
-
   &__info {
     display: flex;
     flex-direction: row;
@@ -97,8 +93,27 @@
   }
 
   &__wrapper {
+    display: block;
     position: relative;
     width: 100%;
+
+    .input {
+      padding-right: 36px;
+    }
+
+    &_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      .form__switcher {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: translateY(0);
+      }
+    }
   }
 
   &__note {
@@ -150,6 +165,17 @@
       width: 24px;
       height: 24px;
     }
+
+    &_pen {
+      width: 14px;
+      height: 14px;
+      stroke: $color-placeholder;
+
+      @include screen('tablet') {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__arrow-link {
@@ -162,12 +188,52 @@
     align-items: center;
     width: 14px;
     height: 24px;
-    transform: translateY(-50%)rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 
     &:hover {
 
       .form__icon {
         stroke: $color-blue;
+      }
+    }
+  }
+
+  &__textfield {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    color: $color-main;
+  }
+
+  &__switcher {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    transform: translateY(-50%);
+
+    @include screen('tablet') {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+
+      .form__icon {
+        stroke: $color-main;
+
+        &_eye {
+          stroke: $color-placeholder;
+        }
       }
     }
   }

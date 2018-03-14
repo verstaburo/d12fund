@@ -9,3 +9,9 @@ mixin popup(title)
       .popup__title!= title
       .popup__content
         block
+
+mixin popup-notitle()
+  +b.popup&attributes(attributes)
+    .container
+      .popup__content
+        block

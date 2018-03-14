@@ -30,7 +30,7 @@ export default function popups() {
       $('.js-open-popup.active').removeClass('active');
     }
   });
-  $(document).on('click', '.popup-overlay', () => {
+  $(document).on('click', '.popup-overlay, .popup .form__button[type="submit"]', () => {
     $('.popup.active').removeClass('active');
     $('.popup-overlay').removeClass('active');
     $('.js-open-popup.active').removeClass('active');

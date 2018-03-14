@@ -15,4 +15,14 @@
     @include fill-img;
     border-radius: 50%;
   }
+
+  &_big {
+    width: 150px;
+    height: 150px;
+
+    @include screen('tablet-wide') {
+      width: 220px;
+      height: 220px;
+    }
+  }
 }
