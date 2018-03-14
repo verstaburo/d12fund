@@ -1,0 +1,152 @@
+.form {
+  display: block;
+
+  &__label {
+    @include text-small;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    color: $color-main;
+  }
+
+  &__dots {
+    position: relative;
+    display: inline-block;
+    min-width: 12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-main;
+    margin-right: 36px;
+
+    &:first-of-type {
+      margin-left: 12px;
+    }
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 24px;
+      min-width: 12px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-main;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include screen('tablet') {
+        margin-bottom: 50px;
+      }
+    }
+
+    &_notes {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &_centered {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form__label {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__note {
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 86px;
+    }
+
+    .form__icon {
+      margin-right: 12px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @include screen('phone') {
+      min-width: 294px;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: $color-main;
+    transition: all $ease-main;
+
+    &_angle {
+      width: 14px;
+      height: 24px;
+      stroke: $color-main;
+    }
+
+    &_calendar {
+      width: 24px;
+      height: 24px;
+    }
+
+    &_alert {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__arrow-link {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    height: 24px;
+    transform: translateY(-50%)rotate(180deg);
+
+    &:hover {
+
+      .form__icon {
+        stroke: $color-blue;
+      }
+    }
+  }
+
+  &__note {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

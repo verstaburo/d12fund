@@ -48,10 +48,12 @@ export function datepicker() {
 export function inputmask() {
   Inputmask({
     mask: '+7 (999) 999-99-99',
+    showMaskOnHover: false,
   }).mask('input[data-type="tel"]');
 
   Inputmask({
     alias: 'email',
+    showMaskOnHover: false,
   }).mask('input[data-type="email"]');
 }
 
@@ -75,7 +77,7 @@ export function numberinput() {
   });
 
   $(document).on('keyup change', '.js-numberbox-input', function () {
-    this.value = this.value.replace(/[^\d]/, '');
+    this.value = this.value.replace(/[^\d.\d]/, '');
     if ($(this).val() < 0) $(this).val(0);
   });
 }

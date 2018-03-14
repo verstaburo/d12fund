@@ -53,6 +53,7 @@
   }
 
   &__content {
+    box-sizing: border-box;
     padding-bottom: 50px;
 
     @include screen('desktop') {

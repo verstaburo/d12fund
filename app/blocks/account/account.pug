@@ -8,8 +8,8 @@ mixin account()
     +dropdown.__dropdown
       +b.UL.link-list_vertical
         +e.item
-          +link(href="#")._white Edit Profile
+          +link(href="#" data-popup="popup-profile")._white.js-open-popup Edit Profile
         +e.item
-          +link(href="#")._white Verification
+          +link(href="#" data-popup="popup-verification")._white.js-open-popup Verification
         +e.item
           +link(href="#")._white Log Out

@@ -1,3 +1,33 @@
 mixin popup-withdrow-funds(title)
-  +popup(title).popup-withdrow-funds&attributes(attributes)
-    block
+  +popup(title).popup-withdraw-funds__&attributes(attributes)
+    +form.__form#form-withdraw
+      +e.row
+        +e.label from my wallet
+        +e.wrapper
+          +e.info.input Available 0000 EUR
+          +input(type="hidden" value="Available 0000 EUR").input_hidden
+          +e.A.arrow-link(href="#")
+            +icon('big-angle').icon_angle
+      +e.row
+        +e.label to visa card
+        +e.wrapper
+          +e.info.input VISA
+            +e.dots
+            +e.dots
+            | 0123
+          +input(type="hidden" value="VISA .... 0123").input_hidden
+          +e.A.arrow-link(href="#")
+            +icon('big-angle').icon_angle
+      +e.LABEL.row
+        +e.label amount
+        +e.wrapper
+          +input(type="text" placeholder="0000").js-numberbox-input
+      +e.row_notes
+        +e.note
+          +icon('calendar').icon_calendar
+          +e.SPAN.label Processing time  2 - 3 business days
+        +e.note
+          +icon('alert').icon_alert
+          +e.SPAN.label a d12 fund Transaction fee may aplly
+      +e.row_centered
+        +button('button')(type="submit").__button Withdraw Fund

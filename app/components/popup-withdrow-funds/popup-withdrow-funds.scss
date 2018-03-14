@@ -1,3 +1,11 @@
-.popup-withdrow-funds {
+.popup-withdraw-funds {
   display: block;
+
+  .popup__content {
+
+    @include screen('desktop') {
+      padding-left: 164px;
+      padding-right: 164px;
+    }
+  }
 }
