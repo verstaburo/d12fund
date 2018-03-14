@@ -74,12 +74,12 @@
                 <div class="js-dropdown dropdown account__dropdown">
                     <ul class="link-list link-list_vertical">
                         <li class="link-list__item">
-                            <a class="link link_white" href="#">
+                            <a class="link link_white js-open-popup" href="#" data-popup="popup-profile">
                                 <span class="link__text">Edit Profile</span>
                             </a>
                         </li>
                         <li class="link-list__item">
-                            <a class="link link_white" href="#">
+                            <a class="link link_white js-open-popup" href="#" data-popup="popup-verification">
                                 <span class="link__text">Verification</span>
                             </a>
                         </li>
@@ -184,10 +184,54 @@
                 </div>
             </div>
         </div>
-        <div class="popup popup-withdrow-funds" id="popup-withdraw-funds">
+        <div class="popup popup-withdraw-funds" id="popup-withdraw-funds">
             <div class="container">
                 <div class="popup__title">Withdraw Funds</div>
-                <div class="popup__content"></div>
+                <div class="popup__content">
+                    <form class="form popup-withdraw-funds__form" id="form-withdraw">
+                        <div class="form__row">
+                            <div class="form__label">from my wallet</div>
+                            <div class="form__wrapper">
+                                <div class="form__info input">Available 0000 EUR</div>
+                                <input class="input" type="hidden" value="Available 0000 EUR" />
+                                <a class="form__arrow-link" href="#">
+                                    <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__label">to visa card</div>
+                            <div class="form__wrapper">
+                                <div class="form__info input">VISA
+                                    <div class="form__dots"></div>
+                                    <div class="form__dots"></div>0123</div>
+                                <input class="input" type="hidden" value="VISA .... 0123" />
+                                <a class="form__arrow-link" href="#">
+                                    <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <label class="form__row">
+                            <span class="form__label">amount</span>
+                            <span class="form__wrapper">
+                                <input class="input js-numberbox-input" type="text" placeholder="0000" />
+                            </span>
+                        </label>
+                        <div class="form__row form__row_notes">
+                            <div class="form__note">
+                                <svg class="form__icon form__icon_calendar"><use xlink:href="assets/images/icon.svg#icon_calendar"></use></svg>
+                                <span class="form__label">Processing time 2 - 3 business days</span>
+                            </div>
+                            <div class="form__note">
+                                <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
+                                <span class="form__label">a d12 fund Transaction fee may aplly</span>
+                            </div>
+                        </div>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Withdraw Fund</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="popup popup-history-purchases" id="popup-history-purchases">
@@ -279,9 +323,171 @@
                 </div>
             </div>
         </div>
+        <div class="popup popup-change-password" id="popup-change-password">
+            <div class="container">
+                <div class="popup__title">Change Password</div>
+                <div class="popup__content">
+                    <form class="form popup-change-password__form" id="form-pass-change">
+                        <label class="form__row">
+                            <span class="form__label">old password</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="password" placeholder="Type your old password" />
+                                <span class="form__switcher js-show-pass">
+                                    <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="form__row">
+                            <span class="form__label">new password</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="password" placeholder="Type your new password" />
+                                <span class="form__switcher js-show-pass">
+                                    <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-edit-wallet" id="popup-edit-wallet">
+            <div class="container">
+                <div class="popup__title">Edit Wallet Address</div>
+                <div class="popup__content">
+                    <form class="form popup__form" id="form-edit-wallet">
+                        <label class="form__row">
+                            <span class="form__label">wallet address</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="text" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71" />
+                                <span class="form__switcher">
+                                    <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-profile" id="popup-profile">
+            <div class="container">
+                <div class="popup__title">My Profile</div>
+                <div class="popup__content">
+                    <div class="popup-profile__column popup-profile__column_left">
+                        <div class="popup-profile__avatar">
+                            <div class="avatar avatar_big">
+                                <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                            </div>
+                            <label class="upload js-upload popup-profile__upload">
+                                <input class="input upload__input" type="file" name="file[]" form="form-edit-profile" />
+                                <span class="upload__image">
+                                    <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="popup-profile__column popup-profile__column_right">
+                        <form class="form popup-profile__form" id="form-edit-profile">
+                            <div class="form__row">
+                                <div class="form__label">Full name</div>
+                                <div class="form__wrapper form__wrapper_row">
+                                    <input class="input" type="hidden" value="Mark Hoffan" placeholder="Full Name" />
+                                    <span class="form__textfield input" contenteditable="false">Mark Hoffan</span>
+                                    <div class="form__switcher js-edit-on">
+                                        <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="form__row">
+                                <span class="form__label">email adress (&nbsp;this is also your username&nbsp;)</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly="readonly" />
+                                    <span class="form__switcher js-edit-on">
+                                        <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                    </span>
+                                </span>
+                            </label>
+                            <div class="form__row form__row_notes">
+                                <a class="link link_bordered link_upper js-open-popup" href="#" data-popup="popup-change-password">
+                                    <span class="link__text">Change password</span>
+                                </a>
+                                <a class="link link_bordered link_upper js-open-popup" href="#" data-popup="popup-edit-wallet">
+                                    <span class="link__text">Edit wallet address</span>
+                                </a>
+                            </div>
+                            <div class="form__row">
+                                <button class="button form__button" type="submit">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-verification" id="popup-verification">
+            <div class="container">
+                <div class="popup__title">Verification</div>
+                <div class="popup__content">
+                    <form class="form popup__form" id="form-verification">
+                        <div class="form__step form__step_centered active" data-step="step1">
+                            <div class="form__row form__row_centered">
+                                <label class="upload upload_zone js-upload-mix form__upload">
+                                    <input class="input upload__input" type="file" name="file[]" />
+                                    <span class="upload__content">
+                                        <svg class="upload__mark"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                        <span class="upload__text">Drag or browse image of your ID card</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form__row form__row_centered">
+                                <a class="button button_arrow form__button js-next-step" href="#" data-target-step="step2">Next Step
+                                    <span class="button__image">
+                                        <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__step" data-step="step2">
+                            <label class="form__row">
+                                <span class="form__label">full name</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your full name" />
+                                </span>
+                            </label>
+                            <div class="form__row">
+                                <div class="form__label">country</div>
+                                <div class="form__wrapper">
+                                    <select class="select js-select">
+                                        <option placeholder="placeholder">Select your country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Slovenia">Slovenia</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label class="form__row">
+                                <span class="form__label">address</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your address" />
+                                </span>
+                            </label>
+                            <div class="form__row form__row_centered">
+                                <button class="button form__button" type="button">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="index">
-        <div class="page-section page-section_light index__informers">
+        <section class="page-section page-section_light index__informers">
             <div class="container">
                 <div class="grid">
                     <div class="grid__col grid__col_four">
@@ -443,8 +649,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="page-section index__news">
+        </section>
+        <section class="page-section index__news">
             <div class="container">
                 <h3 class="page-section__title">
                     <span class="page-section__text">Recent news</span>
@@ -535,8 +741,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="page-section index__history">
+        </section>
+        <section class="page-section index__history">
             <div class="container">
                 <h3 class="page-section__title">
                     <span class="page-section__text">Token Price History</span>
@@ -564,7 +770,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <div class="diagramm" id="di-market"></div>
     </div>
     <script src="assets/scripts/app.min.js"></script>
