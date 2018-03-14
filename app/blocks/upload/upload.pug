@@ -1,5 +1,12 @@
 mixin upload(form)
-  +b.LABEL.upload&attributes(attributes)
+  +b.LABEL.upload.js-upload&attributes(attributes)
     +input(type="file" name="file[]" form=form).upload__input
     +e.image
       +icon('pen').icon
+
+mixin upload-zone()
+  +b.LABEL.upload_zone.js-upload-mix&attributes(attributes)
+    +input(type="file" name="file[]").upload__input
+    +e.content
+      +icon('upload').mark
+      +e.text Drag or browse image of your ID card

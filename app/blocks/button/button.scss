@@ -28,6 +28,27 @@
     background-color: $color-button-hover;
   }
 
+  &__image {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 18px;
+    transform: translate3d(0, -50%, 0);
+    transition: transform $ease-main;
+
+    .button__icon {
+      width: 22px;
+      height: 18px;
+      fill: none;
+      stroke: $color-basic;
+    }
+  }
+
   &_small {
     padding: 10px 20px;
     @include text;
@@ -64,6 +85,18 @@
       background-color: $color-main;
       color: $color-basic;
       background-image: linear-gradient(to top, rgba($color-blend, .64), rgba($color-blend, 0));
+    }
+  }
+
+  &_arrow {
+    position: relative;
+    padding: 16px 50px;
+
+    &:hover {
+
+      .button__image {
+        transform: translate3d(5px, -50%, 0);
+      }
     }
   }
 }

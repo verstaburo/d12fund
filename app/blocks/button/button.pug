@@ -4,3 +4,13 @@ mixin button(newtag)
     - var tag = newtag;
   +b(tag).button&attributes(attributes)
     block
+
+mixin button-arrow(newtag)
+  - var tag = 'a';
+  if newtag
+    - var tag = newtag;
+  +b(tag).button_arrow&attributes(attributes)
+    block
+    +e.image
+      +icon('arrow-right').icon
+

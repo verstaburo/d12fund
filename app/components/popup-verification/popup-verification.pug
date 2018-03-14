@@ -1,3 +1,29 @@
 mixin popup-verification()
   +popup('Verification').popup-verification&attributes(attributes)
-    block
+    +form.__form#form-verification
+      +e.step_centered.active(data-step="step1")
+        +e.row_centered
+          +upload-zone.__upload
+        +e.row_centered
+          +button-arrow('a')(href="#" data-target-step="step2").__button.js-next-step Next Step
+      +e.step(data-step="step2")
+        +e.LABEL.row
+          +e.label full name
+          +e.wrapper
+            +input(type="text" placeholder="Type your full name")
+        +e.row
+          +e.label country
+          +e.wrapper
+            +select
+              +e.OPTION(placeholder) Select your country
+              +e.OPTION(value="USA") USA
+              +e.OPTION(value="Slovenia") Slovenia
+              +e.OPTION(value="Vietnam") Vietnam
+              +e.OPTION(value="Spain") Spain
+              +e.OPTION(value="France") France
+        +e.LABEL.row
+          +e.label address
+          +e.wrapper
+            +input(type="text" placeholder="Type your address")
+        +e.row_centered
+          +button('button')(type="button").__button Apply

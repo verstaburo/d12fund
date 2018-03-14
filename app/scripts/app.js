@@ -18,7 +18,7 @@ import diagramms from '../blocks/diagramm/diagramm';
 import updatePrice from '../blocks/rate/rate';
 import switchTextToEdit from '../components/popup-profile/popup-profile';
 import editAvatar from '../blocks/upload/upload';
-import showPass from '../blocks/form/form';
+import { showPass, formStepsSwitcher } from '../blocks/form/form';
 
 const $ = window.$;
 
@@ -45,4 +45,5 @@ $(() => {
   switchTextToEdit();
   editAvatar();
   showPass();
+  formStepsSwitcher();
 });

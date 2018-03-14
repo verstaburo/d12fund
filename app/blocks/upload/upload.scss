@@ -35,4 +35,67 @@
     fill: none;
     stroke: $color-basic;
   }
+
+  &__mark {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: $color-light-blue2;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text;
+    font-weight: 700;
+    text-align: center;
+    max-width: 170px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &_light {
+      @include text-small;
+      font-weight: 400;
+    }
+  }
+
+  &_zone {
+    width: 100%;
+    max-width: 370px;
+    padding: 86px 20px 70px;
+    border: 2px dashed $color-border;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: background $ease-main;
+
+    &.dragover {
+      background-color: $color-background-third;
+    }
+
+    .upload {
+
+      &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 2;
+      }
+
+      &__image {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background-image: none;
+        z-index: 1;
+      }
+    }
+  }
 }
