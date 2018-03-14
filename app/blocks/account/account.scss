@@ -61,13 +61,25 @@
   }
 
   &__dropdown.dropdown {
-    width: 100%;
+    width: auto;
+    max-width: 200px;
+    margin-top: 0;
+    padding: 20px 12px;
+    left: auto;
+    right: 0;
+
+    @include screen('desktop-wide') {
+      max-width: none;
+      padding-top: 8px;
+      width: calc(100% - 64px);
+    }
 
     .link-list__item {
       max-width: 100%;
+      font-weight: 500;
     }
 
-    .link {
+    .link__text {
       @include ellipsis(100%);
     }
   }
