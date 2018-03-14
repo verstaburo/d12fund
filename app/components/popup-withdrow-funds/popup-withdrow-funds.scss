@@ -3,9 +3,16 @@
 
   .popup__content {
 
-    @include screen('desktop') {
-      padding-left: 164px;
-      padding-right: 164px;
+    @include screen('tablet') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include screen('tablet-wide') {
+      padding-top: 2px;
+      padding-left: 168px;
+      padding-right: 176px;
+      padding-bottom: 60px;
     }
   }
 }
