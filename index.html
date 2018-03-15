@@ -5,12 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>D12 Fund - Главная</title>
+    <title>D12 Fund - Main page</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
@@ -203,8 +204,8 @@
                             <div class="form__label">to visa card</div>
                             <div class="form__wrapper">
                                 <div class="form__info input">VISA
-                                    <div class="form__dots"></div>
-                                    <div class="form__dots"></div>0123</div>
+                                    <div class="dot dot_double"></div>
+                                    <div class="dot dot_double"></div>0123</div>
                                 <input class="input" type="hidden" value="VISA .... 0123" />
                                 <a class="form__arrow-link" href="#">
                                     <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
@@ -477,7 +478,7 @@
                                     <input class="input" type="text" placeholder="Type your address" />
                                 </span>
                             </label>
-                            <div class="form__row form__row_centered">
+                            <div class="form__row form__row_centered form__row_button">
                                 <button class="button form__button" type="button">Apply</button>
                             </div>
                         </div>
@@ -486,7 +487,7 @@
             </div>
         </div>
     </div>
-    <div class="index">
+    <main class="index" role="main">
         <section class="page-section page-section_light index__informers">
             <div class="container">
                 <div class="grid">
@@ -772,7 +773,7 @@
             </div>
         </section>
         <div class="diagramm" id="di-market"></div>
-    </div>
+    </main>
     <script src="assets/scripts/app.min.js"></script>
     <script src="assets/scripts/main.js"></script>
 </body>
