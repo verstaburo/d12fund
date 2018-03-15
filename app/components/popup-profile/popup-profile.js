@@ -24,7 +24,7 @@ export default function switchTextToEdit() {
     $(self).siblings('input[type="hidden"]').val($(self).text());
   });
 
-  $(document).on('keyup', '[data-type="email"]', (evt) => {
+  $(document).on('keyup', '#form-edit-profile [data-type="email"]', (evt) => {
     const self = $(evt.target);
     if (evt.keyCode === 13) {
       $(self).siblings('.js-edit-on').fadeIn();
@@ -32,7 +32,7 @@ export default function switchTextToEdit() {
     }
   });
 
-  $(document).on('focusout', '.form__textfield, [data-type="email"]', (evt) => {
+  $(document).on('focusout', '.form__textfield, #form-edit-profile [data-type="email"]', (evt) => {
     const self = $(evt.target);
     if ($(self).hasClass('form__textfield')) {
       $(self).siblings('input[type="hidden"]').val($(self).text());
