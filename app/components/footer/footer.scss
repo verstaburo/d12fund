@@ -1,0 +1,26 @@
+.footer {
+  display: block;
+  padding: 38px 0;
+  box-sizing: border-box;
+  @include text;
+  font-weight: 700;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: $color-blue-2;
+    margin-right: 36px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

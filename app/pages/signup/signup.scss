@@ -1,0 +1,44 @@
+.signup {
+  display: block;
+  width: 100%;
+
+  &__form {
+    box-sizing: border-box;
+
+    @include screen('tablet-small') {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include screen('tablet-wide') {
+      padding-left: 174px;
+      padding-right: 174px;
+    }
+
+    .form {
+
+      &__step {
+        box-sizing: border-box;
+        padding-top: 150px;
+
+        @include screen('tablet') {
+          padding-top: 210px;
+        }
+      }
+
+      &__row {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+
+        &_button {
+          margin-top: 42px;
+
+          &_mb {
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

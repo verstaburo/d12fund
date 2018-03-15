@@ -1,11 +1,13 @@
 extends ../../layouts/default
 
 block head
-  - var pageTitle = 'Versta Project Template'
+  - var pageTitle = 'D12 Fund - Sitemap'
 
 block content
   +b.sitemap
     .container
       +e.list
         +link(href="ui-kit.html") UI-kit (ui-kit.html)
-        +link(href="index.html") Главная (index.html)
+        +link(href="index.html") D12 Fund - Home page (index.html)
+        +link(href="signup.html") D12 Fund - Sign Up (signup.html)
+        +link(href="signin.html") D12 Fund - Sign In (signin.html)

@@ -47,4 +47,13 @@
       }
     }
   }
+
+  &_steps {
+    justify-content: space-between;
+
+    .link {
+      @include text-bigger;
+      font-weight: 500;
+    }
+  }
 }

@@ -2,6 +2,31 @@
   display: block;
 
   .upload_zone {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+  }
+
+  .popup__content {
+    @include screen('tablet') {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 60px;
+    }
+
+    @include screen('tablet-wide') {
+      padding-left: 168px;
+      padding-right: 176px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .form__row {
+
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+
+    &_button {
+      margin-top: 28px;
+    }
   }
 }

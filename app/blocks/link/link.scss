@@ -91,6 +91,15 @@
     }
   }
 
+  &_dark {
+
+    .link {
+      &__text {
+        @include link-dark;
+      }
+    }
+  }
+
   &.disabled {
     pointer-events: none;
 

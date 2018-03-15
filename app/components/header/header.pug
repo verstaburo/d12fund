@@ -8,3 +8,13 @@ mixin header()
       +notification.is-active
       +language
       +account
+
+mixin header-short(formmenu)
+  +b.header_short&attributes(attributes)
+    +e.logo
+      +logo
+    +e.NAV.navigation
+      if formmenu
+        +link-list-steps
+    +e.account
+      +language

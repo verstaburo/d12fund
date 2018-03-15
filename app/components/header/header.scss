@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  @include clearfix;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -78,6 +77,38 @@
 
       @include screen('desktop') {
         margin-right: 26px;
+      }
+    }
+  }
+
+  &_short {
+    padding: 14px 20px;
+
+    @include screen('tablet-wide') {
+      padding: 24px 30px;
+    }
+
+    @include screen('desktop') {
+      padding: 30px 34px;
+    }
+
+    .header {
+
+      &__account {
+
+        .language {
+          margin-right: 0;
+        }
+      }
+
+      &__navigation {
+        width: 100%;
+        max-width: 502px;
+
+        @include screen('tablet-wide', max) {
+          width: 100%;
+          max-width: none;
+        }
       }
     }
   }

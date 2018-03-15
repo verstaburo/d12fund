@@ -1,0 +1,7 @@
+mixin info-message(title)
+  +b.info-message&attributes(attributes)
+    +e.image
+      +icon('check').icon
+    +e.title!=title
+    +e.text
+      block

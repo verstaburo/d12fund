@@ -1,0 +1,16 @@
+include _externalIncludes
+include _internalIncludes
+
+doctype html
+html(lang='en')
+  include head
+  body
+    .wrapper
+      block header
+      +header-short(formmenu)
+      +popups
+        +popup-language('Choose Your Country')#popup-language
+      block content
+      +footer
+    script(src='assets/scripts/app.min.js')
+    script(src='assets/scripts/main.js')

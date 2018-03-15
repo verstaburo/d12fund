@@ -15,6 +15,15 @@
   }
 }
 
+@mixin link-dark {
+  color: $color-blue-2;
+
+  &:hover {
+    opacity: 1;
+    color: $color-main;
+  }
+}
+
 @mixin link-bordered {
   border-bottom: 1px solid $color-main;
 }
