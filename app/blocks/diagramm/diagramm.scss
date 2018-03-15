@@ -21,6 +21,14 @@
   &-price {
     margin-top: -25px;
 
+    &__old-series {
+      opacity: .35;
+
+      &.highcharts-tracker.highcharts-series-hover {
+        opacity: 1;
+      }
+    }
+
     .highcharts-range-selector-group {
       opacity: 0;
       pointer-events: none;
@@ -58,7 +66,6 @@
 
     .highcharts-axis-labels .highcharts-xaxis-labels {
       span {
-        font-family: $font-main;
         @include text-small;
         color: rgba($color-main, .5);
       }

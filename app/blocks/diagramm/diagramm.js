@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 import Highcharts from 'highcharts/highstock';
 
 const $ = window.$;
@@ -147,8 +148,6 @@ export default function diagramms() {
           fillColor: '#0a2648',
           marker: {
             fillColor: '#fff',
-            height: 19,
-            width: 19,
             radius: 9.5,
           },
           lineWidth: 4,
@@ -208,15 +207,40 @@ export default function diagramms() {
         yAxis: 0,
         marker: {
           fillColor: '#fff',
-          height: 19,
-          widht: 19,
-          radius: 9.5,
           states: {
             hover: {
               lineWidthPlus: 0,
               radiusPlus: 0,
             },
           },
+          symbol: 'circle',
+        },
+        states: {
+          hover: {
+            halo: false,
+            lineWidthPlus: 0,
+          },
+        },
+        zIndex: 2,
+      },
+      {
+        className: 'diagramm-price__old-series',
+        turboThreshold: 0,
+        dashStyle: 'Dot',
+        fillColor: '#112339',
+        fillOpacity: '0,23',
+        color: '#165db2',
+        zIndex: 1,
+        yAxis: 0,
+        marker: {
+          fillColor: '#fff',
+          states: {
+            hover: {
+              lineWidthPlus: 0,
+              radiusPlus: 0,
+            },
+          },
+          symbol: 'circle',
         },
         states: {
           hover: {
@@ -293,6 +317,45 @@ export default function diagramms() {
         enabled: false,
       },
     };
+    let success1 = false;
+    let success2 = false;
+    $.getJSON('assets/data/market-price.json', (data) => {
+      options.series[0].data = data;
+      success1 = true;
+    });
+    $.getJSON('assets/data/stock-data.json', (data) => {
+      options.series[1].data = data;
+      success2 = true;
+    });
+    const waitJson = setInterval(() => {
+      console.log(`${success1} & ${success2}`);
+      if (success1 && success2) {
+        const marketChart = Highcharts.stockChart('di-market', options);
+        $('.highcharts-button').each((i, el) => {
+          const type = $(el).find('text').text();
+          $(el).attr('data-type', type);
+          if ($(el).hasClass('highcharts-button-disabled')) {
+            $(`[data-target-button="${type}"]`).addClass('disabled');
+          } else {
+            $(`[data-target-button="${type}"]`).removeClass('disabled');
+          }
+          if ($(el).hasClass('highcharts-button-pressed')) {
+            $(`[data-target-button="${type}"]`).addClass('active');
+          } else {
+            $(`[data-target-button="${type}"]`).removeClass('active');
+          }
+        });
+        $(document).on('click', '.js-filter', (evt) => {
+          const self = $(evt.target).hasClass('.js-filter') ? $(evt.target) : $(evt.target).closest('.js-filter');
+          const targetButton = $(self).attr('data-target-button');
+          $(`[data-type="${targetButton}"]`).click();
+          $('.js-filter').not(self).removeClass('active');
+          $(self).addClass('active');
+        });
+        clearInterval(waitJson);
+      }
+    }, 100);
+    /*
     $.getJSON('assets/data/market-price.json', (data) => {
       options.series[0].data = data;
       const marketChart = Highcharts.stockChart('di-market', options);
@@ -318,6 +381,8 @@ export default function diagramms() {
         $(self).addClass('active');
       });
     });
+    */
   });
 }
+/* eslint-enable max-len */
 /* eslint-enable no-unused-vars */
