@@ -163,11 +163,11 @@
                             </span>
                         </label>
                         <div class="form__row form__row_centered form__row_button_mb">
-                            <a class="button button_arrow form__button js-next-step" href="#" data-target-step="step2">Next Step
-                                <span class="button__image">
+                            <button class="button button_arrow form__button js-validate" type="button" data-target-step="step2">Next Step
+                                <div class="button__image">
                                     <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
-                                </span>
-                            </a>
+                                </div>
+                            </button>
                         </div>
                     </div>
                     <div class="form__step" data-step="step2">
@@ -175,7 +175,7 @@
                             <span class="form__label">
                                 <span class="form__star">*</span>Password</span>
                             <span class="form__wrapper">
-                                <input class="input" type="password" placeholder="Type your password" required="required" />
+                                <input class="input" type="password" placeholder="Type your password" data-confirm-password="true" required="required" />
                                 <span class="form__switcher js-show-pass">
                                     <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </span>
@@ -185,32 +185,32 @@
                             <span class="form__label">
                                 <span class="form__star">*</span>Confirm Password</span>
                             <span class="form__wrapper">
-                                <input class="input" type="password" placeholder="Confirm password" required="required" />
+                                <input class="input" type="password" placeholder="Confirm password" data-confirm-password="true" required="required" />
                                 <span class="form__switcher js-show-pass">
                                     <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </span>
                             </span>
                         </label>
                         <div class="form__row form__row_centered form__row_button">
-                            <a class="button button_arrow form__button js-next-step" href="#" data-target-step="step3">Next Step
-                                <span class="button__image">
+                            <button class="button button_arrow form__button js-validate" type="button" data-target-step="step3">Next Step
+                                <div class="button__image">
                                     <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
-                                </span>
-                            </a>
+                                </div>
+                            </button>
                         </div>
                     </div>
                     <div class="form__step" data-step="step3">
                         <div class="form__row">
                             <div class="capcha">
-                                <div class="g-recaptcha" data-sitekey="6Lfs3kwUAAAAAE93iFUe8yYnIlDD9WOi-9mMv-9N" data-theme="dark"></div>
+                                <div class="g-recaptcha" id="capcha-signup" data-sitekey="6Lfs3kwUAAAAAE93iFUe8yYnIlDD9WOi-9mMv-9N" data-theme="dark"></div>
                             </div>
                         </div>
                         <div class="form__row form__row_centered form__row_button_sm">
-                            <a class="button button_arrow form__button js-next-step" href="#" data-target-step="step4">Next Step
-                                <span class="button__image">
+                            <button class="button button_arrow form__button js-validate" type="submit" data-target-step="step4">Next Step
+                                <div class="button__image">
                                     <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
-                                </span>
-                            </a>
+                                </div>
+                            </button>
                         </div>
                     </div>
                     <div class="form__step" data-step="step4">
