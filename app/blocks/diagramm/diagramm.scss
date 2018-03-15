@@ -29,7 +29,11 @@
     .highcharts-axis-labels {
 
       .highcharts-yaxis-labels {
-        width: 0;
+
+        span {
+          @include text-big;
+          color: $color-basic;
+        }
       }
     }
 
@@ -37,6 +41,45 @@
       stroke: $color-grid-lines;
       stroke-width: 3;
       stroke-dasharray: 3, 18;
+    }
+
+    &__ylabel {
+      @include text-big;
+      color: $color-basic;
+    }
+
+    &__xlabel {
+
+    }
+
+    .diagramm-price__main-series .highcharts-tracker highcharts-series-hover {
+      box-shadow: 0px 6px 13px 0px rgba(53, 147, 238, 0.43),0px 1px 3px 0px rgba(37, 47, 64, 0.31);
+    }
+
+    .highcharts-axis-labels .highcharts-xaxis-labels {
+      span {
+        font-family: $font-main;
+        @include text-small;
+        color: rgba($color-main, .5);
+      }
+    }
+
+    .highcharts-tooltip {
+      text-align: center;
+
+      .diagramm-price__tooltip-top {
+        font-family: $font-main;
+        @include text;
+        color: rgba($color-basic, .5);
+        text-align: center;
+      }
+
+      .diagramm-price__tooltip-bottom {
+        font-family: $font-main;
+        @include text-big;
+        text-align: center;
+        color: $color-basic;
+      }
     }
   }
 }
