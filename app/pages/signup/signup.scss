@@ -15,6 +15,16 @@
       padding-right: 174px;
     }
 
+    .info-message {
+      margin: 0 auto;
+      max-width: 400px;
+      width: 100%;
+
+      @include screen('tablet-wide') {
+        padding-top: 58px;
+      }
+    }
+
     .form {
 
       &__step {
@@ -36,6 +46,10 @@
 
           &_mb {
             margin-top: 50px;
+          }
+
+          &_sm {
+            margin-top: 10px;
           }
         }
       }

@@ -4,4 +4,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+
+  @include screen('phone') {
+    padding-top: 16px;
+  }
+
+  .g-recaptcha {
+    transform: scale(.9);
+
+    @include screen('phone') {
+      transform: scale3d(1.1, 1.25, 1);
+    }
+  }
 }
