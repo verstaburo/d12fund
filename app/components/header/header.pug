@@ -14,7 +14,10 @@ mixin header-short(formmenu)
     +e.logo
       +logo
     +e.NAV.navigation
-      if formmenu
+      - if (formmenu) {
         +link-list-steps
+      - } else {
+        +e.title Sign In
+      - }
     +e.account
       +language

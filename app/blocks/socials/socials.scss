@@ -1,0 +1,16 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__item {
+    margin-left: 20px;
+
+    @include screen('phone-wide', max) {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

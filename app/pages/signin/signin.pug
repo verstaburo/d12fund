@@ -4,7 +4,38 @@ block head
   - var pageTitle = 'D12 Fund - Sign In'
 
 block header
-  -var formmenu = false
+  - var formmenu = false
 
 block content
   +b.MAIN.signin
+    .container
+      +form.__form#form-signin
+        +e.LABEL.row
+          +e.label
+            +e.SPAN.star *
+            | Your email
+          +e.wrapper
+            +input(type="text" placeholder="Type your email" data-type="email" require)
+            +e.switcher_info
+              +icon('alert').icon_alert
+        +e.LABEL.row
+            +e.label
+              +e.SPAN.star *
+              | Your password
+            +e.wrapper
+              +input(type="password" placeholder="Type your password" require)
+              +e.switcher_info
+                +icon('alert').icon_alert
+        +e.row_columns
+          +e.col_left
+            +link._white.__label(href="#") forgot password?
+          +e.col_right
+            +e.label or sign in with
+            +socials
+        +e.row_centered._button
+          +button-arrow('button')(type="submit").__button.js-validate Sign In
+        +e.row_centered
+          +e.label_centered
+            | Don’t have an account?
+            +link(href="signup.html") sign up here
+

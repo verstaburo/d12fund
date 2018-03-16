@@ -11,9 +11,10 @@
       stroke-width: 3;
       stroke-linecap: round;
       fill: $color-main;
+      stroke-dasharray: 3, 20 !important;
 
       path {
-        stroke-dasharray: 3, 20;
+        stroke-dasharray: 3, 20 !important;
       }
     }
   }
@@ -54,10 +55,6 @@
     &__ylabel {
       @include text-big;
       color: $color-basic;
-    }
-
-    &__xlabel {
-
     }
 
     .diagramm-price__main-series .highcharts-tracker highcharts-series-hover {

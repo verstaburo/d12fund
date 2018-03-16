@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid $color-input;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all $ease-main;
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+    fill: $color-basic;
+    transition: all $ease-main;
+
+    &_fb {
+      width: 12px;
+      height: 23px;
+    }
+
+    &_tw {
+      width: 21px;
+      height: 17px;
+    }
+
+    &_gg {
+      width: 28px;
+      height: 19px;
+    }
+  }
+
+  &:hover {
+    background-color: $color-main;
+  }
+}

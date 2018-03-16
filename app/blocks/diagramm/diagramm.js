@@ -81,10 +81,22 @@ export default function diagramms() {
         plotOptions: {
           areaspline: {
             classNames: 'diagramm-balance__plot',
-          },
-          series: {
             marker: {
-              enabled: false,
+              fillColor: '#fff',
+              radius: 7,
+              states: {
+                hover: {
+                  lineWidthPlus: 0,
+                  radiusPlus: 0,
+                },
+              },
+            },
+            lineWidth: 2,
+            states: {
+              hover: {
+                lineWidthPlus: 0,
+                radiusPlus: 0,
+              },
             },
           },
         },
@@ -104,7 +116,7 @@ export default function diagramms() {
             { x: 13, y: 9.3 },
             { x: 15, y: 9.8 },
           ],
-          lineWidth: 3,
+          lineWidth: 2,
           fillColor: {
             linearGradient: [0, 0, 0, '100%'],
             stops: [
@@ -114,10 +126,11 @@ export default function diagramms() {
           },
           marker: {
             fillColor: '#fff',
-            radius: 5,
+            width: 14,
+            height: 14,
           },
           lineColor: '#1a97fc',
-          threshold: 8,
+          threshold: 10,
           tooltip: {
             headerFormat: '',
             pointFormat: '<b>{point.y}</b><br/>',
@@ -257,17 +270,17 @@ export default function diagramms() {
             millisecond: '',
             second: '',
             minute: '',
-            hour: '%b %e',
-            day: '%b %e',
+            hour: '%b %e, %Y',
+            day: '%b %e, %Y',
             week: '%a %b %e',
-            month: '%b',
+            month: '%b, %Y',
             year: '%Y"',
           },
           useHTML: true,
           split: false,
           snap: '50/50',
           borderWidth: 0,
-          borderRadius: 5,
+          borderRadius: 10,
           backgroundColor: '#1a97fc',
           padding: 8,
           crosshairs: false,
@@ -291,7 +304,8 @@ export default function diagramms() {
               'font-family': 'HelveticaNeue, Arial, sans-serif',
               'font-size': '16px',
               color: '#fff',
-              'padding-left': '18px',
+              'font-weight': '400',
+              'padding-left': '2px',
             },
           },
           opposite: false,
@@ -304,16 +318,29 @@ export default function diagramms() {
           gridLineWidth: 3,
           gridZIndex: 6,
           lineWidth: 0,
+          minRange: 3600000,
+          range: 2592000000,
+          dateTimeLabelFormats: {
+            millisecond: '%H:%M:%S.%L',
+            second: '%H:%M:%S',
+            minute: '%H:%M',
+            hour: '%H:%M',
+            day: '%b, %e',
+            week: '%b, %Y',
+            month: '%b, %Y',
+            year: '%b, %Y',
+          },
           labels: {
             style: {
               'font-family': 'HelveticaNeue, Arial, sans-serif',
               'font-size': '12px',
+              'font-weight': '400',
               color: 'rgba(26, 151, 252, 0.502)',
-              'padding-left': '18px',
+              'padding-left': '8px',
             },
             useHTML: true,
             align: 'left',
-            y: -20,
+            y: -26,
           },
         },
         credits: {
