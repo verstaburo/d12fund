@@ -91,7 +91,7 @@ export default function diagramms() {
                   radiusPlus: 0,
                 },
               },
-              symbol: 'url(/assets/images/marker-small.svg)',
+              symbol: 'url(assets/images/marker-small.svg)',
             },
             lineWidth: 2,
             states: {
@@ -173,7 +173,7 @@ export default function diagramms() {
             marker: {
               fillColor: '#fff',
               radius: 9.5,
-              symbol: 'url(/assets/images/marker-main.svg)',
+              symbol: 'url(assets/images/marker-main.svg)',
             },
             lineWidth: 4,
             states: {
@@ -238,7 +238,7 @@ export default function diagramms() {
                 radiusPlus: 0,
               },
             },
-            symbol: 'url(/assets/images/marker-main.svg)',
+            symbol: 'url(assets/images/marker-main.svg)',
           },
           states: {
             hover: {
@@ -265,7 +265,7 @@ export default function diagramms() {
                 radiusPlus: 0,
               },
             },
-            symbol: 'url(/assets/images/marker-main.svg)',
+            symbol: 'url(assets/images/marker-main.svg)',
           },
           states: {
             hover: {
