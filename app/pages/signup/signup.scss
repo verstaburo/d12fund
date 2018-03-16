@@ -27,13 +27,6 @@
 
     .form {
 
-      &__step {
-        box-sizing: border-box;
-
-        @include screen('tablet') {
-        }
-      }
-
       &__row {
         &:not(:last-child) {
           margin-bottom: 40px;
@@ -51,6 +44,68 @@
           }
         }
       }
+    }
+  }
+
+  &_step1 {
+
+    .form {
+
+      &__row {
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+
+          @include screen('tablet') {
+            margin-bottom: 88px;
+          }
+        }
+      }
+    }
+  }
+
+  &_step2 {
+
+    .form {
+
+      &__row {
+
+        &:not(:last-child) {
+
+          @include screen('tablet', max) {
+            margin-bottom: 30px;
+          }
+        }
+
+        &_button {
+          margin-top: 0;
+
+          @include screen('tablet') {
+            margin-top: 82px;
+          }
+        }
+      }
+    }
+  }
+
+  &_step3 {
+
+    .form {
+
+    }
+  }
+
+  &_confimation {
+
+    .form {
+
+    }
+  }
+
+  &_confirmed {
+
+    .form {
+
     }
   }
 }

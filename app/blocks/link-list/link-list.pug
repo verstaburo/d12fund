@@ -7,18 +7,22 @@ mixin link-list()
     +e.LI.item
       +link-icon('time')._white.js-open-popup(href="#" data-popup="popup-history-purchases" title="Purchase history") Purchase history
 
-mixin link-list-steps()
+mixin link-list-steps(steps)
+  - var active2 = " "
+  - var active3 = " "
+  - if (steps === 2) { active2 = " active"}
+  - if (steps === 3) { active2 = " active"; active3 = " active"}
   +b.UL.link-list_steps&attributes(attributes)
     +e.LI.item
-      +link._white.active(href="#" data-current-step="step1")
+      +link._white.active(href="signup.html" data-current-step="step1")
         +dot
         | Step 1
     +e.LI.item
-      +link._white(href="#" data-current-step="step2")
+      +link._white(href="signup-step2.html" class=active2 data-current-step="step2")
         +dot
         | Step 2
     +e.LI.item
-      +link._white(href="#" data-current-step="step3")
+      +link._white(href="signup-step3.html" class=active3 data-current-step="step3")
         +dot
         | Step 3
 

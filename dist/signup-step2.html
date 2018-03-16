@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>D12 Fund - Sign Up</title>
+    <title>D12 Fund - Sign Up - Step2</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
@@ -32,7 +32,7 @@
                         </a>
                     </li>
                     <li class="link-list__item">
-                        <a class="link link_white" href="signup-step2.html" data-current-step="step2">
+                        <a class="link link_white active" href="signup-step2.html" data-current-step="step2">
                             <span class="link__text">
                                 <span class="dot"></span>Step 2</span>
                         </a>
@@ -148,20 +148,30 @@
                 </div>
             </div>
         </div>
-        <main class="signup signup_step1" role="main">
+        <main class="signup signup_step2" role="main">
             <div class="container">
-                <form class="form signup__form" id="form-signup">
+                <form class="form signup__form" id="form-signup-step2">
                     <label class="form__row">
                         <span class="form__label">
-                            <span class="form__star">*</span>Email Address</span>
+                            <span class="form__star">*</span>Password</span>
                         <span class="form__wrapper">
-                            <input class="input" type="text" placeholder="Type your email address" data-type="email" require="require" />
-                            <span class="form__switcher form__switcher_info">
-                                <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
+                            <input class="input" type="password" placeholder="Type your password" data-confirm-password="true" required="required" />
+                            <span class="form__switcher js-show-pass">
+                                <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                             </span>
                         </span>
                     </label>
-                    <div class="form__row form__row_centered form__row_button_mb">
+                    <label class="form__row">
+                        <span class="form__label">
+                            <span class="form__star">*</span>Confirm Password</span>
+                        <span class="form__wrapper">
+                            <input class="input" type="password" placeholder="Confirm password" data-confirm-password="true" required="required" />
+                            <span class="form__switcher js-show-pass">
+                                <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                            </span>
+                        </span>
+                    </label>
+                    <div class="form__row form__row_centered form__row_button">
                         <button class="button button_arrow form__button js-validate" type="submit">Next Step
                             <div class="button__image">
                                 <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>

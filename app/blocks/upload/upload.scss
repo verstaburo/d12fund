@@ -24,6 +24,7 @@
     @include gradient-main;
     background-size: auto 200%;
     background-position: 0 100%;
+    background-repeat: no-repeat;
     transition: background $ease-main;
   }
 

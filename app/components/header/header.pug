@@ -9,15 +9,16 @@ mixin header()
       +language
       +account
 
-mixin header-short(formmenu)
-  +b.header_short&attributes(attributes)
+mixin header-short(formmenu, title, steps)
+  - addClass = " "
+  - if (!formmenu) { addClass="_transparent" }
+  +b.header_short(class=addClass)&attributes(attributes)
     +e.logo
       +logo
     +e.NAV.navigation
-      - if (formmenu) {
-        +link-list-steps
-      - } else {
+      if formmenu
+        +link-list-steps(steps)
+      if title
         +e.title Sign In
-      - }
     +e.account
       +language

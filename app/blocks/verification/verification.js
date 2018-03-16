@@ -1,5 +1,4 @@
 const $ = window.$;
-const grecaptcha = window.grecaptcha;
 
 export default function verifyForm() {
   let activeform;
@@ -34,22 +33,15 @@ export default function verifyForm() {
     });
   }
   function confirmPassword() {
-    let res;
-    if ($('[data-confirm-password]').closest('.form__step').hasClass('active')) {
-      if ($('[data-confirm-password]')[0].value.length > 0) {
-        if ($('[data-confirm-password]')[0].value.localeCompare($('[data-confirm-password]')[1].value) !== 0) {
-          $('[data-confirm-password]').parent().addClass('error');
-          res = false;
-        } else {
-          $('[data-confirm-password]').parent().removeClass('error');
-          res = true;
-        }
-      } else {
+    if ($('[data-confirm-password]')[0].value.length > 0) {
+      if ($('[data-confirm-password]')[0].value.localeCompare($('[data-confirm-password]')[1].value) !== 0) {
         $('[data-confirm-password]').parent().addClass('error');
-        res = false;
+      } else {
+        $('[data-confirm-password]').parent().removeClass('error');
       }
+    } else {
+      $('[data-confirm-password]').parent().addClass('error');
     }
-    return res;
   }
   function checkinputs() {
     checkempty();
@@ -64,50 +56,13 @@ export default function verifyForm() {
       $(`#${activeform} input[type="tel"]`).parent().removeClass('error');
     }
   }
-  function checkandsubmit(button) {
+  function checkandsubmit() {
     formerrors = 0;
     $(`#${activeform}`).find('.error').each(() => {
       formerrors += 1;
     });
-    if (activeform === 'form-signup') {
-      const currentstep = $(`#${activeform}`).find('.form__step.active').attr('data-step');
-      const nexststep = $(button).attr('data-target-step');
-      let capcha;
-      switch (currentstep) {
-        case 'step1':
-          if ($(`[data-step="${currentstep}"]`).find('.error').length === 0) {
-            $(`[data-step="${currentstep}"]`).removeClass('active');
-            $(`[data-step="${nexststep}"]`).addClass('active');
-            $(`[data-current-step="${nexststep}"]`).addClass('active');
-          }
-          break;
-        case 'step2':
-          if (confirmPassword()) {
-            $(`[data-step="${currentstep}"]`).removeClass('active');
-            $(`[data-step="${nexststep}"]`).addClass('active');
-            $(`[data-current-step="${nexststep}"]`).addClass('active');
-          } else {
-              // dsaf
-          }
-          break;
-        case 'step3':
-          capcha = grecaptcha.getResponse();
-          if (capcha.length) {
-            $(`[data-step="${currentstep}"]`).removeClass('active');
-            $(`[data-step="${nexststep}"]`).addClass('active');
-            $('.link-list_steps').fadeOut(400);
-          } else {
-            grecaptcha.reset();
-          }
-          break;
-        default:
-          break;
-      }
-    } else {
-      if (formerrors === 0) {
-        console.log('success');
-      }
-      console.log('errors');
+    if (formerrors === 0) {
+      console.log('success');
     }
   }
   $(document).on('click', '.js-validate', (evt) => {
@@ -116,6 +71,7 @@ export default function verifyForm() {
     evt.preventDefault();
     checkinputs();
     checkselects();
-    checkandsubmit(self);
+    confirmPassword();
+    checkandsubmit();
   });
 }

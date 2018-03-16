@@ -7,35 +7,54 @@
   box-sizing: border-box;
 
   &__image {
-    width: 64px;
-    height: 45px;
+    width: 48px;
+    height: 34px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 22px;
+    margin-bottom: 14px;
+
+    @include screen('tablet-small') {
+      width: 64px;
+      height: 45px;
+      margin-bottom: 22px;
+    }
   }
 
   &__icon {
-    width: 64px;
-    height: 45px;
+    width: 48px;
+    height: 34px;
     fill: none;
     stroke: $color-light-blue3;
+
+    @include screen('tablet-small') {
+      width: 64px;
+      height: 45px;
+    }
   }
 
   &__title {
     width: 100%;
-    @include heading-1;
+    @include heading-2;
     font-weight: 300;
     margin-bottom: 16px;
+
+    @include screen('tablet-small') {
+      @include heading-1;
+    }
   }
 
   &__text {
     width: 100%;
-    @include text-big;
+    @include text;
     line-height: 1.4;
     color: $color-text;
     margin-bottom: 8px;
+
+    @include screen('tablet-small') {
+      @include text-big;
+    }
 
     p {
       width: 100%;

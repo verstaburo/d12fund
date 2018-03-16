@@ -1,0 +1,17 @@
+extends ../../layouts/sign
+
+block head
+  - var pageTitle = 'D12 Fund - Sign Up - Step3'
+
+block header
+  - formmenu = true
+  - steps = 3
+
+block content
+  +b.MAIN.signup_step3
+    .container
+      +form.__form#form-signup-step3
+        +e.row
+          +capcha
+        +e.row_centered._button_sm
+          +button-arrow('button')(type="submit").__button.js-validate Next Step

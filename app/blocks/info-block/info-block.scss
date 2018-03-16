@@ -32,9 +32,12 @@
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    flex: 1;
     margin-bottom: 35px;
     box-sizing: border-box;
+
+    @include screen('tablet-wide') {
+      flex: 1;
+    }
 
     @include screen('desktop-wide') {
       padding-left: 40px; //Для кривизны дизайна

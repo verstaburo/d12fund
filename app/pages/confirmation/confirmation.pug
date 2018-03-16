@@ -1,0 +1,13 @@
+extends ../../layouts/sign
+
+block head
+  - var pageTitle = 'D12 Fund - Confirmation'
+
+block content
+  +b.MAIN.signup_confirmation
+    .container
+      +e.form.form__
+        +info-message('Confirmation')
+          +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.
+        +e.row_centered._button
+          +button-arrow('a')(href="confirmed.html").__button Confirm Email

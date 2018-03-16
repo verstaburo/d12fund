@@ -6,8 +6,11 @@ html(lang='en')
   include head
   body
     .wrapper
+      - var formmenu = false
+      - var title = false
+      - var steps = 1
       block header
-      +header-short(formmenu)
+      +header-short(formmenu, title, steps)
       +popups
         +popup-language('Choose Your Country')#popup-language
       block content

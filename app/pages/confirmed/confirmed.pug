@@ -1,0 +1,13 @@
+extends ../../layouts/sign
+
+block head
+  - var pageTitle = 'D12 Fund - Confirmed'
+
+block content
+  +b.MAIN.signup_confirmed
+    .container
+      +e.form.form__
+        +info-message('Email Confirmed')
+          +e.P Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.
+        +e.row_centered._button
+          +button-arrow('a')(href="index.html").__button View Dashboard

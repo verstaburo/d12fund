@@ -1,0 +1,31 @@
+extends ../../layouts/sign
+
+block head
+  - var pageTitle = 'D12 Fund - Sign Up - Step2'
+
+block header
+  - formmenu = true
+  - steps = 2
+
+block content
+  +b.MAIN.signup_step2
+    .container
+      +form.__form#form-signup-step2
+        +e.LABEL.row
+          +e.label
+            +e.SPAN.star *
+            | Password
+          +e.wrapper
+            +input(type="password" placeholder="Type your password" data-confirm-password="true" required)
+            +e.switcher.js-show-pass
+              +icon('eye').icon_eye
+        +e.LABEL.row
+          +e.label
+            +e.SPAN.star *
+            | Confirm Password
+          +e.wrapper
+            +input(type="password" placeholder="Confirm password" data-confirm-password="true" required)
+            +e.switcher.js-show-pass
+              +icon('eye').icon_eye
+        +e.row_centered._button
+          +button-arrow('button')(type="submit").__button.js-validate Next Step

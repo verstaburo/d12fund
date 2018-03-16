@@ -83,13 +83,15 @@ export default function diagramms() {
             classNames: 'diagramm-balance__plot',
             marker: {
               fillColor: '#fff',
-              radius: 7,
+              width: 14,
+              height: 14,
               states: {
                 hover: {
                   lineWidthPlus: 0,
                   radiusPlus: 0,
                 },
               },
+              symbol: 'url(/assets/images/marker-small.svg)',
             },
             lineWidth: 2,
             states: {
@@ -136,6 +138,12 @@ export default function diagramms() {
             pointFormat: '<b>{point.y}</b><br/>',
             valuePrefix: '$',
           },
+          states: {
+            hover: {
+              halo: false,
+              lineWidthPlus: 0,
+            },
+          },
         }],
         tooltip: {
           backgroundColor: '#0a1b2f',
@@ -165,6 +173,7 @@ export default function diagramms() {
             marker: {
               fillColor: '#fff',
               radius: 9.5,
+              symbol: 'url(/assets/images/marker-main.svg)',
             },
             lineWidth: 4,
             states: {
@@ -229,7 +238,7 @@ export default function diagramms() {
                 radiusPlus: 0,
               },
             },
-            symbol: 'circle',
+            symbol: 'url(/assets/images/marker-main.svg)',
           },
           states: {
             hover: {
@@ -256,7 +265,7 @@ export default function diagramms() {
                 radiusPlus: 0,
               },
             },
-            symbol: 'circle',
+            symbol: 'url(/assets/images/marker-main.svg)',
           },
           states: {
             hover: {
@@ -281,7 +290,13 @@ export default function diagramms() {
           snap: '50/50',
           borderWidth: 0,
           borderRadius: 10,
-          backgroundColor: '#1a97fc',
+          backgroundColor: {
+            linearGradient: [0, 0, 0, '100%'],
+            stops: [
+              [0, '#268dfc'],
+              [1, '#337dfc'],
+            ],
+          },
           padding: 8,
           crosshairs: false,
           headerFormat: '<span class="diagramm-price__tooltip-top">{point.key}</span><br/>',
@@ -316,7 +331,7 @@ export default function diagramms() {
           tickLength: 0,
           gridLineDashStyle: 'Dot',
           gridLineWidth: 3,
-          gridZIndex: 6,
+          gridZIndex: 3,
           lineWidth: 0,
           minRange: 3600000,
           range: 2592000000,

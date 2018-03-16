@@ -8,6 +8,10 @@
     height: 178px;
     font-family: $font-main;
 
+    .highcharts-point {
+      filter: url(#marker-shadow);
+    }
+
     .highchart-plot-line-0 {
       stroke-width: 3;
       stroke-linecap: round;
@@ -28,6 +32,13 @@
 
       &.highcharts-tracker.highcharts-series-hover {
         opacity: 1;
+      }
+
+      .highcharts-graph {
+        stroke-dasharray: 4, 24;
+        stroke-width: 4;
+        stroke-linecap: "round";
+        stroke-linejoin: "round";
       }
     }
 
