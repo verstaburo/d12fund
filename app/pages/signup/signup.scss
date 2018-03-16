@@ -4,6 +4,7 @@
 
   &__form {
     box-sizing: border-box;
+    padding-bottom: 30px;
 
     @include screen('tablet-small') {
       padding-left: 50px;
