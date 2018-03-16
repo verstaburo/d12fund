@@ -33,7 +33,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-left: 27px;
+      padding-left: 44px;
     }
 
     &__right {
@@ -61,7 +61,7 @@
   &__status {
     @include text;
     line-height: 1.1;
-    color: $color-text;
+    color: rgba($color-text, .5);
   }
 
   &__price {

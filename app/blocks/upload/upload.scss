@@ -5,7 +5,8 @@
   &:hover {
 
     .upload__image {
-      background-color: $color-button-hover;
+      background-color: $color-gradient-2;
+      background-position: 0 0;
     }
   }
 
@@ -19,9 +20,10 @@
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background-color: $color-main;
-    background-image: linear-gradient(to top, rgba($color-blend, .64), rgba($color-blend, 0));
-    background-blend-mode: soft-light;
+    background-color: $color-input;
+    @include gradient-main;
+    background-size: auto 200%;
+    background-position: 0 100%;
     transition: background $ease-main;
   }
 

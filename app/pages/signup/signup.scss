@@ -4,7 +4,6 @@
 
   &__form {
     box-sizing: border-box;
-    padding-bottom: 30px;
 
     @include screen('tablet-small') {
       padding-left: 50px;
@@ -30,10 +29,8 @@
 
       &__step {
         box-sizing: border-box;
-        padding-top: 150px;
 
         @include screen('tablet') {
-          padding-top: 210px;
         }
       }
 

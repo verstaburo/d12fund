@@ -5,12 +5,14 @@
   align-items: flex-start;
   flex-wrap: wrap;
   @include text-big;
+  font-weight: 300;
   line-height: 1.2;
   text-align: center;
 
   &__total {
     width: 100%;
     @include heading-2;
+    font-weight: 300;
     line-height: 1.15;
   }
 

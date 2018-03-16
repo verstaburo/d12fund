@@ -49,8 +49,8 @@
 
   &__image {
     width: 29px;
-    height: 23px;
-    background: $color-main;
+    height: auto;
+    overflow: hidden;
   }
 
   .choices {

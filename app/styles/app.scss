@@ -23,18 +23,21 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100vh;
 
   .header, main, .footer {
+    box-sizing: border-box;
     width: 100%;
   }
 
-  .footer {
-    margin-top: auto;
+  main {
+    display: block;
+    margin: auto 0;
   }
 }
 

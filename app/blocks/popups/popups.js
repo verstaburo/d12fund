@@ -1,15 +1,6 @@
-// http://fancyapps.com/fancybox/3/
-import '@fancyapps/fancybox';
-
-import { freeze, unfreeze } from '../js-functions/freeze';
-
 const $ = window.$;
 
 export default function popups() {
-  $('.js-fancybox').fancybox({
-    afterLoad: freeze,
-    afterClose: unfreeze,
-  });
   $(document).on('click', '.js-open-popup', (evt) => {
     evt.preventDefault();
     const self = $(evt.target).hasClass('.js-open-popup') ? $(evt.target) : $(evt.target).closest('.js-open-popup');
@@ -35,6 +26,9 @@ export default function popups() {
       $('.popup-overlay').removeClass('active');
       $('.js-open-popup.active').removeClass('active');
     }
+    $('body, html').stop().animate({
+      scrollTop: $('body').offset().top,
+    }, 1000, 'swing');
   });
   $(document).on('click', '.popup-overlay, .popup .form__button[type="submit"]', () => {
     $('.popup.active').find('[data-step]').removeClass('active');

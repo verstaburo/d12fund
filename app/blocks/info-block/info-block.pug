@@ -5,4 +5,8 @@ mixin info-block(title, linktitle, link, popup)
     +e.content
       block
     +e.buttons
-      +button('a')(href=addLink data-popup=popup).__button.js-open-popup!= linktitle
+      - if (popup) {
+        +button('a')(href=addLink data-popup=popup).__button.js-open-popup!= linktitle
+      - } else {
+        +button('a')(href=addLink).__button!= linktitle
+      - }
