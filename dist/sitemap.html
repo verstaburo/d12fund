@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>D12 Fund - Sitemap</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__logo">
+            <a class="logo" href="index.html">
+                <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
+                <span class="logo__text">D12 Fund</span>
+            </a>
+        </div>
+        <nav class="header__navigation">
+            <ul class="link-list">
+                <li class="link-list__item">
+                    <a class="link link_icon link_white active" href="#" title="Dashboard">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_dashboard"><use xlink:href="assets/images/icon.svg#icon_dashboard"></use></svg>
+                        </span>
+                        <span class="link__text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="link-list__item">
+                    <a class="link link_icon link_white" href="#" title="Buy tokens / Invest">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
+                        </span>
+                        <span class="link__text">Buy tokens / Invest</span>
+                    </a>
+                </li>
+                <li class="link-list__item">
+                    <a class="link link_icon link_white js-open-popup" href="#" data-popup="popup-history-purchases" title="Purchase history">
+                        <span class="link__iwrapper">
+                            <svg class="link__icon link__icon_time"><use xlink:href="assets/images/icon.svg#icon_time"></use></svg>
+                        </span>
+                        <span class="link__text">Purchase history</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__account">
+            <a class="notification is-active" href="#">
+                <svg class="notification__icon"><use xlink:href="assets/images/icon.svg#icon_bell"></use></svg>
+            </a>
+            <a class="language js-open-popup" href="#" data-popup="popup-language" title="USA">
+                <span class="language__country">
+                    <img class="language__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                </span>
+                <span class="language__toggle">
+                    <svg class="language__icon"><use xlink:href="assets/images/icon.svg#icon_angle"></use></svg>
+                </span>
+            </a>
+            <div class="account">
+                <div class="account__info js-dropdown-toggle">
+                    <div class="avatar account__avatar">
+                        <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                    </div>
+                    <div class="account__login">mark.hoffan@gmail.com</div>
+                    <div class="account__toggle">
+                        <svg class="account__icon"><use xlink:href="assets/images/icon.svg#icon_angle"></use></svg>
+                    </div>
+                </div>
+                <div class="js-dropdown dropdown account__dropdown">
+                    <ul class="link-list link-list_vertical">
+                        <li class="link-list__item">
+                            <a class="link link_white js-open-popup" href="#" data-popup="popup-profile">
+                                <span class="link__text">Edit Profile</span>
+                            </a>
+                        </li>
+                        <li class="link-list__item">
+                            <a class="link link_white js-open-popup" href="#" data-popup="popup-verification">
+                                <span class="link__text">Verification</span>
+                            </a>
+                        </li>
+                        <li class="link-list__item">
+                            <a class="link link_white" href="#">
+                                <span class="link__text">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popups">
+        <div class="popup-overlay"></div>
+        <div class="popup popup-language" id="popup-language">
+            <div class="container">
+                <div class="popup__title">Choose Your Country</div>
+                <div class="popup__content">
+                    <ul class="list list_icon popup-language__list">
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Vietnam, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Vietnam</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="USA, assets/images/usa.svg">
+                            <img class="list__image" src="assets/images/usa.svg" alt="" role="presentation" />
+                            <div class="list__text">USA</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Slovenia, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Slovenia</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="Spain, ">
+                            <div class="list__image"></div>
+                            <div class="list__text">Spain</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                        <li class="list__item js-lang-select" data-value="France, assets/images/fr.svg">
+                            <img class="list__image" src="assets/images/fr.svg" alt="" role="presentation" />
+                            <div class="list__text">France</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-withdraw-funds" id="popup-withdraw-funds">
+            <div class="container">
+                <div class="popup__title">Withdraw Funds</div>
+                <div class="popup__content">
+                    <form class="form popup-withdraw-funds__form" id="form-withdraw">
+                        <div class="form__row">
+                            <div class="form__label">from my wallet</div>
+                            <div class="form__wrapper">
+                                <div class="form__info input">Available 0000 EUR</div>
+                                <input class="input" type="hidden" value="Available 0000 EUR" />
+                                <a class="form__arrow-link" href="#">
+                                    <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__label">to visa card</div>
+                            <div class="form__wrapper">
+                                <div class="form__info input">VISA
+                                    <div class="dot dot_double"></div>
+                                    <div class="dot dot_double"></div>0123</div>
+                                <input class="input" type="hidden" value="VISA .... 0123" />
+                                <a class="form__arrow-link" href="#">
+                                    <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <label class="form__row">
+                            <span class="form__label">amount</span>
+                            <span class="form__wrapper">
+                                <input class="input js-numberbox-input" type="text" placeholder="0000" />
+                            </span>
+                        </label>
+                        <div class="form__row form__row_notes">
+                            <div class="form__note">
+                                <svg class="form__icon form__icon_calendar"><use xlink:href="assets/images/icon.svg#icon_calendar"></use></svg>
+                                <span class="form__label">Processing time 2 - 3 business days</span>
+                            </div>
+                            <div class="form__note">
+                                <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
+                                <span class="form__label">a d12 fund Transaction fee may aplly</span>
+                            </div>
+                        </div>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Withdraw Fund</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-history-purchases" id="popup-history-purchases">
+            <div class="container">
+                <div class="popup__title">Purchase History</div>
+                <div class="popup__content">
+                    <div class="popup-history-purchases__wrapper js-scrollbar">
+                        <table class="table popup-history-purchases__purchase" cellspacing="0">
+                            <thead class="table__header">
+                                <tr class="table__row table__row_head">
+                                    <th class="table__cell table__cell_head">Date</th>
+                                    <th class="table__cell table__cell_head">Name</th>
+                                    <th class="table__cell table__cell_head">Type</th>
+                                    <th class="table__cell table__cell_head">Gross</th>
+                                    <th class="table__cell table__cell_head">Fee</th>
+                                    <th class="table__cell table__cell_head">Net</th>
+                                    <th class="table__cell table__cell_head">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell_date">20 Oct 2017</td>
+                                    <td class="table__cell table__cell_name">
+                                        <div class="mark table__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>TOKEN</td>
+                                    <td class="table__cell table__cell_type">Sold</td>
+                                    <td class="table__cell table__cell_gross">$ 404</td>
+                                    <td class="table__cell table__cell_fee"> $ 67</td>
+                                    <td class="table__cell table__cell_net">
+                                        <span class="table__down">-</span>$ 337</td>
+                                    <td class="table__cell table__cell_balance"> $ 337</td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell_date">20 Oct 2017</td>
+                                    <td class="table__cell table__cell_name">
+                                        <div class="mark mark_orange table__mark">
+                                            <div class="mark__text">B</div>
+                                        </div>BITCOIN</td>
+                                    <td class="table__cell table__cell_type">Bought</td>
+                                    <td class="table__cell table__cell_gross">$ 404</td>
+                                    <td class="table__cell table__cell_fee"> $ 67</td>
+                                    <td class="table__cell table__cell_net">
+                                        <span class="table__up">+</span>$ 337</td>
+                                    <td class="table__cell table__cell_balance"> $ 337</td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell_date">20 Oct 2017</td>
+                                    <td class="table__cell table__cell_name">
+                                        <div class="mark table__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>TOKEN</td>
+                                    <td class="table__cell table__cell_type">Sold</td>
+                                    <td class="table__cell table__cell_gross">$ 404</td>
+                                    <td class="table__cell table__cell_fee"> $ 67</td>
+                                    <td class="table__cell table__cell_net">
+                                        <span class="table__down">-</span>$ 337</td>
+                                    <td class="table__cell table__cell_balance"> $ 337</td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell_date">20 Oct 2017</td>
+                                    <td class="table__cell table__cell_name">
+                                        <div class="mark table__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>TOKEN</td>
+                                    <td class="table__cell table__cell_type">Sold</td>
+                                    <td class="table__cell table__cell_gross">$ 404</td>
+                                    <td class="table__cell table__cell_fee"> $ 67</td>
+                                    <td class="table__cell table__cell_net">
+                                        <span class="table__down">-</span>$ 337</td>
+                                    <td class="table__cell table__cell_balance"> $ 337</td>
+                                </tr>
+                                <tr class="table__row">
+                                    <td class="table__cell table__cell_date">20 Oct 2017</td>
+                                    <td class="table__cell table__cell_name">
+                                        <div class="mark table__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>TOKEN</td>
+                                    <td class="table__cell table__cell_type">Sold</td>
+                                    <td class="table__cell table__cell_gross">$ 404</td>
+                                    <td class="table__cell table__cell_fee"> $ 67</td>
+                                    <td class="table__cell table__cell_net">
+                                        <span class="table__down">-</span>$ 337</td>
+                                    <td class="table__cell table__cell_balance"> $ 337</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-change-password" id="popup-change-password">
+            <div class="container">
+                <div class="popup__title">Change Password</div>
+                <div class="popup__content">
+                    <form class="form popup-change-password__form" id="form-pass-change">
+                        <label class="form__row">
+                            <span class="form__label">old password</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="password" placeholder="Type your old password" />
+                                <span class="form__switcher js-show-pass">
+                                    <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="form__row">
+                            <span class="form__label">new password</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="password" placeholder="Type your new password" />
+                                <span class="form__switcher js-show-pass">
+                                    <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-edit-wallet" id="popup-edit-wallet">
+            <div class="container">
+                <div class="popup__title">Edit Wallet Address</div>
+                <div class="popup__content">
+                    <form class="form popup__form" id="form-edit-wallet">
+                        <label class="form__row">
+                            <span class="form__label">wallet address</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="text" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71" />
+                                <span class="form__switcher">
+                                    <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="form__row form__row_centered">
+                            <button class="button form__button" type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-profile" id="popup-profile">
+            <div class="container">
+                <div class="popup__title">My Profile</div>
+                <div class="popup__content">
+                    <div class="popup-profile__column popup-profile__column_left">
+                        <div class="popup-profile__avatar">
+                            <div class="avatar avatar_big">
+                                <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                            </div>
+                            <label class="upload js-upload popup-profile__upload">
+                                <input class="input upload__input" type="file" name="file[]" form="form-edit-profile" />
+                                <span class="upload__image">
+                                    <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="popup-profile__column popup-profile__column_right">
+                        <form class="form popup-profile__form" id="form-edit-profile">
+                            <div class="form__row">
+                                <div class="form__label">Full name</div>
+                                <div class="form__wrapper form__wrapper_row">
+                                    <input class="input" type="hidden" value="Mark Hoffan" placeholder="Full Name" />
+                                    <span class="form__textfield input" contenteditable="false">Mark Hoffan</span>
+                                    <div class="form__switcher js-edit-on">
+                                        <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <label class="form__row">
+                                <span class="form__label">email adress (&nbsp;this is also your username&nbsp;)</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly="readonly" />
+                                    <span class="form__switcher js-edit-on">
+                                        <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                    </span>
+                                </span>
+                            </label>
+                            <div class="form__row form__row_notes">
+                                <a class="link link_bordered link_upper js-open-popup" href="#" data-popup="popup-change-password">
+                                    <span class="link__text">Change password</span>
+                                </a>
+                                <a class="link link_bordered link_upper js-open-popup" href="#" data-popup="popup-edit-wallet">
+                                    <span class="link__text">Edit wallet address</span>
+                                </a>
+                            </div>
+                            <div class="form__row">
+                                <button class="button form__button" type="submit">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-verification" id="popup-verification">
+            <div class="container">
+                <div class="popup__title">Verification</div>
+                <div class="popup__content">
+                    <form class="form popup__form" id="form-verification">
+                        <div class="form__step form__step_centered active" data-step="step1">
+                            <div class="form__row form__row_centered">
+                                <label class="upload upload_zone js-upload-mix form__upload">
+                                    <input class="input upload__input" type="file" name="file[]" />
+                                    <span class="upload__content">
+                                        <svg class="upload__mark"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                        <span class="upload__text">Drag or browse image of your ID card</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form__row form__row_centered">
+                                <a class="button button_arrow form__button js-next-step" href="#" data-target-step="step2">Next Step
+                                    <span class="button__image">
+                                        <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form__step" data-step="step2">
+                            <label class="form__row">
+                                <span class="form__label">full name</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your full name" />
+                                </span>
+                            </label>
+                            <div class="form__row">
+                                <div class="form__label">country</div>
+                                <div class="form__wrapper">
+                                    <select class="select js-select">
+                                        <option placeholder="placeholder">Select your country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Slovenia">Slovenia</option>
+                                        <option value="Vietnam">Vietnam</option>
+                                        <option value="Spain">Spain</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label class="form__row">
+                                <span class="form__label">address</span>
+                                <span class="form__wrapper">
+                                    <input class="input" type="text" placeholder="Type your address" />
+                                </span>
+                            </label>
+                            <div class="form__row form__row_centered form__row_button">
+                                <button class="button form__button" type="button">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sitemap">
+        <div class="container">
+            <div class="sitemap__list">
+                <a class="link" href="ui-kit.html">
+                    <span class="link__text">UI-kit (ui-kit.html)</span>
+                </a>
+                <a class="link" href="index.html">
+                    <span class="link__text">D12 Fund - Home page (index.html)</span>
+                </a>
+                <a class="link" href="signup.html">
+                    <span class="link__text">D12 Fund - Sign Up (signup.html)</span>
+                </a>
+                <a class="link" href="signin.html">
+                    <span class="link__text">D12 Fund - Sign In (signin.html)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+</body>
+
+</html>
