@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>D12 Fund - Sign Up</title>
+    <title>D12 Fund - Confirmation</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="favicon.ico" rel="shortcut icon">
@@ -16,35 +16,14 @@
 
 <body>
     <div class="wrapper">
-        <div class="header header_short">
+        <div class="header header_short header_transparent">
             <div class="header__logo">
                 <a class="logo" href="index.html">
                     <img class="logo__image" src="assets/images/logo.svg" alt="" role="presentation" />
                     <span class="logo__text">D12 Fund</span>
                 </a>
             </div>
-            <nav class="header__navigation">
-                <ul class="link-list link-list_steps">
-                    <li class="link-list__item">
-                        <a class="link link_white active" href="signup.html" data-current-step="step1">
-                            <span class="link__text">
-                                <span class="dot"></span>Step 1</span>
-                        </a>
-                    </li>
-                    <li class="link-list__item">
-                        <a class="link link_white" href="signup-step2.html" data-current-step="step2">
-                            <span class="link__text">
-                                <span class="dot"></span>Step 2</span>
-                        </a>
-                    </li>
-                    <li class="link-list__item">
-                        <a class="link link_white" href="signup-step3.html" data-current-step="step3">
-                            <span class="link__text">
-                                <span class="dot"></span>Step 3</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <nav class="header__navigation"></nav>
             <div class="header__account">
                 <a class="language js-open-popup" href="#" data-popup="popup-language" title="USA">
                     <span class="language__country">
@@ -148,27 +127,26 @@
                 </div>
             </div>
         </div>
-        <main class="signup signup_step1" role="main">
+        <main class="signup signup_confirmation" role="main">
             <div class="container">
-                <form class="form signup__form" id="form-signup">
-                    <label class="form__row">
-                        <span class="form__label">
-                            <span class="form__star">*</span>Email Address</span>
-                        <span class="form__wrapper">
-                            <input class="input" type="text" placeholder="Type your email address" data-type="email" require="require" />
-                            <span class="form__switcher form__switcher_info">
-                                <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
-                            </span>
-                        </span>
-                    </label>
-                    <div class="form__row form__row_centered form__row_button_mb">
-                        <button class="button button_arrow form__button js-validate" type="submit">Next Step
-                            <div class="button__image">
-                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
-                            </div>
-                        </button>
+                <div class="signup__form form">
+                    <div class="info-message">
+                        <div class="info-message__image">
+                            <svg class="info-message__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                        </div>
+                        <div class="info-message__title">Confirmation</div>
+                        <div class="info-message__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        </div>
                     </div>
-                </form>
+                    <div class="form__row form__row_centered form__row_button">
+                        <a class="button button_arrow form__button" href="confirmed.html">Confirm Email
+                            <span class="button__image">
+                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
         <div class="footer">
