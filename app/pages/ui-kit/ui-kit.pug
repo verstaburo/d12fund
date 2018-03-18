@@ -21,7 +21,7 @@ block content
       +ui-section-head
         h2 Сетка
         p Отступы слева и справа от экрана: 20px ($container-padding)
-        p Ширина контейнера: 960px ($container-width)
+        p Ширина контейнера максимальная: 1210px ($container-width)
         p Ширина контейнера сетки: 100% ($grid-container-width)
         p Колонок: 12 ($grid-cols)
         p Горизонтальное расстояние между колонками: 20px ($grid-gap)
@@ -55,11 +55,38 @@ block content
         p Переменные находятся в файле styles/helpers/_variables.scss
       +ui-section-content()
         +ui-elements-list()
-          +ui-color('black', '$color-basic', true)
-          +ui-color('#2252d8', '$color-main', true)
-          +ui-color('#777', '$color-placeholder', true)
-          +ui-color('black', '$color-input', true)
-          +ui-color('#ccc', '$color-border')
+          +ui-color('white', '$color-basic')
+          +ui-color('#1a97fc', '$color-main', true)
+          +ui-color('#122a48', '$color-placeholder', true)
+          +ui-color('#268dfc', '$color-input', true)
+          +ui-color('#83a1c4', '$color-text', true)
+          +ui-color('#b6d0ee', '$color-text-second', true)
+          +ui-color('#0c3669', '$color-text-third', true)
+          +ui-color('#238efc', '$color-text-four', true)
+          +ui-color('#3a4f68', '$color-text-fifth', true)
+          +ui-color('#23538d', '$color-border', true)
+          +ui-color('#09182a', '$color-background', true)
+          +ui-color('#0a1b2f', '$color-background-second', true)
+          +ui-color('#0c1f35', '$color-background-third', true)
+          +ui-color('#0a2443', '$color-background-four', true)
+          +ui-color('#0a2648', '$color-background-fifth', true)
+          +ui-color('#2290fc', '$color-button', true)
+          +ui-color('#0055a9', '$color-button-hover', true)
+          +ui-color('#0b1e34', '$color-button-background', true)
+          +ui-color('#f5922f', '$color-orange')
+          +ui-color('#ffbd7c', '$color-orange-light')
+          +ui-color('#be2a73', '$color-red', true)
+          +ui-color('#7cbc29', '$color-green', true)
+          +ui-color('#234266', '$color-blue', true)
+          +ui-color('#0f3056', '$color-blue-2', true)
+          +ui-color('#3b93e8', '$color-light-blue', true)
+          +ui-color('#2a8afc', '$color-light-blue2', true)
+          +ui-color('#2f84fc', '$color-light-blue3', true)
+          +ui-color('#1a324f', '$color-grid-lines', true)
+          +ui-color('#183455', '$color-blue-3', true)
+          +ui-color('#337dfc', '$color-gradient-1', true)
+          +ui-color('#0044b3', '$color-gradient-2', true)
+          +ui-color('#0053a9', '$color-gradient-3', true)
 
     //- Цвета
     +ui-section
@@ -70,17 +97,17 @@ block content
       +ui-section-content()
         +ui-elements-list()
           +ui-gradient('gradient-main', true)._gradient_main
+          +ui-gradient('gradient-light', true)._gradient_light
 
     //- Шрифты и контентная зона
     +ui-section
       +ui-section-head
         h2 Шрифты и контентная зона
-        p Основной шрифт: Arial ($font-main), font-weight: 400, 600
-        p Дополнительный шрифт: Times New Roman ($font-second), font-weight: 400, 600
+        p Основной шрифт: Helvetica Neue ($font-main), font-weight: 300, 400, 500, 700
         p Переменные находятся в файле styles/helpers/_variables.scss
         p Шрифты подключены в styles/helpers/_fonts.scss
         p Контентная зона: blocks/content-zone
-        p Стили всех текстов лежат в файле styles/helpers/_text-styles.scss и должны импортироваться из него через директиву @extend и задаваться через "временные" классы %className
+        p Стили всех текстов лежат в файле styles/helpers/_text-styles.scss и должны импортироваться из него через директиву @include
       +ui-section-content()
         +ui-description .content-zone
         +ui-special()
@@ -118,7 +145,10 @@ block content
                   li Элемент списка
               li Элемент списка
         +ui-description Другие стили текстов:
-        +ui-custom-text._style-1 Пример кастомного стиля на примере стандартного (%text)
+        +ui-custom-text._style-1 Пример кастомного стиля на примере стандартного 45px (text-extra-big)
+        +ui-custom-text._style-2 Пример кастомного стиля на примере стандартного 19px (text-bigger-st)
+        +ui-custom-text._style-3 Пример кастомного стиля на примере стандартного 18px (text-bigger)
+        +ui-custom-text._style-4 Пример кастомного стиля на примере стандартного 16px (text-big)
 
     //- Таблицы
     +ui-section
@@ -126,21 +156,57 @@ block content
         h2 Таблицы
         p Блок: blocks/table
       +ui-section-content()
-        +table()
-          thead
-            tr
-              td Ячейка
-              td Ячейка
-              td Ячейка
-          tr
-            td Ячейка
-            td Ячейка
-            td Ячейка
-          tr
-            td Ячейка
-            td Ячейка
-            td Ячейка
-
+        +ui-description Простая таблица
+          +table()
+            thead
+              tr
+                th Ячейка
+                th Ячейка
+                th Ячейка
+            tbody
+              tr
+                td Ячейка
+                td Ячейка
+                td Ячейка
+              tr
+                td Ячейка
+                td Ячейка
+                td Ячейка
+        +ui-description Таблица purchase history
+          +e.wrapper.js-scrollbar
+            +table
+              +e.THEAD.header
+                +e.TR.row_head
+                  +e.TH.cell_head Date
+                  +e.TH.cell_head Name
+                  +e.TH.cell_head Type
+                  +e.TH.cell_head Gross
+                  +e.TH.cell_head Fee
+                  +e.TH.cell_head Net
+                  +e.TH.cell_head Balance
+              +e.TBODY.body
+                +e.TR.row
+                  +e.TD.cell_date table__cell
+                  +e.TD.cell_name
+                    +mark.__mark T
+                    | table__cell_name
+                  +e.TD.cell_type table__cell_type
+                  +e.TD.cell_gross table__cell
+                  +e.TD.cell_fee  table__cell
+                  +e.TD.cell_net
+                    +e.SPAN.down table__down
+                  +e.TD.cell_balance  table__cell
+                +e.TR.row
+                  +e.TD.cell_date table__cell
+                  +e.TD.cell_name
+                    +mark._orange.__mark B
+                    | table__cell_name
+                  +e.TD.cell_type table__cell_type
+                  +e.TD.cell_gross table__cell
+                  +e.TD.cell_fee  table__cell
+                  +e.TD.cell_net
+                    +e.SPAN.up table__up
+                  +e.TD.cell_balance  table__cell
     //- Кнопки
     +ui-section
       +ui-section-head
@@ -149,7 +215,13 @@ block content
       +ui-section-content()
         +ui-elements-list()
           +button()(href="#") .button
-          +button('button')(href="#" disabled) .button:disabled
+          +button('button')(type="button" disabled) .button:disabled (.button.disabled)
+          +button-arrow(href="#") .button_arrow
+          +button._small(href="#") .button_small
+          +button._smaller(href="#") .button_smaller
+          +button._dark(href="#") .button_dark
+          +button._darken(href="#") .button_darken
+          +button._darken.active(href="#") .button_darken.active
         +ui-description При клике на .js-anchor происходит скролл к элементу из атрибута href. Блок: blocks/js-functions/anchor.js
         +button()(href="#section0").js-anchor .js-anchor
         +ui-description При клике на .js-freeze скролл страницы блокируется, на .js-unfreeze разблокируется. Блок: blocks/js-functions/freeze.js. Функции freeze() и unfreeze() можно импортировать и использовать в модалках, бургере или где-то еще
@@ -183,7 +255,7 @@ block content
               li Элемент списка
           li Элемент списка
 
-    //- Табы
+    //- Элементы формы
     +ui-section
       +ui-section-head
         h2 Элементы форм
@@ -233,40 +305,56 @@ block content
             +ui-description .range.js-range<br> Все параметры задаются дата-атрибутами
             +inputbox()
               +range()(data-start='40', data-connect='[true, false]', data-min='0', data-max='100')
+          +col(6)
+            +ui-description .upload.js-upload
+            +inputbox()
+              +upload
+          +col(6)
+            +ui-description .upload._zone.js-upload-mix
+            +inputbox()
+              +upload-zone
 
-    //- Табы
+    //- Form
     +ui-section
       +ui-section-head
-        h2 Табы
-        p Блок: blocks/tabs
+        h2 Форма
+        p Блок: blocks/form/form
+        pre(style="white-space: pre")
+          | .form
+          |  .form__row
+          |    .form__label
+          |       .star *
+          |       | Label
+          |    .form__wrapper
+          |      .input
+          |      .switcher
+          |        .icon
+        p Для валидации добавить .js-validate  к кнопке отправки формы
       +ui-section-content()
-        +tabs
-          +tab()(data-tab-target="tab1").active Информация
-          +tab()(data-tab-target="tab2") Контент
-          +tab()(data-tab-target="tab3") Тексты
-        +tabs-content
-          +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
-            p Это таб 1
-          +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
-            p Это таб 2
-          +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
-            p Это таб 3
-
+        +form
+          +e.LABEL.row
+            +e.label
+              +e.SPAN.star *
+              | Label
+            +e.wrapper
+              +input(type="text" placeholder="Type your name" require)
+              +e.switcher_info
+                +icon('alert').icon_alert
+          +e.row_centered._button
+            +button-arrow('button')(type="submit").__button.js-validate Submit
     //- Попапы
     +ui-section
       +ui-section-head
         h2 Попапы
         p Блок: blocks/popups
       +ui-section-content()
-        +ui-description .js-fancybox
-        +link()(href="#testpopup").js-fancybox Открыть попап
         +ui-description Верстка попапов:
-        +link()(onclick="$('.popups').toggle()") Показать попапы
-        +popups.__ui-popups
-          +popup#testpopup
+        +link.js-open-popup(href="#" data-popup="testpopup") Показать попапы(.js-open-popup)
+        block popups
+          +popup('Тестоввый попап - загололвок')#testpopup
             +content-zone
-              h2 Тестовый попап
-              p С тестовым контентом
+              p Контент попапа
+            +link.js-close-popup(href="#") Скрыть попап (.js-close-popup)
 
     //- Ссылки
     +ui-section
@@ -276,13 +364,19 @@ block content
         p Стили ссылок: helpers/_link-styles.scss
       +ui-section-content()
         +ui-description .link
-        +link()(href="#") Обычная ссылка
-        +ui-description .link._dashed
-        +link()(href="#")._dashed Пунктирная ссылка
+        +link(href="#") Обычная ссылка
+        +ui-description .link._white
+        +link._white(href="#") Белая ссылка
+        +ui-description .link._upper
+        +link._upper(href="#") В верхнем регистре ссылка
+        +ui-description .link._dark
+        +link._dark(href="#") Темная ссылка
+        +ui-description .link._bordered
+        +link(href="#")._bordered Подчеркнутая ссылка
         +ui-description .link._icon
         +link-icon('refresh')(href="#") Ссылка с иконкой
         +ui-description .link.disabled
-        +link()(href="#").disabled Отключенная ссылка
+        +link(href="#").disabled Отключенная ссылка
 
     //- Скроллбар
     +ui-section
@@ -307,103 +401,6 @@ block content
           +slide Привет
           +slide Привет
 
-    //- Подсказки
-    +ui-section
-      +ui-section-head
-        h2 Подсказки
-        p Блок: blocks/tooltip/tooltip
-      +ui-section-content()
-        +ui-description .js-tooltip
-        +button()(href="#" title="Пример подсказки").js-tooltip Пример подсказки
-
-    //- Карты
-    +ui-section
-      +ui-section-head
-        h2 Карты
-        p Блок: blocks/map/map
-      +ui-section-content()
-        +ui-description #map
-        +map()#map
-
-    //- Анимации
-    +ui-section
-      +ui-section-head
-        h2 Анимации при скролле
-        p Блок: blocks/js-functions/scrollanimation
-      +ui-section-content()
-        +ui-description .js-sr — общий класс для анимируемых элементов
-        +content-zone
-          h3.js-sr.js-sr_1 .js-sr_1
-          h4.js-sr.js-sr_2 .js-sr_2
-
-    //- Хлебные крошки
-    +ui-section
-      +ui-section-head
-        h2 Хлебные крошки
-        p Блок: blocks/breadcrumbs/breadcrumbs
-      +ui-section-content()
-        +breadcrumbs(['Главная', 'Раздел', 'Страница'])
-
-    //- Рейтинг
-    +ui-section
-      +ui-section-head
-        h2 Рейтинг
-        p Блок: blocks/rating/rating
-      +ui-section-content()
-        +ui-description Интерактивный
-        +rating-interactive
-        +ui-description Статичный
-        +rating(3)
-
-    //- Аккордион
-    +ui-section
-      +ui-section-head
-        h2 Аккордион
-        p Блок: blocks/accordion/accordion
-
-      +ui-section-content()
-        +ui-description Multiple true
-        +accordions
-          +accordion.is-active
-            +accordion-header
-              +accordion-button Блок #1
-            +accordion-body
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              | Obcaecati aliquam perferendis velit ex numquam, consequatur
-              | doloribus magnam accusantium expedita eveniet,
-              | quisquam voluptate quos maiores impedit quibusdam.
-              | Quod sit molestias sapiente.
-          +accordion
-            +accordion-header
-              +accordion-button Блок #2
-            +accordion-body
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              | Obcaecati aliquam perferendis velit ex numquam, consequatur
-              | doloribus magnam accusantium expedita eveniet,
-              | quisquam voluptate quos maiores impedit quibusdam.
-              | Quod sit molestias sapiente.
-
-        +ui-description Multiple false
-        +accordions(false)
-          +accordion.is-active
-            +accordion-header
-              +accordion-button Блок #1
-            +accordion-body
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              | Obcaecati aliquam perferendis velit ex numquam, consequatur
-              | doloribus magnam accusantium expedita eveniet,
-              | quisquam voluptate quos maiores impedit quibusdam.
-              | Quod sit molestias sapiente.
-          +accordion
-            +accordion-header
-              +accordion-button Блок #2
-            +accordion-body
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              | Obcaecati aliquam perferendis velit ex numquam, consequatur
-              | doloribus magnam accusantium expedita eveniet,
-              | quisquam voluptate quos maiores impedit quibusdam.
-              | Quod sit molestias sapiente.
-
     //- Dropdown
     +ui-section
       +ui-section-head
@@ -417,6 +414,162 @@ block content
         div(style="display: inline-block; position: relative; margin-bottom: 24px;")
           +button.js-dropdown-toggle bottom
           +dropdown content
+
+    //- Avatar
+    +ui-section
+      +ui-section-head
+        h2 Avatar
+        p Блок: blocks/avatar/avatar
+      +ui-section-content
+        +ui-description Блок аватара маленький .avatar
+        +avatar
+        +ui-description Блок аватара большой .avatar._big
+        +avatar._big
+
+    //- Social
+    +ui-section
+      +ui-section-head
+        h2 Social
+        p Блок: blocks/social/social
+      +ui-section-content
+        +ui-description Блок социальной сети .social(img)
+        +social('fb')
+
+    //- Socials
+    +ui-section
+      +ui-section-head
+        h2 Socials
+        p Блок: blocks/socials/socials
+      +ui-section-content
+        +ui-description Список социальных сетей .socials
+        +socials
+
+    //- Capcha
+    +ui-section
+      +ui-section-head
+        h2 Captcha
+        p Блок: blocks/capcha/capcha
+      +ui-section-content
+        +ui-description Captcha .capcha
+        +capcha
+
+    //- Dot
+    +ui-section
+      +ui-section-head
+        h2 Dot
+        p Блок: blocks/dot/dot
+      +ui-section-content
+        +ui-description Dot .dot
+        +dot
+        +ui-description Dot .dot._double
+        +dot._double
+
+    //- Income
+    +ui-section
+      +ui-section-head
+        h2 Income
+        p Блок: blocks/income/income
+      +ui-section-content
+        +ui-description .income
+        +income(width="200")
+
+    //- Info-block
+    +ui-section
+      +ui-section-head
+        h2 Info-block
+        p Блок: blocks/info-block/info-block
+      +ui-section-content
+        +ui-description .info-block
+        +grid
+          +col(6)
+            +info-block('Заголовок', 'Кнопка')
+              +content-zone
+                +e.P Контент
+          +col(6)
+
+    //- Info-message
+    +ui-section
+      +ui-section-head
+        h2 Info-message
+        p Блок: blocks/info-message/info-message
+      +ui-section-content
+        +ui-description .info-message
+        +info-message('Заголовок')
+          +e.P Контент
+
+    //- Mark
+    +ui-section
+      +ui-section-head
+        h2 Mark
+        p Блок: blocks/mark/mark
+      +ui-section-content
+        +ui-description .mark
+        +mark T
+        +ui-description .mark._orange
+        +mark._orange B
+
+    //- Notification
+    +ui-section
+      +ui-section-head
+        h2 Notification
+        p Блок: blocks/notification/notification
+      +ui-section-content
+        +ui-description .notification
+        +notification
+        +ui-description .notification.is-active
+        +notification.is-active
+
+    //- page-section
+    +ui-section
+      +ui-section-head
+        h2 Page-section
+        p Блок: blocks/page-section/page-section
+      +ui-section-content
+        +ui-description .page-section
+        +page-section('Заголовок')
+          +e.P Контент
+
+    //- Price
+    +ui-section
+      +ui-section-head
+        h2 Price
+        p Блок: blocks/price/price
+      +ui-section-content
+        +ui-description .price
+        +price('Заголовок') 1350
+
+    //- Accounting
+    +ui-section
+      +ui-section-head
+        h2 Accounting
+        p Блок: blocks/accounting/accounting
+      +ui-section-content
+        +ui-description .accounting
+        +grid
+          +col(6)
+            +accounting
+
+    //- Rate
+    +ui-section
+      +ui-section-head
+        h2 Rate
+        p Блок: blocks/rate/rate
+      +ui-section-content
+        +ui-description .rate
+        +grid
+          +col(6)
+            +rate
+
+    //- Short news
+    +ui-section
+      +ui-section-head
+        h2 Short-news
+        p Блок: blocks/short-news/short-news
+      +ui-section-content
+        +ui-description .short-news
+        +grid
+          +col(6)
+            +short-news('Заголовок', '01.01.2018') Текст
 
   script
     |

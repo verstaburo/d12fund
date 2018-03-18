@@ -11,10 +11,10 @@ $ui-kit-color-darkbg: $color-background;
     right: 100%;
     top: 0;
     height: 100vh;
-    box-shadow: 0 0 30px rgba($color-basic, .15);
+    box-shadow: 0 0 30px rgba($color-main, .15);
     z-index: 10;
     padding: 20px;
-    background-color: white;
+    background-color: $color-blue;
     transform: translate3d(15%, 0, 0);
     width: 240px;
     opacity: .5;
@@ -27,8 +27,8 @@ $ui-kit-color-darkbg: $color-background;
       width: 18px;
       height: 14px;
       box-sizing: border-box;
-      border-top: 2px solid $color-basic;
-      border-bottom: 2px solid $color-basic;
+      border-top: 2px solid $color-main;
+      border-bottom: 2px solid $color-main;
       top: 9px;
       right: 9px;
       opacity: 1;
@@ -43,7 +43,7 @@ $ui-kit-color-darkbg: $color-background;
         margin: auto;
         width: 100%;
         height: 2px;
-        background-color: $color-basic;
+        background-color: $color-main;
       }
     }
 
@@ -57,7 +57,7 @@ $ui-kit-color-darkbg: $color-background;
     li {
       @include text;
 
-      a { @include link; }
+      a { @include link-white; }
 
       &:not(:last-child) { margin-bottom: 5px; }
     }
@@ -181,17 +181,38 @@ $ui-kit-color-darkbg: $color-background;
     padding: 10px;
     display: inline-block;
     vertical-align: top;
+    color: $color-text-fifth;
     box-shadow: inset 0 0 0 1px rgba(black, .1);
 
     &_bg_dark { color: white; }
 
     &_gradient {
-      &_main { @include gradient-main; }
+      &_main {
+        @include gradient-main;
+      }
+
+      &_light {
+        @include gradient-light;
+      }
     }
   }
 
   &__custom-text {
-    &_style-1 { @include text; }
+    &_style-1 {
+      @include text-extra-big;
+    }
+
+    &_style-2 {
+      @include text-bigger-st;
+    }
+
+    &_style-3 {
+      @include text-bigger;
+    }
+
+    &_style-4 {
+      @include text-big;
+    }
 
     &:not(:last-child) { margin-bottom: 10px; }
   }

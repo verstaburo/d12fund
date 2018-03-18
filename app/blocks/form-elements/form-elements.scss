@@ -113,6 +113,7 @@
     font-family: monospace;
     cursor: pointer;
     text-align: center;
+    vertical-align: middle;
 
     &:hover::before, &:hover::after { opacity: .5; }
 

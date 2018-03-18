@@ -37,4 +37,11 @@ export default function popups() {
     $('.popup-overlay').removeClass('active');
     $('.js-open-popup.active').removeClass('active');
   });
+  $(document).on('click', '.js-close-popup', () => {
+    $('.popup.active').find('[data-step]').removeClass('active');
+    $('.popup.active').find('[data-step="step1"]').addClass('active');
+    $('.popup.active').removeClass('active');
+    $('.popup-overlay').removeClass('active');
+    $('.js-open-popup.active').removeClass('active');
+  });
 }
