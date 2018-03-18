@@ -21,9 +21,13 @@
   }
 
   &__avatar {
-    margin-right: 16px;
+    margin-right: 10px;
 
     @include screen('desktop') {
+      margin-right: 16px;
+    }
+
+    @include screen('desktop-wide') {
       margin-right: 24px;
     }
   }
@@ -33,50 +37,82 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     transform: rotate(0);
     transition: all $ease-main;
+
+    @include screen('phone-wide') {
+      width: 12px;
+      height: 12px;
+    }
   }
 
   &__login {
-    @include text;
+    @include text-small;
     font-weight: 500;
+    margin-right: 10px;
+    @include ellipsis(100%);
+    max-width: 70px;
 
-    @include screen('desktop-wide', max) {
-      @include visual-hide;
+    @include screen('phone-wide') {
+      max-width: none;
     }
 
-    @include screen('desktop') {
+    @include screen('desktop-wide') {
+      @include text;
+      font-weight: 500;
       margin-right: 16px;
     }
   }
 
   &__icon {
-    width: 11px;
-    height: 7px;
+    width: 9px;
+    height: 5px;
     fill: none;
     stroke: $color-basic;
     transition: all $ease-main;
+
+    @include screen('phone-wide') {
+      width: 11px;
+      height: 7px;
+    }
   }
 
   &__dropdown.dropdown {
     width: auto;
+    width: 200px;
     max-width: 200px;
     margin-top: 0;
-    padding: 20px 12px;
+    padding: 0 0 12px;
     left: auto;
     right: 0;
 
     @include screen('desktop-wide') {
       max-width: none;
-      padding-top: 8px;
       width: calc(100% - 64px);
     }
 
     .link-list__item {
+      width: 100%;
       max-width: 100%;
       font-weight: 500;
+      background-color: transparent;
+      transition: all $ease-main;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: $color-background-four;
+      }
+    }
+
+    .link {
+      box-sizing: border-box;
+      padding: 8px 12px;
+      width: 100%;
     }
 
     .link__text {

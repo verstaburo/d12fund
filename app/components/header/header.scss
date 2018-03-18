@@ -16,23 +16,23 @@
   }
 
   @include screen('desktop') {
-    padding: 24px 30px;
-  }
-
-  @include screen('tablet-wide') {
     flex-wrap: nowrap;
+    padding: 24px 30px;
   }
 
   &__logo, &__account {
 
-    @include screen('tablet-wide') {
-      width: 200px;
-      max-width: 200px;
-    }
-
-    @include screen('desktop-wide') {
+    @include screen('desktop') {
       width: 400px;
       max-width: 400px;
+    }
+  }
+
+  &__logo {
+    margin-right: 20px;
+
+    @include screen('desktop') {
+      margin-right: 0;
     }
   }
 
@@ -40,7 +40,7 @@
     display: block;
     margin: 0 auto;
 
-    @include screen('tablet-wide', max) {
+    @include screen('desktop', max) {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -69,19 +69,23 @@
     .notification {
       margin-right: 10px;
 
-      @include screen('phone-wide') {
+      @include screen('desktop') {
         margin-right: 16px;
       }
 
-      @include screen('desktop') {
+      @include screen('desktop-wide') {
         margin-right: 24px;
       }
     }
 
     .language {
-      margin-right: 16px;
+      margin-right: 10px;
 
       @include screen('desktop') {
+        margin-right: 16px;
+      }
+
+      @include screen('desktop-wide') {
         margin-right: 26px;
       }
     }

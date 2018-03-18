@@ -40,6 +40,29 @@ $(document).on('click', '.js-dropdown-toggle', function (e) {
   e.stopPropagation();
 
   toggle(dropdown, !btn.hasClass('is-active'));
+
+  const wD = $(dropdown).outerWidth();
+  const hD = $(dropdown).outerHeight();
+  const xD = $(dropdown).offset().left;
+  const yD = $(dropdown).offset().top;
+
+  function closeDropdown(evt) {
+    const x = evt.pageX;
+    const y = evt.pageY;
+
+    if (x >= xD && x <= (xD + wD) && y > yD && y < (yD + hD)) {
+      return;
+    }
+
+    toggle($(dropdown), false);
+    $(document).off('mousemove', closeDropdown);
+  }
+
+  setTimeout(() => {
+    if (dropdown.hasClass('is-active')) {
+      $(document).on('mousemove', closeDropdown);
+    }
+  }, 1000);
 });
 
 /**
@@ -74,4 +97,14 @@ $(document).on('click', (e) => {
   $('.js-dropdown.is-active').each(function () {
     toggle($(this), false);
   });
+});
+
+$(document).on('mouseleave', '.js-dropdown', (e) => {
+  const target = $(e.target);
+
+  if (target.hasClass('js-dropdown') || target.parents('.js-dropdown').length) {
+    $('.js-dropdown.is-active').each((i, el) => {
+      toggle($(el), false);
+    });
+  }
 });

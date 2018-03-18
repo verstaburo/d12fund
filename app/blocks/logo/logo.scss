@@ -18,7 +18,7 @@
     font-weight: 700;
     color: $color-basic;
 
-    @include screen('phone-wide', max) {
+    @include screen('phablet', max) {
       @include visual-hide;
     }
   }
