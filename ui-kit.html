@@ -486,6 +486,19 @@
                 </div>
             </div>
         </div>
+        <div class="popup" id="testpopup">
+            <div class="container">
+                <div class="popup__title">Тестоввый попап - загололвок</div>
+                <div class="popup__content">
+                    <div class="content-zone">
+                        <p>Контент попапа</p>
+                    </div>
+                    <a class="link js-close-popup" href="#">
+                        <span class="link__text">Скрыть попап (.js-close-popup)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="ui-kit">
         <div class="ui-kit__navigation">
@@ -508,7 +521,7 @@
                 <div class="container">
                     <h2>Сетка</h2>
                     <p>Отступы слева и справа от экрана: 20px ($container-padding)</p>
-                    <p>Ширина контейнера: 960px ($container-width)</p>
+                    <p>Ширина контейнера максимальная: 1210px ($container-width)</p>
                     <p>Ширина контейнера сетки: 100% ($grid-container-width)</p>
                     <p>Колонок: 12 ($grid-cols)</p>
                     <p>Горизонтальное расстояние между колонками: 20px ($grid-gap)</p>
@@ -551,16 +564,70 @@
             <div class="ui-kit__section-content">
                 <div class="container">
                     <div class="ui-kit__elements-list">
-                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: black;">black
+                        <div class="ui-kit__color" style="background-color: white;">white
                             <br>$color-basic</div>
-                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #2252d8;">#2252d8
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #1a97fc;">#1a97fc
                             <br>$color-main</div>
-                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #777;">#777
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #122a48;">#122a48
                             <br>$color-placeholder</div>
-                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: black;">black
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #268dfc;">#268dfc
                             <br>$color-input</div>
-                        <div class="ui-kit__color" style="background-color: #ccc;">#ccc
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #83a1c4;">#83a1c4
+                            <br>$color-text</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #b6d0ee;">#b6d0ee
+                            <br>$color-text-second</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0c3669;">#0c3669
+                            <br>$color-text-third</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #238efc;">#238efc
+                            <br>$color-text-four</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #3a4f68;">#3a4f68
+                            <br>$color-text-fifth</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #23538d;">#23538d
                             <br>$color-border</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #09182a;">#09182a
+                            <br>$color-background</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0a1b2f;">#0a1b2f
+                            <br>$color-background-second</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0c1f35;">#0c1f35
+                            <br>$color-background-third</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0a2443;">#0a2443
+                            <br>$color-background-four</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0a2648;">#0a2648
+                            <br>$color-background-fifth</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #2290fc;">#2290fc
+                            <br>$color-button</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0055a9;">#0055a9
+                            <br>$color-button-hover</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0b1e34;">#0b1e34
+                            <br>$color-button-background</div>
+                        <div class="ui-kit__color" style="background-color: #f5922f;">#f5922f
+                            <br>$color-orange</div>
+                        <div class="ui-kit__color" style="background-color: #ffbd7c;">#ffbd7c
+                            <br>$color-orange-light</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #be2a73;">#be2a73
+                            <br>$color-red</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #7cbc29;">#7cbc29
+                            <br>$color-green</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #234266;">#234266
+                            <br>$color-blue</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0f3056;">#0f3056
+                            <br>$color-blue-2</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #3b93e8;">#3b93e8
+                            <br>$color-light-blue</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #2a8afc;">#2a8afc
+                            <br>$color-light-blue2</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #2f84fc;">#2f84fc
+                            <br>$color-light-blue3</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #1a324f;">#1a324f
+                            <br>$color-grid-lines</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #183455;">#183455
+                            <br>$color-blue-3</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #337dfc;">#337dfc
+                            <br>$color-gradient-1</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0044b3;">#0044b3
+                            <br>$color-gradient-2</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark" style="background-color: #0053a9;">#0053a9
+                            <br>$color-gradient-3</div>
                     </div>
                 </div>
             </div>
@@ -577,6 +644,7 @@
                 <div class="container">
                     <div class="ui-kit__elements-list">
                         <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_main" style="background: undefined;">gradient-main</div>
+                        <div class="ui-kit__color ui-kit__color_bg_dark ui-kit__color_gradient_light" style="background: undefined;">gradient-light</div>
                     </div>
                 </div>
             </div>
@@ -585,12 +653,11 @@
             <div class="ui-kit__section-head">
                 <div class="container">
                     <h2>Шрифты и контентная зона</h2>
-                    <p>Основной шрифт: Arial ($font-main), font-weight: 400, 600</p>
-                    <p>Дополнительный шрифт: Times New Roman ($font-second), font-weight: 400, 600</p>
+                    <p>Основной шрифт: Helvetica Neue ($font-main), font-weight: 300, 400, 500, 700</p>
                     <p>Переменные находятся в файле styles/helpers/_variables.scss</p>
                     <p>Шрифты подключены в styles/helpers/_fonts.scss</p>
                     <p>Контентная зона: blocks/content-zone</p>
-                    <p>Стили всех текстов лежат в файле styles/helpers/_text-styles.scss и должны импортироваться из него через директиву @extend и задаваться через "временные" классы %className</p>
+                    <p>Стили всех текстов лежат в файле styles/helpers/_text-styles.scss и должны импортироваться из него через директиву @include</p>
                 </div>
             </div>
             <div class="ui-kit__section-content">
@@ -647,7 +714,10 @@
                         </div>
                     </div>
                     <p class="ui-kit__description">Другие стили текстов:</p>
-                    <div class="ui-kit__custom-text ui-kit__custom-text_style-1">Пример кастомного стиля на примере стандартного (%text)</div>
+                    <div class="ui-kit__custom-text ui-kit__custom-text_style-1">Пример кастомного стиля на примере стандартного 45px (text-extra-big)</div>
+                    <div class="ui-kit__custom-text ui-kit__custom-text_style-2">Пример кастомного стиля на примере стандартного 19px (text-bigger-st)</div>
+                    <div class="ui-kit__custom-text ui-kit__custom-text_style-3">Пример кастомного стиля на примере стандартного 18px (text-bigger)</div>
+                    <div class="ui-kit__custom-text ui-kit__custom-text_style-4">Пример кастомного стиля на примере стандартного 16px (text-big)</div>
                 </div>
             </div>
         </section>
@@ -660,25 +730,76 @@
             </div>
             <div class="ui-kit__section-content">
                 <div class="container">
-                    <table class="table" cellspacing="0">
-                        <thead>
-                            <tr>
-                                <td>Ячейка</td>
-                                <td>Ячейка</td>
-                                <td>Ячейка</td>
-                            </tr>
-                        </thead>
-                        <tr>
-                            <td>Ячейка</td>
-                            <td>Ячейка</td>
-                            <td>Ячейка</td>
-                        </tr>
-                        <tr>
-                            <td>Ячейка</td>
-                            <td>Ячейка</td>
-                            <td>Ячейка</td>
-                        </tr>
-                    </table>
+                    <p class="ui-kit__description">Простая таблица
+                        <table class="table" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Ячейка</th>
+                                    <th>Ячейка</th>
+                                    <th>Ячейка</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                </tr>
+                                <tr>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                    <td>Ячейка</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                    <p class="ui-kit__description">Таблица purchase history
+                        <span class="ui-kit__wrapper js-scrollbar">
+                            <table class="table" cellspacing="0">
+                                <thead class="table__header">
+                                    <tr class="table__row table__row_head">
+                                        <th class="table__cell table__cell_head">Date</th>
+                                        <th class="table__cell table__cell_head">Name</th>
+                                        <th class="table__cell table__cell_head">Type</th>
+                                        <th class="table__cell table__cell_head">Gross</th>
+                                        <th class="table__cell table__cell_head">Fee</th>
+                                        <th class="table__cell table__cell_head">Net</th>
+                                        <th class="table__cell table__cell_head">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table__body">
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell_date">table__cell</td>
+                                        <td class="table__cell table__cell_name">
+                                            <div class="mark table__mark">
+                                                <div class="mark__text">T</div>
+                                            </div>table__cell_name</td>
+                                        <td class="table__cell table__cell_type">table__cell_type</td>
+                                        <td class="table__cell table__cell_gross">table__cell</td>
+                                        <td class="table__cell table__cell_fee"> table__cell</td>
+                                        <td class="table__cell table__cell_net">
+                                            <span class="table__down">table__down</span>
+                                        </td>
+                                        <td class="table__cell table__cell_balance"> table__cell</td>
+                                    </tr>
+                                    <tr class="table__row">
+                                        <td class="table__cell table__cell_date">table__cell</td>
+                                        <td class="table__cell table__cell_name">
+                                            <div class="mark mark_orange table__mark">
+                                                <div class="mark__text">B</div>
+                                            </div>table__cell_name</td>
+                                        <td class="table__cell table__cell_type">table__cell_type</td>
+                                        <td class="table__cell table__cell_gross">table__cell</td>
+                                        <td class="table__cell table__cell_fee"> table__cell</td>
+                                        <td class="table__cell table__cell_net">
+                                            <span class="table__up">table__up</span>
+                                        </td>
+                                        <td class="table__cell table__cell_balance"> table__cell</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -693,7 +814,17 @@
                 <div class="container">
                     <div class="ui-kit__elements-list">
                         <a class="button" href="#">.button</a>
-                        <button class="button" href="#" disabled="disabled">.button:disabled</button>
+                        <button class="button" type="button" disabled="disabled">.button:disabled (.button.disabled)</button>
+                        <a class="button button_arrow" href="#">.button_arrow
+                            <span class="button__image">
+                                <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                            </span>
+                        </a>
+                        <a class="button button_small" href="#">.button_small</a>
+                        <a class="button button_smaller" href="#">.button_smaller</a>
+                        <a class="button button_dark" href="#">.button_dark</a>
+                        <a class="button button_darken" href="#">.button_darken</a>
+                        <a class="button button_darken active" href="#">.button_darken.active</a>
                     </div>
                     <p class="ui-kit__description">При клике на .js-anchor происходит скролл к элементу из атрибута href. Блок: blocks/js-functions/anchor.js</p>
                     <a class="button js-anchor" href="#section0">.js-anchor</a>
@@ -837,6 +968,29 @@
                                 <div class="range js-range" data-start="40" data-connect="[true, false]" data-min="0" data-max="100"></div>
                             </div>
                         </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.upload.js-upload</p>
+                            <div class="inputbox">
+                                <label class="upload js-upload">
+                                    <input class="input upload__input" type="file" name="file[]" />
+                                    <span class="upload__image">
+                                        <svg class="upload__icon"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six">
+                            <p class="ui-kit__description">.upload._zone.js-upload-mix</p>
+                            <div class="inputbox">
+                                <label class="upload upload_zone js-upload-mix">
+                                    <input class="input upload__input" type="file" name="file[]" />
+                                    <span class="upload__content">
+                                        <svg class="upload__mark"><use xlink:href="assets/images/icon.svg#icon_upload"></use></svg>
+                                        <span class="upload__text">Drag or browse image of your ID card</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -844,28 +998,41 @@
         <section class="ui-kit__section">
             <div class="ui-kit__section-head">
                 <div class="container">
-                    <h2>Табы</h2>
-                    <p>Блок: blocks/tabs</p>
+                    <h2>Форма</h2>
+                    <p>Блок: blocks/form/form</p>
+                    <pre style="white-space: pre;">.form
+ .form__row
+   .form__label
+      .star *
+      | Label
+   .form__wrapper
+     .input
+     .switcher
+       .icon</pre>
+                    <p>Для валидации добавить .js-validate к кнопке отправки формы</p>
                 </div>
             </div>
             <div class="ui-kit__section-content">
                 <div class="container">
-                    <ul class="tabs">
-                        <li class="tabs__tab active" data-tab-target="tab1">Информация</li>
-                        <li class="tabs__tab" data-tab-target="tab2">Контент</li>
-                        <li class="tabs__tab" data-tab-target="tab3">Тексты</li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="testtabs">
-                            <p>Это таб 1</p>
+                    <form class="form">
+                        <label class="form__row">
+                            <span class="form__label">
+                                <span class="form__star">*</span>Label</span>
+                            <span class="form__wrapper">
+                                <input class="input" type="text" placeholder="Type your name" require="require" />
+                                <span class="form__switcher form__switcher_info">
+                                    <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
+                                </span>
+                            </span>
+                        </label>
+                        <div class="form__row form__row_centered form__row_button">
+                            <button class="button button_arrow form__button js-validate" type="submit">Submit
+                                <div class="button__image">
+                                    <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                                </div>
+                            </button>
                         </div>
-                        <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="testtabs">
-                            <p>Это таб 2</p>
-                        </div>
-                        <div class="tabs-content__wrapper" data-tab="tab3" data-tab-group="testtabs">
-                            <p>Это таб 3</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -878,25 +1045,20 @@
             </div>
             <div class="ui-kit__section-content">
                 <div class="container">
-                    <p class="ui-kit__description">.js-fancybox</p>
-                    <a class="link js-fancybox" href="#testpopup">
-                        <span class="link__text">Открыть попап</span>
-                    </a>
                     <p class="ui-kit__description">Верстка попапов:</p>
-                    <a class="link" onclick="$('.popups').toggle()">
-                        <span class="link__text">Показать попапы</span>
+                    <a class="link js-open-popup" href="#" data-popup="testpopup">
+                        <span class="link__text">Показать попапы(.js-open-popup)</span>
                     </a>
-                    <div class="popups ui-kit__ui-popups">
-                        <div class="popup-overlay"></div>
-                        <div class="popup" id="testpopup">
-                            <div class="container">
-                                <div class="popup__title"></div>
-                                <div class="popup__content">
-                                    <div class="content-zone">
-                                        <h2>Тестовый попап</h2>
-                                        <p>С тестовым контентом</p>
-                                    </div>
+                    <div class="popup" id="testpopup">
+                        <div class="container">
+                            <div class="popup__title">Тестоввый попап - загололвок</div>
+                            <div class="popup__content">
+                                <div class="content-zone">
+                                    <p>Контент попапа</p>
                                 </div>
+                                <a class="link js-close-popup" href="#">
+                                    <span class="link__text">Скрыть попап (.js-close-popup)</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -917,9 +1079,21 @@
                     <a class="link" href="#">
                         <span class="link__text">Обычная ссылка</span>
                     </a>
-                    <p class="ui-kit__description">.link._dashed</p>
-                    <a class="link link_dashed" href="#">
-                        <span class="link__text">Пунктирная ссылка</span>
+                    <p class="ui-kit__description">.link._white</p>
+                    <a class="link link_white" href="#">
+                        <span class="link__text">Белая ссылка</span>
+                    </a>
+                    <p class="ui-kit__description">.link._upper</p>
+                    <a class="link link_upper" href="#">
+                        <span class="link__text">В верхнем регистре ссылка</span>
+                    </a>
+                    <p class="ui-kit__description">.link._dark</p>
+                    <a class="link link_dark" href="#">
+                        <span class="link__text">Темная ссылка</span>
+                    </a>
+                    <p class="ui-kit__description">.link._bordered</p>
+                    <a class="link link_bordered" href="#">
+                        <span class="link__text">Подчеркнутая ссылка</span>
                     </a>
                     <p class="ui-kit__description">.link._icon</p>
                     <a class="link link_icon" href="#">
@@ -992,180 +1166,6 @@
         <section class="ui-kit__section">
             <div class="ui-kit__section-head">
                 <div class="container">
-                    <h2>Подсказки</h2>
-                    <p>Блок: blocks/tooltip/tooltip</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">.js-tooltip</p>
-                    <a class="button js-tooltip" href="#" title="Пример подсказки">Пример подсказки</a>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Карты</h2>
-                    <p>Блок: blocks/map/map</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">#map</p>
-                    <div class="map" id="map"></div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Анимации при скролле</h2>
-                    <p>Блок: blocks/js-functions/scrollanimation</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">.js-sr — общий класс для анимируемых элементов</p>
-                    <div class="content-zone">
-                        <h3 class="js-sr js-sr_1">.js-sr_1</h3>
-                        <h4 class="js-sr js-sr_2">.js-sr_2</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Хлебные крошки</h2>
-                    <p>Блок: blocks/breadcrumbs/breadcrumbs</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <div class="breadcrumbs js-test">
-                        <ul>
-                            <li class="breadcrumbs__item">
-                                <a class="link" href="#">
-                                    <span class="link__text">Главная</span>
-                                </a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a class="link" href="#">
-                                    <span class="link__text">Раздел</span>
-                                </a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a class="link" href="#">
-                                    <span class="link__text">Страница</span>
-                                </a>
-                            </li>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Рейтинг</h2>
-                    <p>Блок: blocks/rating/rating</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">Интерактивный</p>
-                    <div class="rating rating_interactive">
-                        <label class="rating__box">
-                            <input class="rating__control js-rating-control" type="radio" name="name" value="4" />
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </label>
-                        <label class="rating__box">
-                            <input class="rating__control js-rating-control" type="radio" name="name" value="3" />
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </label>
-                        <label class="rating__box">
-                            <input class="rating__control js-rating-control" type="radio" name="name" value="2" />
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </label>
-                        <label class="rating__box">
-                            <input class="rating__control js-rating-control" type="radio" name="name" value="1" />
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </label>
-                        <label class="rating__box">
-                            <input class="rating__control js-rating-control" type="radio" name="name" value="0" />
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </label>
-                    </div>
-                    <p class="ui-kit__description">Статичный</p>
-                    <div class="rating">
-                        <div class="rating__box">
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </div>
-                        <div class="rating__box">
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </div>
-                        <div class="rating__box is-active">
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </div>
-                        <div class="rating__box">
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </div>
-                        <div class="rating__box">
-                            <svg class="rating__icon"><use xlink:href="assets/images/icon.svg#icon_star"></use></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
-                    <h2>Аккордион</h2>
-                    <p>Блок: blocks/accordion/accordion</p>
-                </div>
-            </div>
-            <div class="ui-kit__section-content">
-                <div class="container">
-                    <p class="ui-kit__description">Multiple true</p>
-                    <div class="accordions" data-accordion-multiple="false">
-                        <div class="accordion is-active">
-                            <div class="accordion__header">
-                                <div class="accordion__button js-accordion-button">Блок #1</div>
-                            </div>
-                            <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam. Quod sit
-                                molestias sapiente.</div>
-                        </div>
-                        <div class="accordion">
-                            <div class="accordion__header">
-                                <div class="accordion__button js-accordion-button">Блок #2</div>
-                            </div>
-                            <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam. Quod sit
-                                molestias sapiente.</div>
-                        </div>
-                    </div>
-                    <p class="ui-kit__description">Multiple false</p>
-                    <div class="accordions" data-accordion-multiple="false">
-                        <div class="accordion is-active">
-                            <div class="accordion__header">
-                                <div class="accordion__button js-accordion-button">Блок #1</div>
-                            </div>
-                            <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam. Quod sit
-                                molestias sapiente.</div>
-                        </div>
-                        <div class="accordion">
-                            <div class="accordion__header">
-                                <div class="accordion__button js-accordion-button">Блок #2</div>
-                            </div>
-                            <div class="accordion__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam. Quod sit
-                                molestias sapiente.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ui-kit__section">
-            <div class="ui-kit__section-head">
-                <div class="container">
                     <h2>Dropdown</h2>
                     <p>Блок: blocks/dropdown/dropdown</p>
                 </div>
@@ -1180,6 +1180,430 @@
                     <div style="display: inline-block; position: relative; margin-bottom: 24px;">
                         <a class="button js-dropdown-toggle">bottom</a>
                         <div class="js-dropdown dropdown">content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Avatar</h2>
+                    <p>Блок: blocks/avatar/avatar</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">Блок аватара маленький .avatar</p>
+                    <div class="avatar">
+                        <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                    </div>
+                    <p class="ui-kit__description">Блок аватара большой .avatar._big</p>
+                    <div class="avatar avatar_big">
+                        <img class="avatar__image" src="assets/images/avatar.jpg" alt="" role="presentation" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Social</h2>
+                    <p>Блок: blocks/social/social</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">Блок социальной сети .social(img)</p>
+                    <a class="social">
+                        <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Socials</h2>
+                    <p>Блок: blocks/socials/socials</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">Список социальных сетей .socials</p>
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a class="social" href="#" title="Facebook">
+                                <svg class="social__icon social__icon_fb"><use xlink:href="assets/images/icon.svg#icon_fb"></use></svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social" href="#" title="Twitter">
+                                <svg class="social__icon social__icon_tw"><use xlink:href="assets/images/icon.svg#icon_tw"></use></svg>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="social" href="#" title="Google+">
+                                <svg class="social__icon social__icon_gg"><use xlink:href="assets/images/icon.svg#icon_gg"></use></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Captcha</h2>
+                    <p>Блок: blocks/capcha/capcha</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">Captcha .capcha</p>
+                    <div class="capcha">
+                        <div class="g-recaptcha" id="capcha-signup" data-sitekey="6Lfs3kwUAAAAAE93iFUe8yYnIlDD9WOi-9mMv-9N" data-theme="dark"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Dot</h2>
+                    <p>Блок: blocks/dot/dot</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">Dot .dot</p>
+                    <div class="dot"></div>
+                    <p class="ui-kit__description">Dot .dot._double</p>
+                    <div class="dot dot_double"></div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Income</h2>
+                    <p>Блок: blocks/income/income</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.income</p>
+                    <div class="income" width="200">
+                        <div class="income__total">$8,337.335</div>
+                        <div class="income__current">
+                            <div class="income__sum">+ $ 337,23</div>
+                            <div class="income__time">Today</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Info-block</h2>
+                    <p>Блок: blocks/info-block/info-block</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.info-block</p>
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <div class="info-block">
+                                <div class="info-block__title">Заголовок</div>
+                                <div class="info-block__content">
+                                    <div class="content-zone">
+                                        <p>Контент</p>
+                                    </div>
+                                </div>
+                                <div class="info-block__buttons">
+                                    <a class="button info-block__button" href="#">Кнопка</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__col grid__col_six"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Info-message</h2>
+                    <p>Блок: blocks/info-message/info-message</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.info-message</p>
+                    <div class="info-message">
+                        <div class="info-message__image">
+                            <svg class="info-message__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                        </div>
+                        <div class="info-message__title">Заголовок</div>
+                        <div class="info-message__text">
+                            <p>Контент</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Mark</h2>
+                    <p>Блок: blocks/mark/mark</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.mark</p>
+                    <div class="mark">
+                        <div class="mark__text">T</div>
+                    </div>
+                    <p class="ui-kit__description">.mark._orange</p>
+                    <div class="mark mark_orange">
+                        <div class="mark__text">B</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Notification</h2>
+                    <p>Блок: blocks/notification/notification</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.notification</p>
+                    <a class="notification" href="#">
+                        <svg class="notification__icon"><use xlink:href="assets/images/icon.svg#icon_bell"></use></svg>
+                    </a>
+                    <p class="ui-kit__description">.notification.is-active</p>
+                    <a class="notification is-active" href="#">
+                        <svg class="notification__icon"><use xlink:href="assets/images/icon.svg#icon_bell"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Page-section</h2>
+                    <p>Блок: blocks/page-section/page-section</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.page-section</p>
+                    <section class="page-section">
+                        <div class="container">
+                            <h3 class="page-section__title">
+                                <span class="page-section__text">Заголовок</span>
+                            </h3>
+                            <p>Контент</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Price</h2>
+                    <p>Блок: blocks/price/price</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.price</p>
+                    <div class="price">
+                        <div class="price__label">Заголовок</div>
+                        <div class="price__text">1350
+                            <span class="price__unit">USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Accounting</h2>
+                    <p>Блок: blocks/accounting/accounting</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.accounting</p>
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <div class="accounting">
+                                <div class="accounting__row">
+                                    <div class="accounting__col accounting__col_left">
+                                        <div class="mark accounting__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>
+                                        <div class="accounting__currency">TOKEN</div>
+                                        <div class="accounting__status">Sold</div>
+                                    </div>
+                                    <div class="accounting__col accounting__col_right">
+                                        <div class="accounting__price">
+                                            <span class="down">-</span>$ 337</div>
+                                    </div>
+                                </div>
+                                <div class="accounting__row">
+                                    <div class="accounting__col accounting__col_left">
+                                        <div class="mark accounting__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>
+                                        <div class="accounting__currency">TOKEN</div>
+                                        <div class="accounting__status">Bought</div>
+                                    </div>
+                                    <div class="accounting__col accounting__col_right">
+                                        <div class="accounting__price">
+                                            <span class="up">+</span>$ 337</div>
+                                    </div>
+                                </div>
+                                <div class="accounting__row">
+                                    <div class="accounting__col accounting__col_left">
+                                        <div class="mark accounting__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>
+                                        <div class="accounting__currency">TOKEN</div>
+                                        <div class="accounting__status">Bought</div>
+                                    </div>
+                                    <div class="accounting__col accounting__col_right">
+                                        <div class="accounting__price">
+                                            <span class="up">+</span>$ 337</div>
+                                    </div>
+                                </div>
+                                <div class="accounting__row">
+                                    <div class="accounting__col accounting__col_left">
+                                        <div class="mark accounting__mark">
+                                            <div class="mark__text">T</div>
+                                        </div>
+                                        <div class="accounting__currency">TOKEN</div>
+                                        <div class="accounting__status">Bought</div>
+                                    </div>
+                                    <div class="accounting__col accounting__col_right">
+                                        <div class="accounting__price">
+                                            <span class="up">+</span>$ 337</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Rate</h2>
+                    <p>Блок: blocks/rate/rate</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.rate</p>
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <div class="rate">
+                                <div class="rate__row">
+                                    <div class="rate__col rate__col_left">
+                                        <div class="rate__count">25</div>
+                                        <div class="rate__name">BTC</div>
+                                    </div>
+                                    <div class="rate__col rate__col_right">
+                                        <div class="rate__growth">
+                                            <div class="rate__arrow">
+                                                <svg class="rate__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </div>
+                                            <div class="rate__price">$ 1,482.402</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rate__row">
+                                    <div class="rate__col rate__col_left">
+                                        <div class="rate__count">28</div>
+                                        <div class="rate__name">EHT</div>
+                                    </div>
+                                    <div class="rate__col rate__col_right">
+                                        <div class="rate__growth">
+                                            <div class="rate__arrow">
+                                                <svg class="rate__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </div>
+                                            <div class="rate__price">$ 1,482.402</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rate__row">
+                                    <div class="rate__col rate__col_left">
+                                        <div class="rate__count">332</div>
+                                        <div class="rate__name">Bitcoin Cash</div>
+                                    </div>
+                                    <div class="rate__col rate__col_right">
+                                        <div class="rate__growth">
+                                            <div class="rate__arrow is-down">
+                                                <svg class="rate__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </div>
+                                            <div class="rate__price">$ 1,482.402</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rate__row">
+                                    <div class="rate__col rate__col_left">
+                                        <div class="rate__count">450</div>
+                                        <div class="rate__name">Monero</div>
+                                    </div>
+                                    <div class="rate__col rate__col_right">
+                                        <div class="rate__growth">
+                                            <div class="rate__arrow">
+                                                <svg class="rate__icon"><use xlink:href="assets/images/icon.svg#icon_arrow"></use></svg>
+                                            </div>
+                                            <div class="rate__price">$ 1,482.402</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2>Short-news</h2>
+                    <p>Блок: blocks/short-news/short-news</p>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <p class="ui-kit__description">.short-news</p>
+                    <div class="grid">
+                        <div class="grid__col grid__col_six">
+                            <a class="short-news">
+                                <div class="short-news__image">
+                                    <div class="short-news__round">
+                                        <svg class="short-news__icon"><use xlink:href="assets/images/icon.svg#icon_envelope"></use></svg>
+                                    </div>
+                                </div>
+                                <div class="short-news__content">
+                                    <h4 class="short-news__title">Заголовок</h4>
+                                    <div class="short-news__text">Текст</div>
+                                    <time class="short-news__date">01.01.2018</time>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
