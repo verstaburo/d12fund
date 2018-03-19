@@ -40,12 +40,6 @@ $(document).on('click', '.js-dropdown-toggle', function (e) {
   e.stopPropagation();
 
   toggle(dropdown, !btn.hasClass('is-active'));
-
-  setTimeout(() => {
-    if (!$(dropdown).hasClass('is-active')) {
-      toggle($(dropdown), false);
-    }
-  }, 2000);
 });
 
 /**
@@ -82,12 +76,20 @@ $(document).on('click touchstart', (e) => {
   });
 });
 
-$(document).on('mouseleave', '.js-dropdown', (e) => {
+$(document).on('mouseleave', '.js-dropdown.is-active', (e) => {
   const target = $(e.target);
 
   if (target.hasClass('js-dropdown') || target.parents('.js-dropdown').length) {
     $('.js-dropdown.is-active').each((i, el) => {
       toggle($(el), false);
     });
+  }
+});
+
+$(document).on('click', '.js-close-dropdown', (e) => {
+  const target = $(e.target).closest('.js-dropdown');
+
+  if (target.hasClass('is-active')) {
+    toggle($(target), false);
   }
 });
