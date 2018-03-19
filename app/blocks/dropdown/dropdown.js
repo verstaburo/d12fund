@@ -41,28 +41,11 @@ $(document).on('click', '.js-dropdown-toggle', function (e) {
 
   toggle(dropdown, !btn.hasClass('is-active'));
 
-  const wD = $(dropdown).outerWidth();
-  const hD = $(dropdown).outerHeight();
-  const xD = $(dropdown).offset().left;
-  const yD = $(dropdown).offset().top;
-
-  function closeDropdown(evt) {
-    const x = evt.pageX;
-    const y = evt.pageY;
-
-    if (x >= xD && x <= (xD + wD) && y > yD && y < (yD + hD)) {
-      return;
-    }
-
-    toggle($(dropdown), false);
-    $(document).off('mousemove', closeDropdown);
-  }
-
   setTimeout(() => {
-    if (dropdown.hasClass('is-active')) {
-      $(document).on('mousemove', closeDropdown);
+    if (!$(dropdown).hasClass('is-active')) {
+      toggle($(dropdown), false);
     }
-  }, 1000);
+  }, 2000);
 });
 
 /**
@@ -87,7 +70,7 @@ $(document).on(BEFORE_SHOW, '.js-dropdown', () => {
 /**
  * Hide dropdown when click outside
  */
-$(document).on('click', (e) => {
+$(document).on('click touchstart', (e) => {
   const target = $(e.target);
 
   if (target.hasClass('js-dropdown') || target.parents('.js-dropdown').length) {
