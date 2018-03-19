@@ -1,0 +1,19 @@
+include _externalIncludes
+include _internalIncludes
+
+doctype html
+html(lang='en')
+  include head
+  body
+    .wrapper.wrapper_mobile
+      - var formmenu = false
+      - var title = false
+      - var steps = 1
+      block header
+      +header-short(formmenu, title, steps)
+      +popups
+        +popup-language('Choose Your Country')#popup-language
+      block content
+      +footer
+    script(src='assets/scripts/app.min.js')
+    script(src='assets/scripts/main.js')

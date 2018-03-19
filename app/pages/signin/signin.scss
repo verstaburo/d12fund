@@ -24,10 +24,18 @@
         }
 
         &_columns {
-          margin-top: 40px;
+          margin-top: 30px;
+
+          @include screen('tablet-wide') {
+            margin-top: 50px;
+          }
 
           &:not(:last-child) {
-            margin-bottom: 70px;
+            margin-bottom: 40px;
+
+            @include screen('tablet-wide') {
+              margin-bottom: 70px;
+            }
 
             @include screen('desktop') {
               margin-bottom: 110px;

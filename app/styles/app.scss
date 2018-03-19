@@ -30,6 +30,16 @@
   min-height: 100vh;
   height: 100vh;
 
+  &_mobile {
+    min-height: 100vh;
+    height: auto;
+
+    @include screen('tablet') {
+      min-height: 100vh;
+      height: 100vh;
+    }
+  }
+
   .header, main, .footer {
     box-sizing: border-box;
     width: 100%;
