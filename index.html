@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="link-list__item">
-                    <a class="link link_icon link_white" href="#" title="Buy tokens / Invest">
+                    <a class="link link_icon link_white js-open-popup" href="#" title="Buy tokens / Invest" data-popup="popup-buy-tokens">
                         <span class="link__iwrapper">
                             <svg class="link__icon link__icon_money"><use xlink:href="assets/images/icon.svg#icon_money"></use></svg>
                         </span>
@@ -488,6 +488,237 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="popup popup-buy-tokens" id="popup-buy-tokens">
+            <div class="container">
+                <div class="popup__content">
+                    <ul class="tabs">
+                        <li class="tabs__tab active" data-tab-target="tab1">Select Cryptocurrency</li>
+                        <li class="tabs__tab" data-tab-target="tab2">Pay With Bank Account</li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="coins">
+                            <div class="form">
+                                <a class="hidden-link js-open-popup" data-popup="popup-exchange"></a>
+                                <div class="grid grid_wide">
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="btc">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_bitcoin"><use xlink:href="assets/images/icon.svg#icon_bitcoin"></use></svg>
+                                            </span>
+                                            <span class="card__title">Bitcoin</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="eth">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_ethereum"><use xlink:href="assets/images/icon.svg#icon_ethereum"></use></svg>
+                                            </span>
+                                            <span class="card__title">Ethereum</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="ltc">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_litecoin"><use xlink:href="assets/images/icon.svg#icon_litecoin"></use></svg>
+                                            </span>
+                                            <span class="card__title">Litecoin</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="xpr">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_ripple"><use xlink:href="assets/images/icon.svg#icon_ripple"></use></svg>
+                                            </span>
+                                            <span class="card__title">Ripple</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="bch">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_bitcoin"><use xlink:href="assets/images/icon.svg#icon_bitcoin"></use></svg>
+                                            </span>
+                                            <span class="card__title">Bitcoin Cash</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="xmr">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_monero"><use xlink:href="assets/images/icon.svg#icon_monero"></use></svg>
+                                            </span>
+                                            <span class="card__title">Monero</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="doge">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_doge"><use xlink:href="assets/images/icon.svg#icon_doge"></use></svg>
+                                            </span>
+                                            <span class="card__title">Doge</span>
+                                        </a>
+                                    </div>
+                                    <div class="grid__col grid__col_three">
+                                        <a class="card js-cryptocurrency-select" data-select="etc">
+                                            <span class="card__picture">
+                                                <svg class="card__icon card__icon_ethereum-c"><use xlink:href="assets/images/icon.svg#icon_ethereum-c"></use></svg>
+                                            </span>
+                                            <span class="card__title">Ethereum Classic</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__label">or choose from list</div>
+                                    <div class="form__wrapper">
+                                        <select class="select js-select js-cryptocurrency-select" name="cryptocurrency-select">
+                                            <option placeholder="placeholder" value="">Choose other currency</option>
+                                            <option value="btc">Bitcoin</option>
+                                            <option value="eth">Ethereum</option>
+                                            <option value="ltc">Litecoin</option>
+                                            <option value="xpr">Ripple</option>
+                                            <option value="bch">Bitcoin Cash</option>
+                                            <option value="xmr">Monero</option>
+                                            <option value="doge">Doge</option>
+                                            <option value="etc">Ethereum Classic</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs-content__wrapper" data-tab="tab2" data-tab-group="coins">
+                            <div class="grid grid_wide grid_centered">
+                                <div class="grid__col grid__col_three">
+                                    <a class="card" data-select="changelly" href="#">
+                                        <span class="card__picture card__picture_noeffects">
+                                            <img class="card__image card__image_changelly" src="assets/images/changelly.png" alt="" role="presentation" />
+                                        </span>
+                                        <span class="card__title">Changelly</span>
+                                    </a>
+                                </div>
+                                <div class="grid__col grid__col_three">
+                                    <a class="card" data-select="localbitcoins" href="#">
+                                        <span class="card__picture card__picture_noeffects">
+                                            <img class="card__image card__image_localbitcoins" src="assets/images/localbitcoins.png" alt="" role="presentation" />
+                                        </span>
+                                        <span class="card__title">Local Bitcoins</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="copied-block">
+                                <div class="copied-block__title">Your Wallet addess</div>
+                                <div class="copied-block__content">
+                                    <div class="copied-block__target">
+                                        <div class="copied-block__text" id="text-for-copy">0xb9645b95baa481971684e476786cbee34f6c8f71</div>
+                                    </div>
+                                    <button class="button button_small copied-block__button js-copyied" type="button" data-clipboard-target="#text-for-copy">Copy</button>
+                                    <a class="button button_small copied-block__button" href="#">Email</a>
+                                </div>
+                            </div>
+                            <div class="accordions" data-accordion-multiple="false">
+                                <div class="accordion">
+                                    <div class="accordion__header">
+                                        <div class="accordion__button js-accordion-button">Changelly FAQ</div>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <img src="assets/images/avatar.jpg" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion">
+                                    <div class="accordion__header">
+                                        <div class="accordion__button js-accordion-button">LocalBitcoins FAQ</div>
+                                    </div>
+                                    <div class="accordion__body">
+                                        <img src="assets/images/avatar.jpg" />
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Obcaecati aliquam perferendis velit ex numquam, consequatur doloribus magnam accusantium expedita eveniet, quisquam voluptate quos maiores impedit quibusdam.
+                                            Quod sit molestias sapiente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-exchange" id="popup-exchange">
+            <section class="popup__section">
+                <div class="container">
+                    <div class="popup__title">Exchange</div>
+                    <form class="form" id="form-exchange">
+                        <div class="form__field">
+                            <div class="form__column">
+                                <div class="form__label">Enter amount</div>
+                                <div class="form__wrapper form__wrapper_row">
+                                    <input class="input js-numberbox-input" type="text" placeholder="0" />
+                                    <select class="select js-select js-currency-from">
+                                        <option value="btc">BTC</option>
+                                        <option value="eth">ETH</option>
+                                        <option value="ltc">LTC</option>
+                                        <option value="xpr">XPR</option>
+                                        <option value="bch">BCH</option>
+                                        <option value="xmr">XMR</option>
+                                        <option value="doge">DOGE</option>
+                                        <option value="etc">ETC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form__exchange">
+                                <svg class="form__icon"><use xlink:href="assets/images/icon.svg#icon_exchange"></use></svg>
+                            </div>
+                            <div class="form__column">
+                                <div class="form__label">You are getting</div>
+                                <div class="form__wrapper form__wrapper_row">
+                                    <input class="input js-numberbox-input" type="text" placeholder="0" />
+                                    <select class="select js-select">
+                                        <option value="btc">BTC</option>
+                                        <option value="eth" selected="selected">ETH</option>
+                                        <option value="ltc">LTC</option>
+                                        <option value="xpr">XPR</option>
+                                        <option value="bch">BCH</option>
+                                        <option value="xmr">XMR</option>
+                                        <option value="doge">DOGE</option>
+                                        <option value="etc">ETC</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__row form__row_centered form__row_button">
+                            <button class="button form__button" type="submit">Proceed</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="popup__section popup__section_dark">
+                <div class="container">
+                    <div class="qr-block">
+                        <div class="qr-block__image">
+                            <img class="qr-block__qr" src="assets/images/qr.svg" alt="" role="presentation" />
+                        </div>
+                        <div class="qr-block__text">
+                            <p>Use QR code to get your wallet address.</p>
+                            <p>The balance will be updated after incoming transaction is confirmed in the blockchain.</p>
+                        </div>
+                    </div>
+                    <div class="copied-block">
+                        <div class="copied-block__title">Your Wallet addess</div>
+                        <div class="copied-block__content">
+                            <div class="copied-block__target">
+                                <div class="copied-block__text" id="text-for-copy">0xb9645b95baa481971684e476786cbee34f6c8f71</div>
+                            </div>
+                            <button class="button button_small copied-block__button js-copyied" type="button" data-clipboard-target="#text-for-copy">Copy</button>
+                            <a class="button button_small copied-block__button" href="#">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <main class="index" role="main">
