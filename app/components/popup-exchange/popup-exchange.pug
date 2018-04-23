@@ -8,7 +8,8 @@ mixin popup-exchange()
             +e.column
               +e.label Enter amount
               +e.wrapper_row
-                +input(type="text" placeholder="0").js-numberbox-input
+                +e.container
+                  +input(type="text" placeholder="0").js-numberbox-input
                 +select.js-currency-from
                   +e.OPTION(value="btc") BTC
                   +e.OPTION(value="eth") ETH
@@ -23,7 +24,8 @@ mixin popup-exchange()
             +e.column
               +e.label You are getting
               +e.wrapper_row
-                +input(type="text" placeholder="0").js-numberbox-input
+                +e.container
+                  +input(type="text" placeholder="0").js-numberbox-input
                 +select
                   +e.OPTION(value="btc") BTC
                   +e.OPTION(value="eth" selected) ETH
