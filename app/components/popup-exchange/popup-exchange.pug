@@ -1,0 +1,42 @@
+mixin popup-exchange()
+  +popup-nocontent.popup-exchange&attributes(attributes)
+    +e.SECTION.section
+      .container
+        .popup__title Exchange
+        +form#form-exchange
+          +e.field
+            +e.column
+              +e.label Enter amount
+              +e.wrapper_row
+                +input(type="text" placeholder="0").js-numberbox-input
+                +select.js-currency-from
+                  +e.OPTION(value="btc") BTC
+                  +e.OPTION(value="eth") ETH
+                  +e.OPTION(value="ltc") LTC
+                  +e.OPTION(value="xpr") XPR
+                  +e.OPTION(value="bch") BCH
+                  +e.OPTION(value="xmr") XMR
+                  +e.OPTION(value="doge") DOGE
+                  +e.OPTION(value="etc") ETC
+            +e.exchange
+              +icon('exchange').icon
+            +e.column
+              +e.label You are getting
+              +e.wrapper_row
+                +input(type="text" placeholder="0").js-numberbox-input
+                +select
+                  +e.OPTION(value="btc") BTC
+                  +e.OPTION(value="eth" selected) ETH
+                  +e.OPTION(value="ltc") LTC
+                  +e.OPTION(value="xpr") XPR
+                  +e.OPTION(value="bch") BCH
+                  +e.OPTION(value="xmr") XMR
+                  +e.OPTION(value="doge") DOGE
+                  +e.OPTION(value="etc") ETC
+          +e.row_centered._button
+            +button('button')(type="submit").__button Proceed
+    +e.SECTION.section_dark
+      .container
+        +qr-block
+        +copied-block
+

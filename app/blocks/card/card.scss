@@ -1,0 +1,141 @@
+.card {
+  display: block;
+  transition: all $ease-main;
+  background: $color-background-second;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+
+  @include screen('tablet') {
+    padding: 40px 10px;
+  }
+
+  &__picture {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @include screen('tablet') {
+      width: 184px;
+      height: 184px;
+    }
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all $ease-main;
+      transform-origin: center center;
+      transform: scale(.66);
+      border-radius: 50%;
+      background-image: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .4) 100%);
+      opacity: 0;
+    }
+
+    &_noeffects {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__icon {
+    width: 66px;
+    height: 66px;
+    fill: $color-light-blue3;
+    transition: all $ease-main;
+
+    @include screen('tablet') {
+      width: 123px;
+      height: 123px;
+    }
+
+    &_ripple {
+      width: 63px;
+      height: 68px;
+
+      @include screen('tablet') {
+        width: 117px;
+        height: 127px;
+      }
+    }
+
+    &_ethereum {
+      width: 56px;
+      height: 90px;
+
+      @include screen('tablet') {
+        width: 104px;
+        height: 167px;
+      }
+    }
+
+    &_ethereum-c {
+      width: 51px;
+      height: 90px;
+
+      @include screen('tablet') {
+        width: 96px;
+        height: 166px;
+      }
+    }
+  }
+
+  &__image {
+    max-height: 100px;
+    max-width: 100px;
+
+    @include screen('tablet') {
+      max-width: 184px;
+      max-height: 184px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    @include heading-4;
+    font-weight: 500;
+    color: rgba($color-text, .5);
+    transition: all $ease-main;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+
+    @include screen('tablet') {
+      margin-top: 60px;
+    }
+  }
+
+  &:hover, &.active {
+    background: $color-light-blue3;
+
+    .card {
+
+      &__title {
+        font-weight: 700;
+        color: $color-basic;
+      }
+
+      &__picture {
+
+        &::before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      &__icon {
+        fill: $color-basic;
+      }
+    }
+  }
+}

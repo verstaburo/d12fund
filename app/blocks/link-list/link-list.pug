@@ -3,7 +3,7 @@ mixin link-list()
     +e.LI.item
       +link-icon('dashboard')._white.active(href="#" title="Dashboard") Dashboard
     +e.LI.item
-      +link-icon('money')._white(href="#" title="Buy tokens / Invest") Buy tokens / Invest
+      +link-icon('money')._white(href="#" title="Buy tokens / Invest" data-popup="popup-buy-tokens").js-open-popup Buy tokens / Invest
     +e.LI.item
       +link-icon('time')._white.js-open-popup(href="#" data-popup="popup-history-purchases" title="Purchase history") Purchase history
 

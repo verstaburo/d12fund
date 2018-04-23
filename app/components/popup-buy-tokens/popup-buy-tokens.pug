@@ -1,0 +1,88 @@
+mixin popup-buy-tokens()
+  +popup.popup-buy-tokens&attributes(attributes)
+    +tabs
+      +tab()(data-tab-target="tab1").active Select Cryptocurrency
+      +tab()(data-tab-target="tab2") Pay With Bank Account
+    +tabs-content
+      +tab-wrapper()(data-tab="tab1" data-tab-group="coins").active
+        +b.form
+          a.hidden-link.js-open-popup(data-popup="popup-exchange")
+          +grid.grid_wide
+            +col(3)
+              +card('Bitcoin', 'bitcoin')(data-select="btc").js-cryptocurrency-select
+            +col(3)
+              +card('Ethereum', 'ethereum')(data-select="eth").js-cryptocurrency-select
+            +col(3)
+              +card('Litecoin', 'litecoin')(data-select="ltc").js-cryptocurrency-select
+            +col(3)
+              +card('Ripple', 'ripple')(data-select="xpr").js-cryptocurrency-select
+            +col(3)
+              +card('Bitcoin Cash', 'bitcoin')(data-select="bch").js-cryptocurrency-select
+            +col(3)
+              +card('Monero', 'monero')(data-select="xmr").js-cryptocurrency-select
+            +col(3)
+              +card('Doge', 'doge')(data-select="doge").js-cryptocurrency-select
+            +col(3)
+              +card('Ethereum Classic', 'ethereum-c')(data-select="etc").js-cryptocurrency-select
+          +e.row
+            +e.label or choose from list
+            +e.wrapper
+              +select.js-cryptocurrency-select(name="cryptocurrency-select")
+                +e.OPTION(placeholder value="") Choose other currency
+                +e.OPTION(value="btc") Bitcoin
+                +e.OPTION(value="eth") Ethereum
+                +e.OPTION(value="ltc") Litecoin
+                +e.OPTION(value="xpr") Ripple
+                +e.OPTION(value="bch") Bitcoin Cash
+                +e.OPTION(value="xmr") Monero
+                +e.OPTION(value="doge") Doge
+                +e.OPTION(value="etc") Ethereum Classic
+      +tab-wrapper()(data-tab="tab2" data-tab-group="coins")
+        +grid.grid_wide.grid_centered
+          +col(3)
+            +card('Changelly', '', 'assets/images/changelly.png', 'changelly')(data-select="changelly" href="#")
+          +col(3)
+            +card('Local Bitcoins', '', 'assets/images/localbitcoins.png', 'localbitcoins')(data-select="localbitcoins" href="#")
+        +copied-block
+        +accordions
+          +accordion
+            +accordion-header
+              +accordion-button Changelly FAQ
+            +accordion-body
+              img(src="assets/images/avatar.jpg")
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+          +accordion
+            +accordion-header
+              +accordion-button LocalBitcoins FAQ
+            +accordion-body
+              img(src="assets/images/avatar.jpg")
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Obcaecati aliquam perferendis velit ex numquam, consequatur
+                | doloribus magnam accusantium expedita eveniet,
+                | quisquam voluptate quos maiores impedit quibusdam.
+                | Quod sit molestias sapiente.
+

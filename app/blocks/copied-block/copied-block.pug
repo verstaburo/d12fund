@@ -1,0 +1,8 @@
+mixin copied-block()
+  +b.copied-block&attributes(attributes)
+    +e.title Your Wallet addess
+    +e.content
+      +e.target
+        +e.text#text-for-copy 0xb9645b95baa481971684e476786cbee34f6c8f71
+      +button('button')._small.__button.js-copyied(type="button" data-clipboard-target="#text-for-copy") Copy
+      +button('a')._small.__button(href="#") Email

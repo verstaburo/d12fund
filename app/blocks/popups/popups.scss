@@ -60,6 +60,20 @@
       padding-bottom: 90px;
     }
   }
+
+  &__section {
+    width: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+
+    @include screen('desktop') {
+      padding-bottom: 106px;
+    }
+
+    &_dark {
+      background: $color-background;
+    }
+  }
 }
 
 .fancybox-close-small:focus::after { outline: none; }

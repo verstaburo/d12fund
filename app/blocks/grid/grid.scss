@@ -30,4 +30,22 @@
     &_fourteen { width: 14 * $grid-col-width; }
     &_fifteen { width: 15 * $grid-col-width; }
   }
+
+  &_wide {
+    margin-left: -$grid-gap;
+    margin-right: -$grid-gap;
+
+    &:first-of-type { margin-top: -$grid-gap-vertical*2; }
+
+    .grid {
+
+      &__col {
+        padding: $grid-gap-vertical*2 $grid-gap 0;
+      }
+    }
+  }
+
+  &_centered {
+    justify-content: center;
+  }
 }

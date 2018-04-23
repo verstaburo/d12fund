@@ -6,9 +6,14 @@ mixin popups()
 mixin popup(title)
   +b.popup&attributes(attributes)
     .container
-      .popup__title!= title
+      if title
+        .popup__title!= title
       .popup__content
         block
+
+mixin popup-nocontent()
+  +b.popup&attributes(attributes)
+    block
 
 mixin popup-notitle()
   +b.popup&attributes(attributes)

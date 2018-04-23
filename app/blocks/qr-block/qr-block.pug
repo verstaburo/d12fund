@@ -1,0 +1,7 @@
+mixin qr-block()
+  +b.qr-block&attributes(attributes)
+    +e.image
+      +e.IMG.qr(src="assets/images/qr.svg")
+    +e.text
+      p Use QR code to get your wallet address.
+      p The balance will be updated after incoming transaction is confirmed in the blockchain.

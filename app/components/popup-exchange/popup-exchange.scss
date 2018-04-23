@@ -1,0 +1,52 @@
+.popup-exchange {
+  display: block;
+
+  .section {
+    position: relative;
+    display: block;
+    background-color: $color-background;
+
+    &::before {
+      @inlcude pseudo;
+      width: 100vw;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translate3d(-50%, 0, 0);
+      background-color: $color-background;
+    }
+  }
+
+  .form {
+    box-sizing: border-box;
+    padding: 58px 0 0;
+
+    @include screen('desktop') {
+      margin: 0 -20px;
+    }
+  }
+
+  .choices {
+
+    &__inner, &[data-type*='select-one'] &__inner {
+      padding-right: 14px !important;
+    }
+
+    &[data-type*='select-one'] {
+
+      &::after {
+        @include screen('tablet-small') {
+          width: 18px;
+          height: 10px;
+          background-size: 18px 10px;
+        }
+      }
+    }
+  }
+
+  .copied-block {
+    @include screen('desktop') {
+      margin: 0 -20px;
+    }
+  }
+}

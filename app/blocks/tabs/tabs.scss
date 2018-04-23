@@ -1,0 +1,77 @@
+.tabs {
+  $tab-gap: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
+  margin-top: (-$tab-gap + 10px);
+
+  &__tab {
+    position: relative;
+    display: inline-block;
+    margin: ($tab-gap - 10px) $tab-gap/2 0;
+    transition: color $ease-main, opacity $ease-main;
+    padding-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    @include heading-4;
+    font-weight: 300;
+
+    @include screen('phablet') {
+      margin: ($tab-gap - 10px) $tab-gap 0;
+    }
+
+    @include screen('tablet') {
+      @include heading-3;
+      font-weight: 300;
+    }
+
+    @include screen('tablet-wide') {
+      @include heading-1;
+      font-weight: 300;
+    }
+
+    &::before {
+      @include pseudo;
+      bottom: 0;
+      left: 50%;
+      width: 85px;
+      height: 1px;
+      background-color: $color-light-blue3;
+      transform: translate3d(-50%, 20px, 0);
+      transition: all $ease-main;
+      opacity: 0;
+    }
+
+    &.active {
+      color: $color-light-blue3;
+
+      &::before {
+        transform: translate3d(-50%, 0, 0);
+        opacity: 1;
+      }
+    }
+  }
+
+  & + &-content { margin-top: 30px; }
+
+  &-content {
+
+    &__wrapper {
+      display: none;
+      opacity: 0;
+      transition: opacity $ease-main, transform $ease-main;
+      transform: translate3d(0, 10px, 0);
+
+      &.active {
+        display: block;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}

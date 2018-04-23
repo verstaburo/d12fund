@@ -1,0 +1,59 @@
+.copied-block {
+  display: block;
+
+  &__title {
+    display: inline-block;
+    padding: 10px 22px;
+    @include text-bigger-st;
+    font-weight: 700;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 22px;
+    border: 1px solid $color-placeholder;
+    flex-wrap: wrap;
+
+    @include screen('tablet') {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__target {
+    width: 100%;
+    margin-bottom: 22px;
+    @include heading-3;
+    font-weight: 300;
+    color: $color-input;
+
+    @include screen('tablet') {
+      margin-right: 26px;
+      margin-bottom: 0;
+      width: auto;
+      max-width: calc(100% - 260px);
+      flex: 1;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    @include ellipsis(100%);
+  }
+
+  &__button {
+    flex: 1;
+
+    @include screen('tablet') {
+      width: 104px;
+      flex: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg width="21.414" height="19.414" version="1.1" viewBox="0 0 21.414213 19.414213" xmlns="http://www.w3.org/2000/svg">
+  <g class="nc-icon-wrapper" transform="translate(-1.2929 -2.2929)" fill="none" stroke="#111" stroke-miterlimit="10">
+    <line x1="7" x2="22" y1="17" y2="17" data-cap="butt" data-color="color-2"/>
+    <polyline points="18 21 22 17 18 13" stroke-linecap="square" data-color="color-2"/>
+    <line x1="18" x2="2" y1="7" y2="7" data-cap="butt"/>
+    <polyline points="6 11 2 7 6 3" stroke-linecap="square"/>
+  </g>
+</svg>

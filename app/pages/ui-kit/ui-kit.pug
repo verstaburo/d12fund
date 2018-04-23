@@ -47,6 +47,28 @@ block content
           +col(4)
           +col(6)
           +col(6)
+        +ui-description
+          p .grid.grid_wide
+          p Горизонтальное расстояние между колонками: 40px ($grid-gap)
+          p Вертикальное расстояние между колонками: 40px ($grid-gap-vertical)
+        +grid.grid_wide
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(1)
+          +col(4)
+          +col(4)
+          +col(4)
+          +col(6)
+          +col(6)
 
     //- Цвета
     +ui-section
@@ -570,6 +592,25 @@ block content
         +grid
           +col(6)
             +short-news('Заголовок', '01.01.2018') Текст
+
+    //- Табы
+    +ui-section
+      +ui-section-head
+        h2 Табы
+        p Блок: blocks/tabs
+      +ui-section-content()
+        +tabs
+          +tab()(data-tab-target="tab1").active Информация
+          +tab()(data-tab-target="tab2") Контент
+          +tab()(data-tab-target="tab3") Тексты
+        +tabs-content
+          +tab-wrapper()(data-tab="tab1" data-tab-group="testtabs").active
+            p Это таб 1
+          +tab-wrapper()(data-tab="tab2" data-tab-group="testtabs")
+            p Это таб 2
+          +tab-wrapper()(data-tab="tab3" data-tab-group="testtabs")
+            p Это таб 3
+
 
   script
     |

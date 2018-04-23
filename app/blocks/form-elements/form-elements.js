@@ -14,7 +14,7 @@ const $ = window.$;
 
 export function selects() {
   /* eslint-disable no-unused-vars */
-  const choices = new Choices('.js-select', {
+  const choices = new Choices('.js-select:not(.js-currency-from)', {
     searchEnabled: false,
     itemSelectText: '',
   });

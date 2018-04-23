@@ -49,9 +49,16 @@
 
 .checkradio {
   position: relative;
-  padding-left: 25px;
+  padding-left: 30px;
   display: inline-block;
   cursor: pointer;
+
+  &:hover {
+
+    .checkradio__box {
+      border-color: $color-light-blue3;
+    }
+  }
 
   &__input {
     position: absolute;
@@ -66,34 +73,31 @@
     &:checked {
 
       & + .checkradio__box {
-        &::before { opacity: 1; }
+        border-color: $color-light-blue3;
+        background: $color-light-blue3;
       }
     }
   }
 
   &__box {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    border: 1px solid $color-border;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-placeholder;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: transparent;
     left: 0;
-    top: 2px;
-
-    &::before {
-      content: '';
-      width: 9px;
-      height: 9px;
-      background-color: $color-main;
-      display: block;
-      opacity: 0;
-      transition: opacity $ease-main;
-
-      @include center-image;
-    }
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition: all $ease-main;
   }
 
   &__content {
-    @include text;
+    @include text-small;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
   }
 }
 

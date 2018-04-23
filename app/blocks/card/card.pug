@@ -1,0 +1,9 @@
+mixin card(title, icon, img, imgname, tag)
+  +b(tag || 'a').card&attributes(attributes)
+    if icon
+      +e.picture
+        +icon(icon)(class="icon_" + icon)
+    if img
+      +e.picture_noeffects
+        +e.IMG(src=img class="image_" + imgname)
+    +e.title!= title

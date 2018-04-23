@@ -1,0 +1,89 @@
+.accordion {
+  $b: &;
+  @include text;
+
+  .accordions & { margin-top: -1px; }
+
+  &__header {
+    position: relative;
+    padding-right: 28px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 38px;
+    @include text-bigger-st;
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 11px;
+      height: 11px;
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: $color-input;
+      transform-origin: center;
+      transform: translateY(-50%) rotate(135deg);
+      transition: transform $ease-main;
+
+      #{$b}.is-active & {
+        transform: translateY(-50%) rotate(-45deg);
+        margin-top: 2px;
+      }
+    }
+
+  }
+
+  &__button {
+    padding: 15px 24px;
+    cursor: pointer;
+  }
+
+  &__body {
+    padding: 10px 24px;
+    border-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+    clear: both;
+
+    @include clearfix;
+    @include text;
+    font-weight: 400;
+    color: $color-text;
+
+    #{$b}.is-active & { display: block; }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @include screen('phablet') {
+        float: right;
+        margin-left: 24px;
+        margin-top: 0;
+        width: 300px;
+        height: auto;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.accordions {
+  padding-top: 1px;
+}

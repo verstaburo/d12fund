@@ -14,6 +14,10 @@ import switchTextToEdit from '../components/popup-profile/popup-profile';
 import editAvatar from '../blocks/upload/upload';
 import { showPass, formStepsSwitcher } from '../blocks/form/form';
 import verifyForm from '../blocks/verification/verification';
+import tabs from '../blocks/tabs/tabs';
+import cryptocurrencyChosen from '../components/popup-buy-tokens/popup-buy-tokens';
+import '../blocks/accordion/accordion';
+import copiedBlock from '../blocks/copied-block/copied-block';
 
 const $ = window.$;
 
@@ -38,4 +42,7 @@ $(() => {
   showPass();
   formStepsSwitcher();
   verifyForm();
+  tabs();
+  cryptocurrencyChosen();
+  copiedBlock();
 });

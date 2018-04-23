@@ -1,0 +1,15 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" width="87" height="139" viewBox="0 0 87 139">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #2f84fc;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M43.5,52.588V0L11.924,52.588H43.5Zm-31.576,0L0,72.446,43.5,52.588H11.924Z" fill-opacity="0.4"/>
+  <path class="cls-2" d="M75.076,52.588H43.5L87,72.446Zm0,0L43.5,0V52.588H75.076Z" fill-opacity="0.7"/>
+  <path class="cls-3" d="M13.953,80.63L43.509,98.157V80.63H13.953Zm29.556,0V52.493L0,72.355,13.953,80.63H43.509ZM87,72.355L43.509,52.493V80.63H73.053ZM43.509,80.63V98.157L73.053,80.63H43.509Z"/>
+  <path class="cls-1" d="M29.55,95.045H12.392L43.5,139h0V103.311Zm0,0L0,77.535l12.392,17.51H29.55Z" fill-opacity="0.4"/>
+  <path class="cls-2" d="M57.461,95.03L43.5,103.3V139L74.632,95.03H57.461ZM87,77.535L57.461,95.03H74.632L87,77.563V77.535Z" fill-opacity="0.7"/>
+</svg>
