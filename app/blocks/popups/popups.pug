@@ -3,20 +3,28 @@ mixin popups()
     .popup-overlay
     block
 
-mixin popup(title)
+mixin popup(title, back, close)
   +b.popup&attributes(attributes)
+    if close
+      .popup__close.js-close-popup
     .container
       if title
         .popup__title!= title
+          if back 
+            +back.js-close-child
       .popup__content
         block
 
-mixin popup-nocontent()
+mixin popup-nocontent(close)
   +b.popup&attributes(attributes)
+    if close
+      .popup__close.js-close-popup
     block
 
-mixin popup-notitle()
+mixin popup-notitle(close)
   +b.popup&attributes(attributes)
+    if close
+      .popup__close.js-close-popup
     .container
       .popup__content
         block

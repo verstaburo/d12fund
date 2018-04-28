@@ -1,5 +1,5 @@
 mixin popup-edit-wallet()
-  +popup('Edit Wallet Address').popup-edit-wallet&attributes(attributes)
+  +popup('Edit Wallet Address', true).popup_child.popup-edit-wallet&attributes(attributes)
      +form.__form#form-edit-wallet
       +e.LABEL.row
         +e.label wallet address

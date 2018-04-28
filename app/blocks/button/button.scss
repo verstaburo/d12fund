@@ -13,6 +13,7 @@
   border-radius: 5px;
   transition: all $ease-main;
   cursor: pointer;
+  max-width: 300px;
 
   @include text-big;
   font-weight: 700;

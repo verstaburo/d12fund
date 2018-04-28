@@ -1,0 +1,54 @@
+.back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display:inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include screen("tablet-wide") {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+
+    .back {
+      &__ico {
+        stroke: $color-input;
+      }
+
+      &__text {
+        color: $color-input;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 22px;
+    height: 18px;
+    transform: rotate(180deg);
+  }
+
+  &__ico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 18px;
+    fill: none;
+    stroke: $color-placeholder;
+    transition: all $ease-main;
+  }
+
+  &__text {
+    margin-left: 8px;
+    @include text-big;
+    color: $color-placeholder;
+    font-weight: 700;
+    transition: all $ease-main;
+  }
+}

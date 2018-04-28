@@ -1,5 +1,5 @@
 mixin popup-history-purchases(title)
-  +popup(title).popup-history-purchases__&attributes(attributes)
+  +popup(title, '', true).popup-history-purchases__&attributes(attributes)
     +e.wrapper.js-scrollbar
       +table.__purchase
         +e.THEAD.header

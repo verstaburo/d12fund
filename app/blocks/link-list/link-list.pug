@@ -1,7 +1,7 @@
 mixin link-list()
   +b.UL.link-list&attributes(attributes)
     +e.LI.item
-      +link-icon('dashboard')._white.active(href="#" title="Dashboard") Dashboard
+      +link-icon('dashboard')._white.js-default-link.active(href="#" title="Dashboard") Dashboard
     +e.LI.item
       +link-icon('money')._white(href="#" title="Buy tokens / Invest" data-popup="popup-buy-tokens").js-open-popup Buy tokens / Invest
     +e.LI.item
@@ -25,4 +25,3 @@ mixin link-list-steps(steps)
       +link._white(href="signup-step3.html" class=active3 data-current-step="step3")
         +dot
         | Step 3
-

@@ -18,6 +18,7 @@ import tabs from '../blocks/tabs/tabs';
 import cryptocurrencyChosen from '../components/popup-buy-tokens/popup-buy-tokens';
 import '../blocks/accordion/accordion';
 import copiedBlock from '../blocks/copied-block/copied-block';
+import calculator from '../components/popup-exchange/popup-exchange';
 
 const $ = window.$;
 
@@ -45,4 +46,5 @@ $(() => {
   tabs();
   cryptocurrencyChosen();
   copiedBlock();
+  calculator();
 });

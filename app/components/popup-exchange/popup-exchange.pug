@@ -1,15 +1,16 @@
 mixin popup-exchange()
-  +popup-nocontent.popup-exchange&attributes(attributes)
+  +popup-nocontent(true).popup_child.popup-exchange&attributes(attributes)
     +e.SECTION.section
       .container
         .popup__title Exchange
+          +back.js-close-child
         +form#form-exchange
           +e.field
             +e.column
               +e.label Enter amount
               +e.wrapper_row
                 +e.container
-                  +input(type="text" placeholder="0" name="amountfrom").js-numberbox-input
+                  +input(type="text" placeholder="0" name="amountfrom" data-rate-usd="{'btc': 9303.12, 'eth': 681.23, 'ltc': 151.1, 'xpr': 0.8632, 'bch': 1388.32, 'xmr': 255.12, 'doge': 0.005502, 'etc': 21.69}").js-numberbox-input.js-value-from
                 +select.js-currency-from(name="currencyfrom")
                   +e.OPTION(value="btc") BTC
                   +e.OPTION(value="eth") ETH
@@ -25,8 +26,8 @@ mixin popup-exchange()
               +e.label You are getting
               +e.wrapper_row
                 +e.container
-                  +input(type="text" placeholder="0" name="amountto").js-numberbox-input
-                +select(name="currencyto")
+                  +input(type="text" placeholder="0" name="amountto" readonly="readonly").js-numberbox-input.js-value-to
+                +select.js-currency-to(name="currencyto")
                   +e.OPTION(value="btc") BTC
                   +e.OPTION(value="eth" selected) ETH
                   +e.OPTION(value="ltc") LTC
@@ -41,4 +42,3 @@ mixin popup-exchange()
       .container
         +qr-block
         +copied-block
-

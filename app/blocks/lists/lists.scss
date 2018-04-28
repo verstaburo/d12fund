@@ -20,9 +20,9 @@
       }
 
       &__image {
-        min-width: 28px;
-        width: 28px;
-        height: 21px;
+        min-width: 24px;
+        width: 24px;
+        height: 18px;
         margin-right: 18px;
         background-color: $color-main;
       }
@@ -37,4 +37,3 @@ ul.list {
 ol.list {
   @include ollist;
 }
-

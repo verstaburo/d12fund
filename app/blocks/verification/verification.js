@@ -62,7 +62,25 @@ export default function verifyForm() {
       formerrors += 1;
     });
     if (formerrors === 0) {
-      console.log('success');
+      // Отправка формы
+      // $.ajax({
+      //   url: 'https://echo.htmlacademy.ru', // вписать нужное
+      //   type: 'POST',
+      //   dataType: 'html',
+      //   data: $(`#${activeform}`).serialize().concat(`&form=${activeform}`),
+      //   success(data) {
+      //     console.log(data);
+      //     console.log('success');
+      //   },
+      //   error(data) {
+      //     console.log(data);
+      //     console.log('error');
+      //   },
+      //   complete(data) {
+      //     console.log(data);
+      //     console.log('complete');
+      //   },
+      // });
     }
   }
   $(document).on('click', '.js-validate', (evt) => {

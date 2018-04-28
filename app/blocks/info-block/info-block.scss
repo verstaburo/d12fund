@@ -71,6 +71,7 @@
   &__buttons {
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
 
     @include screen('desktop-wide') {
       padding-left: 40px; //Для кривизны дизайна
@@ -79,5 +80,8 @@
 
   &__button {
     width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

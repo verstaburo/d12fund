@@ -364,5 +364,9 @@
 
   &__container {
     flex: 1;
+
+    .input[readonly] {
+      border-bottom-color: $color-placeholder;
+    }
   }
 }

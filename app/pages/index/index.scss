@@ -5,6 +5,7 @@
   &__informers {
 
     .grid {
+      justify-content: center;
 
       &:first-of-type {
         @include screen('desktop', max) {

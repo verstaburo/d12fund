@@ -1,12 +1,12 @@
 mixin popup-buy-tokens()
-  +popup.popup-buy-tokens&attributes(attributes)
+  +popup('', '', true).popup-buy-tokens&attributes(attributes)
     +tabs
       +tab()(data-tab-target="tab1").active Select Cryptocurrency
       +tab()(data-tab-target="tab2") Pay With Bank Account
     +tabs-content
       +tab-wrapper()(data-tab="tab1" data-tab-group="coins").active
         +b.form
-          a.hidden-link.js-open-popup(data-popup="popup-exchange")
+          a.hidden-link.js-open-child(data-popup="popup-exchange")
           +grid.grid_wide
             +col(3)
               +card('Bitcoin', 'bitcoin')(data-select="btc").js-cryptocurrency-select
@@ -85,4 +85,3 @@ mixin popup-buy-tokens()
                 | doloribus magnam accusantium expedita eveniet,
                 | quisquam voluptate quos maiores impedit quibusdam.
                 | Quod sit molestias sapiente.
-

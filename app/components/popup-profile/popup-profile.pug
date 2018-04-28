@@ -1,5 +1,5 @@
 mixin popup-profile()
-  +popup('My Profile').popup-profile__&attributes(attributes)
+  +popup('My Profile', '', true).popup-profile__&attributes(attributes)
       +e.column_left
         +e.avatar
           +avatar._big
@@ -20,7 +20,7 @@ mixin popup-profile()
               +e.switcher.js-edit-on
                 +icon('pen').icon_pen
           +e.row_notes
-            +link._bordered._upper.js-open-popup(href="#" data-popup="popup-change-password") Change password
-            +link._bordered._upper.js-open-popup(href="#" data-popup="popup-edit-wallet") Edit wallet address
+            +link._bordered._upper.js-open-child(href="#" data-popup="popup-change-password") Change password
+            +link._bordered._upper.js-open-child(href="#" data-popup="popup-edit-wallet") Edit wallet address
           +e.row
             +button('button')(type="submit").__button Save Changes
