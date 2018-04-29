@@ -53,8 +53,12 @@ export default function popups() {
     evt.preventDefault();
     const self = $(evt.target).hasClass('.js-close-child') ? $(evt.target) : $(evt.target).closest('.js-close-child');
     $(self).closest('.popup').removeClass('active');
+    $(self).closest('.popup').find('.form__info-message').removeClass('error');
+    $(self).closest('.popup').find('.form__info-message').removeClass('success');
   });
   $(document).on('click', '.popup-overlay', () => {
+    $('.popup.active').find('.form__info-message').removeClass('error');
+    $('.popup.active').find('.form__info-message').removeClass('success');
     $('.popup.active').find('[data-step]').removeClass('active');
     $('.popup.active').find('[data-step="step1"]').addClass('active');
     $('.popup.active').removeClass('active');
@@ -63,6 +67,8 @@ export default function popups() {
     $('.js-default-link').addClass('active');
   });
   $(document).on('click', '.js-close-popup, .js-default-link', () => {
+    $('.popup.active').find('.form__info-message').removeClass('error');
+    $('.popup.active').find('.form__info-message').removeClass('success');
     $('.popup.active').find('[data-step]').removeClass('active');
     $('.popup.active').find('[data-step="step1"]').addClass('active');
     $('.popup.active').removeClass('active');

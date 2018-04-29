@@ -5,6 +5,11 @@ mixin popup-exchange()
         .popup__title Exchange
           +back.js-close-child
         +form#form-exchange
+          +e.info-message
+            +e.error 
+            +e.success
+              +icon('check').success-icon
+              +e.success-text Request has been sent
           +e.field
             +e.column
               +e.label Enter amount
@@ -37,7 +42,7 @@ mixin popup-exchange()
                   +e.OPTION(value="doge") DOGE
                   +e.OPTION(value="etc") ETC
           +e.row_centered._button
-            +button('button')(type="submit").__button Proceed
+            +button('button', 'true')(type="submit").__button.js-validate Proceed
     +e.SECTION.section_dark
       .container
         +qr-block

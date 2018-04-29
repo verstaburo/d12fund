@@ -1,11 +1,14 @@
-mixin button(newtag)
+mixin button(newtag, loader)
   - var tag = 'a';
   if newtag
-    - var tag = newtag;
+    - var tag = newtag;    
   +b(tag).button&attributes(attributes)
     block
+    if loader
+      +e.loader
+        +e.IMG.loader-img(src="assets/images/loader.gif")
 
-mixin button-arrow(newtag)
+mixin button-arrow(newtag, loader)
   - var tag = 'a';
   if newtag
     - var tag = newtag;
@@ -13,4 +16,6 @@ mixin button-arrow(newtag)
     block
     +e.image
       +icon('arrow-right').icon
-
+    if loader
+      +e.loader
+        +e.IMG.loader-img(src="assets/images/loader.gif")

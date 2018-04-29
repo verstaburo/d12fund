@@ -10,12 +10,17 @@ block content
   +b.MAIN.signin
     .container
       +form.__form#form-signin
+        +e.info-message
+          +e.error 
+          +e.success
+            +icon('check').success-icon
+            +e.success-text Signed In
         +e.LABEL.row
           +e.label
             +e.SPAN.star *
             | Your email
           +e.wrapper
-            +input(type="text" placeholder="Type your email" data-type="email" require)
+            +input(type="text" name="email" placeholder="Type your email" data-type="email" required)
             +e.switcher_info
               +icon('alert').icon_alert
         +e.LABEL.row
@@ -23,7 +28,7 @@ block content
               +e.SPAN.star *
               | Your password
             +e.wrapper
-              +input(type="password" placeholder="Type your password" require)
+              +input(type="password" name="password" placeholder="Type your password" required)
               +e.switcher_info
                 +icon('alert').icon_alert
         +e.row_columns
@@ -33,9 +38,8 @@ block content
             +e.label or sign in with
             +socials
         +e.row_centered._button
-          +button-arrow('button')(type="submit").__button.js-validate Sign In
+          +button-arrow('button', 'true')(type="submit").__button.js-validate Sign In
         +e.row_centered
           +e.label_centered
             | Don’t have an account?
             +link(href="signup.html") sign up here
-

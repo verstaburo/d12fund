@@ -369,4 +369,61 @@
       border-bottom-color: $color-placeholder;
     }
   }
+
+  &__info-message {
+    display: block;
+    width: 100%;
+
+    .form__error {
+      display: none;
+      color: $color-red;
+      @include text-big;
+      padding: 30px 0;
+    }
+
+    .form__success {
+      display: none;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 30px 0;
+
+      &-icon {
+        width: 20px;
+        height: 14px;
+        fill: none;
+        stroke: $color-green;
+        stroke-width: 2px;
+        margin-right: 10px;
+      }
+
+      &-text {
+        @include text-big;
+        color: $color-green;
+      }
+
+      &-buttons {
+        width: 100%;
+        text-align: center;
+
+        .button {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+
+    &.error {
+      .form__error {
+        display: block;
+      }
+    }
+
+    &.success {
+      .form__success {
+        display: flex;
+      }
+    }
+  }
 }

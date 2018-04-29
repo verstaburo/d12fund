@@ -15,8 +15,8 @@ block content
             +e.SPAN.star *
             | Email Address
           +e.wrapper
-            +input(type="text" placeholder="Type your email address" data-type="email" require)
+            +input(type="text" name="email" placeholder="Type your email address" data-type="email" require)
             +e.switcher_info
               +icon('alert').icon_alert
         +e.row_centered._button_mb
-          +button-arrow('button')(type="submit").__button.js-validate Next Step
+          +button-arrow('button', 'true')(type="submit").__button.js-validate Next Step

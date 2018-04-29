@@ -6,21 +6,26 @@ mixin popup-profile()
           +upload('form-edit-profile').__upload
       +e.column_right
         +form.__form#form-edit-profile
+          +e.info-message
+            +e.error 
+            +e.success
+              +icon('check').success-icon
+              +e.success-text Changes saved
           +e.row
             +e.label Full name
             +e.wrapper_row
-              +input(type="hidden" value="Mark Hoffan" placeholder="Full Name")
+              +input(type="hidden" name="name" value="Mark Hoffan" placeholder="Full Name")
               +e.SPAN.textfield.input(contenteditable="false") Mark Hoffan
               +e.switcher.js-edit-on
                 +icon('pen').icon_pen
           +e.LABEL.row
             +e.label email adress (&nbsp;this is also your username&nbsp;)
             +e.wrapper
-              +input(type="text" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly)
+              +input(type="text" name="email" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly)
               +e.switcher.js-edit-on
                 +icon('pen').icon_pen
           +e.row_notes
             +link._bordered._upper.js-open-child(href="#" data-popup="popup-change-password") Change password
             +link._bordered._upper.js-open-child(href="#" data-popup="popup-edit-wallet") Edit wallet address
           +e.row
-            +button('button')(type="submit").__button Save Changes
+            +button('button', 'true')(type="submit").__button.js-validate Save Changes

@@ -1,6 +1,11 @@
 mixin popup-verification()
   +popup('Verification', '', 'true').popup-verification&attributes(attributes)
     +form.__form#form-verification
+      +e.info-message
+        +e.error 
+        +e.success
+          +icon('check').success-icon
+          +e.success-text Request has been sent
       +e.step_centered.active(data-step="step1")
         +e.row_centered
           +upload-zone.__upload
@@ -10,12 +15,12 @@ mixin popup-verification()
         +e.LABEL.row
           +e.label full name
           +e.wrapper
-            +input(type="text" placeholder="Type your full name")
+            +input(type="text" name="name" placeholder="Type your full name")
         +e.row
           +e.label country
           +e.wrapper
-            +select
-              +e.OPTION(placeholder) Select your country
+            +select(name="country")
+              +e.OPTION(placeholder value="") Select your country
               +e.OPTION(value="USA") USA
               +e.OPTION(value="Slovenia") Slovenia
               +e.OPTION(value="Vietnam") Vietnam
@@ -24,6 +29,6 @@ mixin popup-verification()
         +e.LABEL.row
           +e.label address
           +e.wrapper
-            +input(type="text" placeholder="Type your address")
+            +input(type="text" name="address" placeholder="Type your address")
         +e.row_centered._button
-          +button('button')(type="submit").__button Apply
+          +button('button', 'true')(type="submit").__button.js-validate Apply

@@ -1,11 +1,16 @@
 mixin popup-edit-wallet()
   +popup('Edit Wallet Address', true).popup_child.popup-edit-wallet&attributes(attributes)
-     +form.__form#form-edit-wallet
+    +form.__form#form-edit-wallet
+      +e.info-message
+        +e.error 
+        +e.success
+          +icon('check').success-icon
+          +e.success-text Wallet changed successfully
       +e.LABEL.row
         +e.label wallet address
         +e.wrapper
-          +input(type="text" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71")
+          +input(type="text" name="wallet" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71")
           +e.switcher
             +icon('pen').icon_pen
       +e.row_centered
-        +button('button')(type="submit").__button Save
+        +button('button', 'true')(type="submit").__button.js-validate Save

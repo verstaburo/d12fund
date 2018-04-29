@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   display: inline-block;
   padding: 16px 20px;
   border: none;
@@ -21,8 +22,11 @@
 
   &:disabled,
   &.disabled {
-    opacity: .5;
+    opacity: 1;
     cursor: not-allowed;
+  }
+
+  &.disabled {
     pointer-events: none;
   }
 
@@ -50,6 +54,40 @@
       height: 18px;
       fill: none;
       stroke: $color-basic;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include gradient-main;
+    background-size: auto 200%;
+    background-color: $color-gradient-2;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: all $ease-main;
+
+    &-image {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &.loading {
+    cursor: not-allowed;
+
+    .button__loader {
+      opacity: 1;
     }
   }
 

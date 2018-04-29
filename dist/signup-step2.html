@@ -155,7 +155,7 @@
                         <span class="form__label">
                             <span class="form__star">*</span>Password</span>
                         <span class="form__wrapper">
-                            <input class="input" type="password" placeholder="Type your password" data-confirm-password="true" required="required" />
+                            <input class="input" type="password" name="password" placeholder="Type your password" data-confirm-password="true" required="required" />
                             <span class="form__switcher js-show-pass">
                                 <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                             </span>
@@ -165,7 +165,7 @@
                         <span class="form__label">
                             <span class="form__star">*</span>Confirm Password</span>
                         <span class="form__wrapper">
-                            <input class="input" type="password" placeholder="Confirm password" data-confirm-password="true" required="required" />
+                            <input class="input" type="password" name="confirmpassword" placeholder="Confirm password" data-confirm-password="true" required="required" />
                             <span class="form__switcher js-show-pass">
                                 <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                             </span>
@@ -175,6 +175,9 @@
                         <button class="button button_arrow form__button js-validate" type="submit">Next Step
                             <div class="button__image">
                                 <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                            </div>
+                            <div class="button__loader">
+                                <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
                             </div>
                         </button>
                     </div>
