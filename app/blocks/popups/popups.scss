@@ -53,6 +53,7 @@
 
     @include screen('tablet-wide') {
       position: relative;
+      padding: 0 80px;
       margin: 52px 0 54px;
     }
   }
