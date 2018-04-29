@@ -17,6 +17,13 @@ function submitform(formid, button) {
         document.getElementById(formid).reset();
       }, 250);
     },
+    error() {
+      setTimeout(() => {
+        $(button).removeClass('loading');
+        $(`#${formid}`).find('.form__error').text('Failed to send form');
+        $(`#${formid}`).find('.form__info-message').addClass('error').removeClass('success');
+      }, 250);
+    },
   });
 }
 
