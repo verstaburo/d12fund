@@ -155,7 +155,7 @@
                         <span class="form__label">
                             <span class="form__star">*</span>Email Address</span>
                         <span class="form__wrapper">
-                            <input class="input" type="text" placeholder="Type your email address" data-type="email" require="require" />
+                            <input class="input" type="text" name="email" placeholder="Type your email address" data-type="email" require="require" />
                             <span class="form__switcher form__switcher_info">
                                 <svg class="form__icon form__icon_alert"><use xlink:href="assets/images/icon.svg#icon_alert"></use></svg>
                             </span>
@@ -165,6 +165,9 @@
                         <button class="button button_arrow form__button js-validate" type="submit">Next Step
                             <div class="button__image">
                                 <svg class="button__icon"><use xlink:href="assets/images/icon.svg#icon_arrow-right"></use></svg>
+                            </div>
+                            <div class="button__loader">
+                                <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
                             </div>
                         </button>
                     </div>

@@ -186,15 +186,23 @@
             </div>
         </div>
         <div class="popup popup-withdraw-funds" id="popup-withdraw-funds">
+            <div class="popup__close js-close-popup"></div>
             <div class="container">
                 <div class="popup__title">Withdraw Funds</div>
                 <div class="popup__content">
                     <form class="form popup-withdraw-funds__form" id="form-withdraw">
+                        <div class="form__info-message">
+                            <div class="form__error"> </div>
+                            <div class="form__success">
+                                <svg class="form__success-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                <div class="form__success-text">Request has been sent</div>
+                            </div>
+                        </div>
                         <div class="form__row">
                             <div class="form__label">from my wallet</div>
                             <div class="form__wrapper">
                                 <div class="form__info input">Available 0000 EUR</div>
-                                <input class="input" type="hidden" value="Available 0000 EUR" />
+                                <input class="input" type="hidden" name="available" value="Available 0000 EUR" />
                                 <a class="form__arrow-link" href="#">
                                     <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
                                 </a>
@@ -206,7 +214,7 @@
                                 <div class="form__info input">VISA
                                     <div class="dot dot_double"></div>
                                     <div class="dot dot_double"></div>0123</div>
-                                <input class="input" type="hidden" value="VISA .... 0123" />
+                                <input class="input" type="hidden" name="card" value="VISA .... 0123" />
                                 <a class="form__arrow-link" href="#">
                                     <svg class="form__icon form__icon_angle"><use xlink:href="assets/images/icon.svg#icon_big-angle"></use></svg>
                                 </a>
@@ -215,7 +223,7 @@
                         <label class="form__row">
                             <span class="form__label">amount</span>
                             <span class="form__wrapper">
-                                <input class="input js-numberbox-input" type="text" placeholder="0000" />
+                                <input class="input js-numberbox-input" type="text" name="amount" placeholder="0000" />
                             </span>
                         </label>
                         <div class="form__row form__row_notes">
@@ -229,7 +237,11 @@
                             </div>
                         </div>
                         <div class="form__row form__row_centered">
-                            <button class="button form__button" type="submit">Withdraw Fund</button>
+                            <button class="button form__button js-validate" type="submit">Withdraw Fund
+                                <div class="button__loader">
+                                    <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                </div>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -340,10 +352,27 @@
                 </div>
                 <div class="popup__content">
                     <form class="form popup-change-password__form" id="form-pass-change">
+                        <div class="form__info-message">
+                            <div class="form__error"> </div>
+                            <div class="form__success">
+                                <div class="container">
+                                    <div class="info-message">
+                                        <div class="info-message__image">
+                                            <svg class="info-message__icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                        </div>
+                                        <div class="info-message__title">Password changed successfully</div>
+                                        <div class="info-message__text"></div>
+                                    </div>
+                                    <div class="form__success-buttons">
+                                        <button class="button js-close-child" type="button">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <label class="form__row">
                             <span class="form__label">old password</span>
                             <span class="form__wrapper">
-                                <input class="input" type="password" placeholder="Type your old password" />
+                                <input class="input" type="password" name="password-old" placeholder="Type your old password" required="required" />
                                 <span class="form__switcher js-show-pass">
                                     <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </span>
@@ -352,14 +381,18 @@
                         <label class="form__row">
                             <span class="form__label">new password</span>
                             <span class="form__wrapper">
-                                <input class="input" type="password" placeholder="Type your new password" />
+                                <input class="input" type="password" name="password-new" placeholder="Type your new password" required="required" />
                                 <span class="form__switcher js-show-pass">
                                     <svg class="form__icon form__icon_eye"><use xlink:href="assets/images/icon.svg#icon_eye"></use></svg>
                                 </span>
                             </span>
                         </label>
                         <div class="form__row form__row_centered">
-                            <button class="button form__button" type="submit">Save</button>
+                            <button class="button form__button js-validate" type="submit">Save
+                                <div class="button__loader">
+                                    <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                </div>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -377,17 +410,28 @@
                 </div>
                 <div class="popup__content">
                     <form class="form popup__form" id="form-edit-wallet">
+                        <div class="form__info-message">
+                            <div class="form__error"> </div>
+                            <div class="form__success">
+                                <svg class="form__success-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                <div class="form__success-text">Wallet changed successfully</div>
+                            </div>
+                        </div>
                         <label class="form__row">
                             <span class="form__label">wallet address</span>
                             <span class="form__wrapper">
-                                <input class="input" type="text" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71" />
+                                <input class="input" type="text" name="wallet" placeholder="Type your wallet address" value="0xb9645b95baa481971684e476786cbee34f6c8f71" />
                                 <span class="form__switcher">
                                     <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
                                 </span>
                             </span>
                         </label>
                         <div class="form__row form__row_centered">
-                            <button class="button form__button" type="submit">Save</button>
+                            <button class="button form__button js-validate" type="submit">Save
+                                <div class="button__loader">
+                                    <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                </div>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -413,10 +457,17 @@
                     </div>
                     <div class="popup-profile__column popup-profile__column_right">
                         <form class="form popup-profile__form" id="form-edit-profile">
+                            <div class="form__info-message">
+                                <div class="form__error"> </div>
+                                <div class="form__success">
+                                    <svg class="form__success-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                    <div class="form__success-text">Changes saved</div>
+                                </div>
+                            </div>
                             <div class="form__row">
                                 <div class="form__label">Full name</div>
                                 <div class="form__wrapper form__wrapper_row">
-                                    <input class="input" type="hidden" value="Mark Hoffan" placeholder="Full Name" />
+                                    <input class="input" type="hidden" name="name" value="Mark Hoffan" placeholder="Full Name" />
                                     <span class="form__textfield input" contenteditable="false">Mark Hoffan</span>
                                     <div class="form__switcher js-edit-on">
                                         <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
@@ -426,7 +477,7 @@
                             <label class="form__row">
                                 <span class="form__label">email adress (&nbsp;this is also your username&nbsp;)</span>
                                 <span class="form__wrapper">
-                                    <input class="input" type="text" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly="readonly" />
+                                    <input class="input" type="text" name="email" placeholder="Type your email address" value="mark.hoffan@gmail.com" data-type="email" readonly="readonly" />
                                     <span class="form__switcher js-edit-on">
                                         <svg class="form__icon form__icon_pen"><use xlink:href="assets/images/icon.svg#icon_pen"></use></svg>
                                     </span>
@@ -441,7 +492,11 @@
                                 </a>
                             </div>
                             <div class="form__row">
-                                <button class="button form__button" type="submit">Save Changes</button>
+                                <button class="button form__button js-validate" type="submit">Save Changes
+                                    <div class="button__loader">
+                                        <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                    </div>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -454,6 +509,13 @@
                 <div class="popup__title">Verification</div>
                 <div class="popup__content">
                     <form class="form popup__form" id="form-verification">
+                        <div class="form__info-message">
+                            <div class="form__error"> </div>
+                            <div class="form__success">
+                                <svg class="form__success-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                <div class="form__success-text">Request has been sent</div>
+                            </div>
+                        </div>
                         <div class="form__step form__step_centered active" data-step="step1">
                             <div class="form__row form__row_centered">
                                 <label class="upload upload_zone js-upload-mix form__upload">
@@ -476,14 +538,14 @@
                             <label class="form__row">
                                 <span class="form__label">full name</span>
                                 <span class="form__wrapper">
-                                    <input class="input" type="text" placeholder="Type your full name" />
+                                    <input class="input" type="text" name="name" placeholder="Type your full name" />
                                 </span>
                             </label>
                             <div class="form__row">
                                 <div class="form__label">country</div>
                                 <div class="form__wrapper">
-                                    <select class="select js-select">
-                                        <option placeholder="placeholder">Select your country</option>
+                                    <select class="select js-select" name="country">
+                                        <option placeholder="placeholder" value="">Select your country</option>
                                         <option value="USA">USA</option>
                                         <option value="Slovenia">Slovenia</option>
                                         <option value="Vietnam">Vietnam</option>
@@ -495,11 +557,15 @@
                             <label class="form__row">
                                 <span class="form__label">address</span>
                                 <span class="form__wrapper">
-                                    <input class="input" type="text" placeholder="Type your address" />
+                                    <input class="input" type="text" name="address" placeholder="Type your address" />
                                 </span>
                             </label>
                             <div class="form__row form__row_centered form__row_button">
-                                <button class="button form__button" type="submit">Apply</button>
+                                <button class="button form__button js-validate" type="submit">Apply
+                                    <div class="button__loader">
+                                        <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                    </div>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -679,6 +745,13 @@
                         </a>
                     </div>
                     <form class="form" id="form-exchange">
+                        <div class="form__info-message">
+                            <div class="form__error"> </div>
+                            <div class="form__success">
+                                <svg class="form__success-icon"><use xlink:href="assets/images/icon.svg#icon_check"></use></svg>
+                                <div class="form__success-text">Request has been sent</div>
+                            </div>
+                        </div>
                         <div class="form__field">
                             <div class="form__column">
                                 <div class="form__label">Enter amount</div>
@@ -722,7 +795,11 @@
                             </div>
                         </div>
                         <div class="form__row form__row_centered form__row_button">
-                            <button class="button form__button" type="submit">Proceed</button>
+                            <button class="button form__button js-validate" type="submit">Proceed
+                                <div class="button__loader">
+                                    <img class="button__loader-img" src="assets/images/loader.gif" alt="" role="presentation" />
+                                </div>
+                            </button>
                         </div>
                     </form>
                 </div>
