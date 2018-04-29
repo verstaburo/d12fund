@@ -5,7 +5,7 @@ function submitform(formid, button) {
   $(button).attr('disabled', 'disabled');
   $(button).addClass('loading');
   $.ajax({
-    url: '/', // вписать нужное
+    url: 'https://echo.htmlacademy.ru', // вписать нужное
     type: 'POST',
     dataType: 'html',
     data: $(`#${formid}`).serialize().concat(`&form=${formid}`),
