@@ -2,6 +2,7 @@ mixin popup-exchange()
   +popup-nocontent(true).popup_child.popup-exchange&attributes(attributes)
     +e.SECTION.section
       .container
+        .popup__close.js-close-popup
         .popup__title Exchange
           +back.js-close-child
         +form#form-exchange

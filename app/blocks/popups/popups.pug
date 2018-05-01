@@ -5,9 +5,9 @@ mixin popups()
 
 mixin popup(title, back, close)
   +b.popup&attributes(attributes)
-    if close
-      .popup__close.js-close-popup
     .container
+      if close
+        .popup__close.js-close-popup
       if title
         .popup__title!= title
           if back 
@@ -17,14 +17,12 @@ mixin popup(title, back, close)
 
 mixin popup-nocontent(close)
   +b.popup&attributes(attributes)
-    if close
-      .popup__close.js-close-popup
     block
 
 mixin popup-notitle(close)
   +b.popup&attributes(attributes)
-    if close
-      .popup__close.js-close-popup
     .container
+      if close
+        .popup__close.js-close-popup
       .popup__content
         block

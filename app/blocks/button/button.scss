@@ -1,3 +1,18 @@
+@keyframes rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -7,7 +22,9 @@
   box-sizing: border-box;
   color: $color-basic;
   background-color: $color-input;
+
   @include gradient-main;
+
   background-size: auto 200%;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -17,21 +34,22 @@
   max-width: 300px;
 
   @include text-big;
+
   font-weight: 700;
   text-align: center;
 
-  &:disabled,
-  &.disabled {
+  &:disabled, &.disabled {
     opacity: 1;
     cursor: not-allowed;
+    background-color: $color-gradient-2;
+    background-position: 0 0;
   }
 
   &.disabled {
     pointer-events: none;
   }
 
-  &:hover,
-  &.is-active {
+  &:hover, &.is-active {
     background-color: $color-gradient-2;
     background-position: 0 0;
   }
@@ -47,7 +65,7 @@
     width: 22px;
     height: 18px;
     transform: translate3d(0, -50%, 0);
-    transition: transform $ease-main;
+    transition: transform $ease-main, opacity $ease-main;
 
     .button__icon {
       width: 22px;
@@ -59,27 +77,29 @@
 
   &__loader {
     position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 32px;
+    height: 32px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    top: 0;
-    left: 0;
-    @include gradient-main;
-    background-size: auto 200%;
-    background-color: $color-gradient-2;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    width: 100%;
+    transform: translate3d(0, -50%, 0);
     opacity: 0;
     pointer-events: none;
     z-index: 2;
-    transition: all $ease-main;
+    transition: opacity $ease-main;
 
-    &-image {
-      width: 40px;
-      height: 40px;
+    span {
+      display: block;
+      width: 32px;
+      height: 32px;
+      border: 2px solid $color-basic;
+      border-bottom-color: transparent;
+      box-sizing: border-box;
+      border-radius: 50%;
+      animation: rotate .75s linear infinite;
     }
   }
 
@@ -89,11 +109,17 @@
     .button__loader {
       opacity: 1;
     }
+
+    .button__image {
+      opacity: 0;
+    }
   }
 
   &_small {
     padding: 10px 20px;
+
     @include text;
+
     font-weight: 700;
   }
 
@@ -106,6 +132,10 @@
     background-color: $color-button-background;
     background-image: none;
     color: $color-text;
+
+    &:disabled, &.disabled {
+      opacity: .3;
+    }
 
     &:hover {
       background-color: $color-main;
@@ -124,8 +154,13 @@
       color: $color-text;
     }
 
+    &:disabled, &.disabled {
+      opacity: .3;
+    }
+
     &.active {
       @include gradient-light;
+
       color: $color-basic;
       background-size: auto 100%;
       background-position: 0 0;

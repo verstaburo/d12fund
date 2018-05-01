@@ -2,7 +2,6 @@
   display: block;
 
   .container {
-
     @include screen('desktop') {
       padding: 0;
     }
@@ -19,6 +18,10 @@
   &__purchase {
     width: 1210px;
     margin-bottom: 20px;
+  }
+
+  &__wrapper {
+    max-height: 400px;
   }
 
   &__buttons {

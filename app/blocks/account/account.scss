@@ -50,10 +50,13 @@
 
   &__login {
     @include text-small;
+
     font-weight: 500;
     margin-right: 10px;
+
     @include ellipsis(100%);
-    max-width: 70px;
+
+    max-width: 120px;
 
     @include screen('phone-wide') {
       max-width: none;
@@ -61,6 +64,7 @@
 
     @include screen('desktop-wide') {
       @include text;
+
       font-weight: 500;
       margin-right: 16px;
     }
@@ -83,14 +87,14 @@
     width: auto;
     width: 200px;
     max-width: 200px;
-    margin-top: 0;
+    margin-top: 10px;
     padding: 0 0 12px;
     left: auto;
     right: 0;
 
     @include screen('desktop-wide') {
       max-width: none;
-      width: calc(100% - 64px);
+      width: 100%;
     }
 
     .link-list__item {

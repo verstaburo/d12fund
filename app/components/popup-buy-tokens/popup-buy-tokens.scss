@@ -18,7 +18,6 @@
   }
 
   .grid__col_three {
-
     @include screen('tablet-wide', max) {
       width: 4 * $grid-col-width;
     }
@@ -43,8 +42,18 @@
   }
 
   .copied-block {
+
     &:not(:last-child) {
       margin-bottom: 50px;
+    }
+  }
+
+  .popup__close {
+    bottom: 100%;
+
+    @include screen('desktop') {
+      top: 30px;
+      bottom: auto;
     }
   }
 }

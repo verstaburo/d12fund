@@ -6,7 +6,7 @@ mixin button(newtag, loader)
     block
     if loader
       +e.loader
-        +e.IMG.loader-img(src="assets/images/loader.gif")
+        span
 
 mixin button-arrow(newtag, loader)
   - var tag = 'a';
@@ -18,4 +18,4 @@ mixin button-arrow(newtag, loader)
       +icon('arrow-right').icon
     if loader
       +e.loader
-        +e.IMG.loader-img(src="assets/images/loader.gif")
+        span
